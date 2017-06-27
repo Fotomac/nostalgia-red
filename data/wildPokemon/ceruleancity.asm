@@ -1,0 +1,23 @@
+CeruleanMons:
+	db $01
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db 7,MEW
+	db $05
+	db 5,TENTACOOL
+	db 10,TENTACOOL
+	db 15,TENTACOOL
+	db 20,TENTACOOL
+	db 25,TENTACOOL
+	db 30,TENTACOOL
+	db 35,TENTACOOL
+	db 40,TENTACOOL
+	db 30,TENTACRUEL
+	db 40,TENTACRUEL

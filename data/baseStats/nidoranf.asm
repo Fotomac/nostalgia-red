@@ -13,7 +13,7 @@ dw NidoranFPicFront
 dw NidoranFPicBack
 ; attacks known at lvl 0
 db GROWL
-db TACKLE
+db SCRATCH
 db 0
 db 0
 db 3 ; growth rate

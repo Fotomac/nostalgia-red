@@ -22,7 +22,8 @@ _Route6BattleText2::
 
 _Route6EndBattleText2::
 	text "Ugh!"
-	line "I hate losing!"
+	line "Damn it all! I"
+	line "hate losing!"
 	prompt
 
 _Route6BattleText3::

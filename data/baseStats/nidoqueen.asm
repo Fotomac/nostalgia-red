@@ -12,10 +12,10 @@ INCBIN "pic/bmon/nidoqueen.pic",0,1 ; 77, sprite dimensions
 dw NidoqueenPicFront
 dw NidoqueenPicBack
 ; attacks known at lvl 0
-db TACKLE
 db SCRATCH
 db TAIL_WHIP
-db BODY_SLAM
+db DOUBLE_KICK
+db POISON_STING
 db 3 ; growth rate
 ; learnset
 	tmlearn 1,5,6,7,8

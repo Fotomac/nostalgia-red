@@ -25,7 +25,7 @@ TechnicalMachines:
 	db THUNDERBOLT
 	db THUNDER
 	db EARTHQUAKE
-	db FISSURE
+	db RETURN
 	db DIG
 	db PSYCHIC_M
 	db TELEPORT
@@ -37,7 +37,7 @@ TechnicalMachines:
 	db SELFDESTRUCT
 	db EGG_BOMB
 	db FIRE_BLAST
-	db SWIFT
+	db ROCK_TOMB
 	db SKULL_BASH
 	db SOFTBOILED
 	db DREAM_EATER

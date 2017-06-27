@@ -1,13 +1,14 @@
 _ViridianGymText_74ace::
-	text "Fwahahaha! This is"
-	line "my hideout!"
+	text "Fwahahaha! Welcome"
+	line "to my hideout!"
 
-	para "I planned to"
-	line "resurrect TEAM"
-	cont "ROCKET here!"
+	para "It shall be so"
+	line "until I restore"
+	cont "TEAM ROCKET to"
+	cont "its former glory!"
 
 	para "But, you have"
-	line "caught me again!"
+	line "found me again!"
 	cont "So be it! This"
 	cont "time, I'm not"
 	cont "holding back!"
@@ -27,14 +28,17 @@ _ViridianGymText_74ad3::
 	cont "the EARTHBADGE!@@"
 
 _ViridianGymText_74ad9::
-	text "Having lost, I"
-	line "cannot face my"
+	text "Having lost in"
+	line "this fashion, I"
+	cont "cannot face my"
 	cont "underlings!"
+	cont "As of today,"
 	cont "TEAM ROCKET is"
 	cont "finished forever!"
 
-	para "I will dedicate my"
-	line "life to the study"
+	para "As for myself,"
+	line "I will dedicate my"
+	cont "life to the study"
 	cont "of #MON!"
 
 	para "Let us meet again"
@@ -44,38 +48,44 @@ _ViridianGymText_74ad9::
 _ViridianGymText12::
 	text "The EARTHBADGE"
 	line "makes #MON of"
-	cont "any level obey!"
+	cont "any level obey"
+	cont "without question!"
 
 	para "It is evidence of"
 	line "your mastery as a"
 	cont "#MON trainer!"
 
 	para "With it, you can"
-	line "enter the #MON"
-	cont "LEAGUE!"
+	line "challenge the"
+	cont "#MON LEAGUE!"
 
-	para "It is my gift for"
-	line "your #MON"
-	cont "LEAGUE challenge!"
+	para "Also, take this"
+	line "TM! Consider it a"
+	cont "gift for your"
+	cont "#MON LEAGUE"
+	cont "challenge!"
 	done
 
-_ReceivedTM27Text::
+_ReceivedTM26Text::
 	text $52, " received"
-	line "TM27!@@"
+	line "TM26!@@"
 
-_TM27ExplanationText::
+_TM26ExplanationText::
 	db $0
-	para "TM27 is FISSURE!"
-	line "It will take out"
-	cont "#MON with just"
-	cont "one hit!"
+	para "TM26 contains"
+	line "EARTHQUAKE!"
+
+	para "It is a powerful"
+	line "attack that"
+	cont "causes a massive"
+	cont "tremor!"
 
 	para "I made it when I"
 	line "ran the GYM here,"
 	cont "too long ago..."
 	done
 
-_TM27NoRoomText::
+_TM26NoRoomText::
 	text "You do not have"
 	line "space for this!"
 	done

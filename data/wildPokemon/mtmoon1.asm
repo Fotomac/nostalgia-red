@@ -7,7 +7,7 @@ MoonMons1:
 	db 6,ZUBAT
 	db 10,ZUBAT
 	db 10,GEODUDE
-	db 8,PARAS
+	db 8,SANDSHREW
 	db 11,ZUBAT
 	db 8,CLEFAIRY
 	db $00

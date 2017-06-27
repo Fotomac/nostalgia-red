@@ -4,10 +4,10 @@ PlateauMons3:
 	db 26,GEODUDE
 	db 22,ZUBAT
 	db 42,ONIX
-	db 40,VENOMOTH
+	db 40,SANDSLASH
 	db 45,ONIX
 	db 43,GRAVELER
 	db 41,GOLBAT
 	db 42,MACHOKE
-	db 45,MACHOKE
+	db 45,GOLEM
 	db $00

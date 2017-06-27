@@ -12,7 +12,7 @@ IslandMonsB4:
 		db 39,SLOWBRO
 		db 32,GOLBAT
 	ENDC
-	IF DEF(_BLUE)
+	IF DEF(_GREEN)
 		db 31,KRABBY
 		db 31,STARYU
 		db 33,KRABBY
@@ -24,4 +24,52 @@ IslandMonsB4:
 		db 39,GOLDUCK
 		db 32,GOLBAT
 	ENDC
-	db $00
+	IF DEF(_BLUE)
+		db 31,KRABBY
+		db 31,STARYU
+		db 33,KRABBY
+		db 33,STARYU
+		db 29,HORSEA
+		db 31,SEEL
+		db 31,HORSEA
+		db 29,SEEL
+		db 39,JYNX
+		db 32,GOLBAT
+	ENDC
+	db $05
+	IF DEF(_RED)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,HORSEA
+		db 30,HORSEA
+		db 35,DEWGONG
+		db 30,SLOWPOKE
+		db 35,SLOWPOKE
+		db 40,SLOWPOKE
+		db 40,SLOWBRO
+	ENDC
+	IF DEF(_GREEN)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,KRABBY
+		db 30,KRABBY
+		db 35,DEWGONG
+		db 30,PSYDUCK
+		db 35,PSYDUCK
+		db 40,PSYDUCK
+		db 40,GOLDUCK
+	ENDC
+	IF DEF(_BLUE)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,KRABBY
+		db 30,KRABBY
+		db 35,DEWGONG
+		db 30,HORSEA
+		db 35,HORSEA
+		db 40,HORSEA
+		db 40,SEADRA
+	ENDC

@@ -163,6 +163,23 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw MetalClawAnim
+	dw CrunchAnim
+	dw FaintAttackAnim
+	dw OutrageAnim
+	dw TwisterAnim
+	dw RolloutAnim
+	dw AncientPowerAnim
+	dw RockTombAnim
+	dw SludgeBombAnim
+	dw CrossChopAnim
+	dw PowderSnowAnim
+	dw GigaDrainAnim
+	dw ZapCannonAnim
+	dw FlameWheelAnim
+	dw RapidSpinAnim
+	dw ScaryFaceAnim
+	dw ReturnAnim
 	dw StruggleAnim
 	dw ShowPicAnim
 	dw EnemyFlashAnim
@@ -214,11 +231,14 @@ ZigZagScreenAnim:
 	db $FF
 
 PoundAnim:
+RolloutAnim:
+ReturnAnim:
 StruggleAnim:
 	db $08,$00,$01
 	db $FF
 
 KarateChopAnim:
+CrossChopAnim:
 	db $08,$01,$03
 	db $FF
 
@@ -434,6 +454,7 @@ LeerAnim:
 	db $FF
 
 BiteAnim:
+CrunchAnim:
 	db $08,$2B,$02
 	db $FF
 
@@ -458,6 +479,7 @@ SupersonicAnim:
 	db $FF
 
 SonicBoomAnim:
+TwisterAnim:
 	db $46,$2D,$15
 	db $46,$2D,$15
 	db $46,$0F,$10
@@ -477,6 +499,7 @@ AcidAnim:
 	db $FF
 
 EmberAnim:
+FlameWheelAnim:
 	db $46,$33,$11
 	db $FF
 
@@ -595,6 +618,7 @@ AbsorbAnim:
 	db $FF
 
 MegaDrainAnim:
+GigaDrainAnim:
 	db SE_LIGHT_SCREEN_PALETTE, $47
 	db SE_DARK_SCREEN_FLASH, $FF
 	db $06,$FF,$21
@@ -685,6 +709,7 @@ ThunderAnim:
 	db $FF
 
 RockThrowAnim:
+AncientPowerAnim:
 	db $04,$57,$30
 	db $FF
 
@@ -736,12 +761,14 @@ AgilityAnim:
 	db $FF
 
 QuickAttackAnim:
+RapidSpinAnim:
 	db SE_SLIDE_MON_OFF, $61
 	db $46,$FF,$04
 	db SE_SHOW_MON_PIC, $FF
 	db $FF
 
 RageAnim:
+OutrageAnim:
 	db $06,$62,$01
 	db $FF
 
@@ -973,6 +1000,7 @@ HiJumpKickAnim:
 	db $FF
 
 GlareAnim:
+ScaryFaceAnim:
 	db SE_DARK_SCREEN_PALETTE, $48
 	db SE_DARK_SCREEN_FLASH, $88
 	db SE_DARK_SCREEN_FLASH, $FF
@@ -1079,6 +1107,7 @@ RestAnim:
 	db $FF
 
 RockSlideAnim:
+RockTombAnim:
 	db $04,$9C,$1D
 	db $03,$9C,$1E
 	db $46,$9D,$04
@@ -1122,6 +1151,35 @@ SubstituteAnim:
 	db SE_SLIDE_MON_OFF, $A3
 	db $08,$FF,$47
 	db SE_SUBSTITUTE_MON, $FF
+	db $FF
+
+MetalClawAnim:
+	db SE_DARK_SCREEN_FLASH, $0E
+	db $06,$A2,$0F
+	db $FF
+
+FaintAttackAnim:
+	db SE_SLIDE_MON_DOWN, $5A
+	db $46,$FF,$04
+	db SE_SHOW_MON_PIC, $FF
+	db $FF
+
+SludgeBombAnim:
+	db SE_DARKEN_MON_PALETTE, $48
+	db $46,$7B,$13
+	db $46,$7B,$14
+	db SE_RESET_SCREEN_PALETTE, $FF
+	db $FF
+
+PowderSnowAnim:
+	db SE_WATER_DROPLETS_EVERYWHERE, $38
+	db $FF
+
+ZapCannonAnim:
+	db $43,$8B,$41
+	db $05,$FF,$55
+	db $04,$13,$23
+	db $04,$13,$23
 	db $FF
 
 BallTossAnim:

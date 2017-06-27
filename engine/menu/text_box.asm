@@ -524,8 +524,8 @@ TwoOptionMenu_RestoreScreenTiles:
 TwoOptionMenuStrings:
 	db 4,3,0
 	dw .YesNoMenu
-	db 6,3,0
-	dw .NorthWestMenu
+	db 5,3,0
+	dw .BoyGirlMenu
 	db 6,3,0
 	dw .SouthEastMenu
 	db 6,3,0
@@ -545,9 +545,9 @@ TwoOptionMenuStrings:
 .YesNoMenu
 	db   "YES"
 	next "NO@"
-.NorthWestMenu
-	db   "NORTH"
-	next "WEST@"
+.BoyGirlMenu
+	db   "BOY"
+	next "GIRL@"
 .SouthEastMenu
 	db   "SOUTH"
 	next "EAST@"

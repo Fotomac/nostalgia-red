@@ -3,10 +3,15 @@ TunnelMonsB1:
 	db 16,ZUBAT
 	db 17,ZUBAT
 	db 17,GEODUDE
-	db 15,MACHOP
+	db 16,MACHOP
 	db 16,GEODUDE
-	db 18,ZUBAT
-	db 15,ZUBAT
+	IF DEF(_BLUE)
+		db 17,DITTO
+		db 16,DITTO
+	ELSE
+		db 17,MANKEY
+		db 16,MANKEY
+	ENDC
 	db 17,MACHOP
 	db 13,ONIX
 	db 15,ONIX

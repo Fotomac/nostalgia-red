@@ -3,9 +3,11 @@ _OakAppearsText::
 	line "Don't go out!@@"
 
 _OakWalksUpText::
-	text "OAK: It's unsafe!"
-	line "Wild #MON live"
-	cont "in tall grass!"
+	text "OAK: Whew! That"
+	line "was close!"
+
+	para "Wild #MON live"
+	line "in tall grass!"
 
 	para "You need your own"
 	line "#MON for your"

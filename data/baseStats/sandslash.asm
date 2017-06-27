@@ -13,9 +13,9 @@ dw SandslashPicFront
 dw SandslashPicBack
 ; attacks known at lvl 0
 db SCRATCH
+db BIDE
+db DEFENSE_CURL
 db SAND_ATTACK
-db 0
-db 0
 db 0 ; growth rate
 ; learnset
 	tmlearn 3,6,8

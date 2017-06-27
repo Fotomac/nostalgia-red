@@ -53,9 +53,14 @@ _Museum1FText_5c242::
 	done
 
 _Museum1FText_5c251::
-	text "That is one"
-	line "magnificent"
-	cont "fossil!"
+	text "I should be"
+	line "grateful for my"
+	cont "long life!"
+
+	para "Never did I think"
+	line "I would live to"
+	cont "see the bones of"
+	cont "the dragon god!"
 	done
 
 _Museum1FText_5c28e::

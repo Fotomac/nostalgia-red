@@ -13,7 +13,7 @@ dw NidoranMPicFront
 dw NidoranMPicBack
 ; attacks known at lvl 0
 db LEER
-db TACKLE
+db PECK
 db 0
 db 0
 db 3 ; growth rate

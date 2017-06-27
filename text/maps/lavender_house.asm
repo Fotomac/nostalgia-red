@@ -2,8 +2,10 @@ _LavenderHouse2Text1::
 	text "CUBONE: Kyarugoo!@@"
 
 _LavenderHouse2Text_1d9dc::
-	text "I hate those"
+	text "God damn those"
 	line "horrible ROCKETs!"
+	cont "They deserve no"
+	cont "mercy!"
 
 	para "That poor CUBONE's"
 	line "mother..."

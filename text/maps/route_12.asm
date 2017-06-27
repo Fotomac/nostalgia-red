@@ -55,7 +55,8 @@ _Route12BattleText3::
 	done
 
 _Route12EndBattleText3::
-	text "Oww!"
+	text "Bloody,"
+	line "bloody hell!"
 	prompt
 
 _Route12AfterBattleText3::

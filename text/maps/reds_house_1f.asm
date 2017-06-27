@@ -9,6 +9,17 @@ _MomWakeUpText::
 	cont "for you."
 	done
 
+_MomWakeUpText2::
+	text "MOM: Right."
+	line "All girls dream"
+	cont "of traveling."
+	cont "It said so on TV."
+
+	para "PROF.OAK, next"
+	line "door, is looking"
+	cont "for you."
+	done
+
 _MomHealText1::
 	text "MOM: <PLAYER>!"
 	line "You should take a"
@@ -28,6 +39,17 @@ _StandByMeText::
 	line "on TV. Four boys"
 	cont "are walking on"
 	cont "railroad tracks."
+
+	para "I better go too."
+	done
+
+_WizardOfOzText::
+	text "There's a movie"
+	line "on TV. A girl"
+	cont "in pigtails is"
+	cont "walking down a"
+	cont "yellow brick"
+	cont "road."
 
 	para "I better go too."
 	done

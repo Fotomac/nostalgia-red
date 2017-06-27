@@ -8,42 +8,42 @@ Route12GateUpstairsTextPointers:
 
 Route12GateUpstairsText1:
 	TX_ASM
-	CheckEvent EVENT_GOT_TM39, 1
+	CheckEvent EVENT_GOT_TM27, 1
 	jr c, .asm_0ad3c
-	ld hl, TM39PreReceiveText
+	ld hl, TM27PreReceiveText
 	call PrintText
-	lb bc, TM_39, 1
+	lb bc, TM_27, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld hl, ReceivedTM39Text
+	ld hl, ReceivedTM27Text
 	call PrintText
-	SetEvent EVENT_GOT_TM39
+	SetEvent EVENT_GOT_TM27
 	jr .asm_4ba56
 .BagFull
-	ld hl, TM39NoRoomText
+	ld hl, TM27NoRoomText
 	call PrintText
 	jr .asm_4ba56
 .asm_0ad3c
-	ld hl, TM39ExplanationText
+	ld hl, TM27ExplanationText
 	call PrintText
 .asm_4ba56
 	jp TextScriptEnd
 
-TM39PreReceiveText:
-	TX_FAR _TM39PreReceiveText
+TM27PreReceiveText:
+	TX_FAR _TM27PreReceiveText
 	db "@"
 
-ReceivedTM39Text:
-	TX_FAR _ReceivedTM39Text
+ReceivedTM27Text:
+	TX_FAR _ReceivedTM27Text
 	TX_SFX_ITEM_1
 	db "@"
 
-TM39ExplanationText:
-	TX_FAR _TM39ExplanationText
+TM27ExplanationText:
+	TX_FAR _TM27ExplanationText
 	db "@"
 
-TM39NoRoomText:
-	TX_FAR _TM39NoRoomText
+TM27NoRoomText:
+	TX_FAR _TM27NoRoomText
 	db "@"
 
 Route12GateUpstairsText2:

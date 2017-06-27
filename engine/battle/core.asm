@@ -398,7 +398,7 @@ MainInBattleLoop:
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
 	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP ; is mon frozen or asleep?
+	and SLP ; is mon asleep?
 	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << StoringEnergy) | (1 << UsingTrappingMove) ; check player is using Bide or using a multi-turn attack like wrap
@@ -865,7 +865,7 @@ FaintEnemyPokemon:
 	call ClearScreenArea
 	ld a, [wIsInBattle]
 	dec a
-	jr z, .wild_win
+	jr z, .sfxplayed
 	xor a
 	ld [wFrequencyModifier], a
 	ld [wTempoModifier], a
@@ -878,14 +878,7 @@ FaintEnemyPokemon:
 	ld a, SFX_FAINT_THUD
 	call PlaySound
 	call WaitForSoundToFinish
-	jr .sfxplayed
-.wild_win
-	call EndLowHealthAlarm
-	ld a, MUSIC_DEFEATED_WILD_MON
-	call PlayBattleVictoryMusic
 .sfxplayed
-; bug: win sfx is played for wild battles before checking for player mon HP
-; this can lead to odd scenarios where both player and enemy faint, as the win sfx plays yet the player never won the battle
 	ld hl, wBattleMonHP
 	ld a, [hli]
 	or [hl]
@@ -898,7 +891,16 @@ FaintEnemyPokemon:
 	call AnyPartyAlive
 	ld a, d
 	and a
-	ret z
+	jr nz, .moreAliveMons
+	ret
+.moreAliveMons
+	ld a, [wIsInBattle]
+	dec a
+	jr nz, .trainer
+	call EndLowHealthAlarm
+	ld a, MUSIC_DEFEATED_WILD_MON
+	call PlayBattleVictoryMusic
+.trainer
 	ld hl, EnemyMonFaintedText
 	call PrintText
 	call PrintEmptyString
@@ -2932,7 +2934,7 @@ PrintMenuItem:
 	coord hl, 1, 10
 	ld de, DisabledText
 	call PlaceString
-	jr .moveDisabled
+	jp .moveDisabled
 .notDisabled
 	ld hl, wCurrentMenuItem
 	dec [hl]
@@ -2960,13 +2962,27 @@ PrintMenuItem:
 	ld a, [hl]
 	and $3f
 	ld [wcd6d], a
-; print TYPE/<type> and <curPP>/<maxPP>
+	ld a, [wPlayerSelectedMove]
+	call PhysicalSpecialSplit
+	cp a,$02
+	jp z, .OtherTextShow
+	cp a,$01
+	jp nz, .PhysicalTextShow
 	coord hl, 1, 9
-	ld de, TypeText
+	ld de,SpecialText
 	call PlaceString
+	jp .RestOfTheRoutineThing
+.PhysicalTextShow
+	coord hl, 1,9
+	ld de,PhysicalText
+	call PlaceString
+	jr .RestOfTheRoutineThing
+.OtherTextShow
+	coord hl, 1,9
+	ld de,OtherText
+	call PlaceString
+.RestOfTheRoutineThing
 	coord hl, 7, 11
-	ld [hl], "/"
-	coord hl, 5, 9
 	ld [hl], "/"
 	coord hl, 5, 11
 	ld de, wcd6d
@@ -2987,8 +3003,14 @@ PrintMenuItem:
 DisabledText:
 	db "disabled!@"
 
-TypeText:
-	db "TYPE@"
+OtherText:
+	db "STATUS/@"
+
+PhysicalText:
+	db "PHYSICAL/@"
+
+SpecialText:
+	db "SPECIAL/@"
 
 SelectEnemyMove:
 	ld a, [wLinkState]
@@ -3021,7 +3043,7 @@ SelectEnemyMove:
 	and (1 << ChargingUp) | (1 << ThrashingAbout) ; using a charging move or thrash/petal dance
 	ret nz
 	ld a, [wEnemyMonStatus]
-	and SLP | 1 << FRZ ; sleeping or frozen
+	and SLP ; sleeping
 	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << UsingTrappingMove) | (1 << StoringEnergy) ; using a trapping move like wrap or bide
@@ -3415,12 +3437,29 @@ CheckPlayerStatusConditions:
 .FrozenCheck
 	bit FRZ,[hl] ; frozen?
 	jr z,.HeldInPlaceCheck
+	ld a, [wPlayerSelectedMove]
+	cp FLAME_WHEEL
+	jr z, .defrostMon
+	call BattleRandom
+	cp $19
+	jr c, .defrostMon
 	ld hl,IsFrozenText
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove],a
 	ld hl,ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
+
+.defrostMon ; New routine to thaw Pokemon, called from FrozenCheck
+	ld hl, wBattleMonStatus
+	res FRZ, [hl]
+	xor a
+	inc a
+	ld [H_WHOSETURN],a
+	ld hl, DefrostedText
+	call PrintText
+	xor a
+	ld [H_WHOSETURN],a
 
 .HeldInPlaceCheck
 	ld a,[wEnemyBattleStatus1]
@@ -3656,6 +3695,10 @@ WokeUpText:
 
 IsFrozenText:
 	TX_FAR _IsFrozenText
+	db "@"
+
+DefrostedText:
+	TX_FAR _DefrostedText
 	db "@"
 
 FullyParalyzedText:
@@ -4241,9 +4284,10 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wPlayerMoveType]
-	cp FIRE ; types >= FIRE are all special
-	jr nc, .specialAttack
+	ld a,[wPlayerMoveNum]
+	call PhysicalSpecialSplit
+	dec a
+	jr z, .specialAttack
 .physicalAttack
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
@@ -4354,9 +4398,10 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wEnemyMoveType]
-	cp FIRE ; types >= FIRE are all special
-	jr nc, .specialAttack
+	ld a,[wEnemyMoveNum]
+	call PhysicalSpecialSplit
+	dec a
+	jr z, .specialAttack
 .physicalAttack
 	ld hl, wBattleMonDefense
 	ld a, [hli]
@@ -4674,6 +4719,7 @@ UnusedHighCriticalMoves:
 	db RAZOR_LEAF
 	db CRABHAMMER
 	db SLASH
+	db CROSS_CHOP
 	db $FF
 
 ; determines if attack is a critical hit
@@ -4692,7 +4738,6 @@ CriticalHitTest:
 	call GetMonHeader
 	ld a, [wMonHBaseSpeed]
 	ld b, a
-	srl b                        ; (effective (base speed/2))
 	ld a, [H_WHOSETURN]
 	and a
 	ld hl, wPlayerMovePower
@@ -4708,14 +4753,11 @@ CriticalHitTest:
 	ld c, [hl]                   ; read move id
 	ld a, [de]
 	bit GettingPumped, a         ; test for focus energy
-	jr nz, .focusEnergyUsed      ; bug: using focus energy causes a shift to the right instead of left,
-	                             ; resulting in 1/4 the usual crit chance
-	sla b                        ; (effective (base speed/2)*2)
-	jr nc, .noFocusEnergyUsed
-	ld b, $ff                    ; cap at 255/256
-	jr .noFocusEnergyUsed
-.focusEnergyUsed
-	srl b
+	jr z, .noFocusEnergyUsed
+	sla b
+	jr c, .guaranteedCritical
+	sla b
+	jr c, .guaranteedCritical
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -4741,6 +4783,7 @@ CriticalHitTest:
 	rlc a
 	cp b                         ; check a against calculated crit rate
 	ret nc                       ; no critical hit if no borrow
+.guaranteedCritical
 	ld a, $1
 	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
 	ret
@@ -4751,6 +4794,7 @@ HighCriticalMoves:
 	db RAZOR_LEAF
 	db CRABHAMMER
 	db SLASH
+	db CROSS_CHOP
 	db $FF
 
 
@@ -5911,12 +5955,28 @@ CheckEnemyStatusConditions:
 .checkIfFrozen
 	bit FRZ, [hl]
 	jr z, .checkIfTrapped
+	ld a, [wEnemySelectedMove]
+	cp FLAME_WHEEL
+	jr z, .defrostMon
+	call BattleRandom
+	cp $19
+	jr c, .defrostMon
 	ld hl, IsFrozenText
 	call PrintText
 	xor a
 	ld [wEnemyUsedMove], a
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
+.defrostMon ; New routine to thaw mon
+	ld hl, wEnemyMonStatus
+	res FRZ, [hl]
+	xor a
+	ld [H_WHOSETURN],a
+	ld hl, DefrostedText
+	call PrintText
+	xor a
+	inc a
+	ld [H_WHOSETURN],a
 .checkIfTrapped
 	ld a, [wPlayerBattleStatus1]
 	bit UsingTrappingMove, a ; is the player using a multi-turn attack like warp
@@ -6410,9 +6470,15 @@ SwapPlayerAndEnemyLevels:
 LoadPlayerBackPic:
 	ld a, [wBattleType]
 	dec a ; is it the old man tutorial?
-	ld de, RedPicBack
-	jr nz, .next
 	ld de, OldManPic
+	jr z, .next
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr z, .RedBack
+	ld de, LeafPicBack
+	jr .next
+.RedBack
+	ld de, RedPicBack
 .next
 	ld a, BANK(RedPicBack)
 	call UncompressSpriteFromDE
@@ -7146,7 +7212,7 @@ MoveEffectPointerTable:
 	 dw PoisonEffect              ; POISON_SIDE_EFFECT1
 	 dw DrainHPEffect             ; DRAIN_HP_EFFECT
 	 dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT1
-	 dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT
+	 dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT1
 	 dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT1
 	 dw ExplodeEffect             ; EXPLODE_EFFECT
 	 dw DrainHPEffect             ; DREAM_EATER_EFFECT
@@ -7176,7 +7242,7 @@ MoveEffectPointerTable:
 	 dw SleepEffect               ; SLEEP_EFFECT
 	 dw PoisonEffect              ; POISON_SIDE_EFFECT2
 	 dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT2
-	 dw FreezeBurnParalyzeEffect  ; unused effect
+	 dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT2
 	 dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT2
 	 dw FlinchSideEffect           ; FLINCH_SIDE_EFFECT2
 	 dw OneHitKOEffect            ; OHKO_EFFECT
@@ -7431,7 +7497,7 @@ FreezeBurnParalyzeEffect:
 	ld a, b ; what type of effect is this?
 	cp a, BURN_SIDE_EFFECT1
 	jr z, .burn
-	cp a, FREEZE_SIDE_EFFECT
+	cp a, FREEZE_SIDE_EFFECT1
 	jr z, .freeze
 ; .paralyze
 	ld a, 1 << PAR
@@ -7483,7 +7549,7 @@ opponentAttacker:
 	ld a, b
 	cp a, BURN_SIDE_EFFECT1
 	jr z, .burn
-	cp a, FREEZE_SIDE_EFFECT
+	cp a, FREEZE_SIDE_EFFECT1
 	jr z, .freeze
 	ld a, 1 << PAR
 	ld [wBattleMonStatus], a
@@ -8717,3 +8783,185 @@ PlayBattleAnimationGotID:
 	pop de
 	pop hl
 	ret
+
+PlayDefeatedWildMonMusic:
+	call WaitForSoundToFinish
+	call EndLowHealthAlarm
+	ld a, MUSIC_DEFEATED_WILD_MON
+	jp PlayBattleVictoryMusic
+
+PhysicalSpecialSplit: ;Determines if a move is Physical or Special
+	ld c,a
+	ld b, $00
+	ld hl,.MovesTable
+	add hl,bc
+	ld a,[hl]
+	ret
+	
+.MovesTable
+	db OTHER_M ;NOTHING      EQU $00
+	db PHYSICAL;POUND        EQU $01
+	db PHYSICAL;KARATE_CHOP  EQU $02
+	db PHYSICAL;DOUBLESLAP   EQU $03
+	db PHYSICAL;COMET_PUNCH  EQU $04
+	db PHYSICAL;MEGA_PUNCH   EQU $05
+	db PHYSICAL;PAY_DAY      EQU $06
+	db PHYSICAL;FIRE_PUNCH   EQU $07
+	db PHYSICAL;ICE_PUNCH    EQU $08
+	db PHYSICAL;THUNDERPUNCH EQU $09
+	db PHYSICAL;SCRATCH      EQU $0A
+	db PHYSICAL;VICEGRIP     EQU $0B
+	db PHYSICAL;GUILLOTINE   EQU $0C
+	db SPECIAL ;RAZOR_WIND   EQU $0D
+	db OTHER_M ;SWORDS_DANCE EQU $0E
+	db PHYSICAL;CUT          EQU $0F
+	db SPECIAL ;GUST         EQU $10
+	db PHYSICAL;WING_ATTACK  EQU $11
+	db OTHER_M ;WHIRLWIND    EQU $12
+	db PHYSICAL;FLY          EQU $13
+	db PHYSICAL;BIND         EQU $14
+	db PHYSICAL;SLAM         EQU $15
+	db PHYSICAL;VINE_WHIP    EQU $16
+	db PHYSICAL;STOMP        EQU $17
+	db PHYSICAL;DOUBLE_KICK  EQU $18
+	db PHYSICAL;MEGA_KICK    EQU $19
+	db PHYSICAL;JUMP_KICK    EQU $1A
+	db PHYSICAL;ROLLING_KICK EQU $1B
+	db OTHER_M ;SAND_ATTACK  EQU $1C
+	db PHYSICAL;HEADBUTT     EQU $1D
+	db PHYSICAL;HORN_ATTACK  EQU $1E
+	db PHYSICAL;FURY_ATTACK  EQU $1F
+	db PHYSICAL;HORN_DRILL   EQU $20
+	db PHYSICAL;TACKLE       EQU $21
+	db PHYSICAL;BODY_SLAM    EQU $22
+	db PHYSICAL;WRAP         EQU $23
+	db PHYSICAL;TAKE_DOWN    EQU $24
+	db PHYSICAL;THRASH       EQU $25
+	db PHYSICAL;DOUBLE_EDGE  EQU $26
+	db OTHER_M ;TAIL_WHIP    EQU $27
+	db PHYSICAL;POISON_STING EQU $28
+	db PHYSICAL;TWINEEDLE    EQU $29
+	db PHYSICAL;PIN_MISSILE  EQU $2A
+	db OTHER_M ;LEER         EQU $2B
+	db PHYSICAL;BITE         EQU $2C
+	db OTHER_M ;GROWL        EQU $2D
+	db OTHER_M ;ROAR         EQU $2E
+	db OTHER_M ;SING         EQU $2F
+	db OTHER_M ;SUPERSONIC   EQU $30
+	db SPECIAL ;SONICBOOM    EQU $31
+	db OTHER_M ;DISABLE      EQU $32
+	db SPECIAL ;ACID         EQU $33
+	db SPECIAL ;EMBER        EQU $34
+	db SPECIAL ;FLAMETHROWER EQU $35
+	db OTHER_M ;MIST         EQU $36
+	db SPECIAL ;WATER_GUN    EQU $37
+	db SPECIAL ;HYDRO_PUMP   EQU $38
+	db SPECIAL ;SURF         EQU $39
+	db SPECIAL ;ICE_BEAM     EQU $3A
+	db SPECIAL ;BLIZZARD     EQU $3B
+	db SPECIAL ;PSYBEAM      EQU $3C
+	db SPECIAL ;BUBBLEBEAM   EQU $3D
+	db SPECIAL ;AURORA_BEAM  EQU $3E
+	db SPECIAL ;HYPER_BEAM   EQU $3F
+	db PHYSICAL;PECK         EQU $40
+	db PHYSICAL;DRILL_PECK   EQU $41
+	db PHYSICAL;SUBMISSION   EQU $42
+	db PHYSICAL;LOW_KICK     EQU $43
+	db PHYSICAL;COUNTER      EQU $44
+	db PHYSICAL;SEISMIC_TOSS EQU $45
+	db PHYSICAL;STRENGTH     EQU $46
+	db SPECIAL ;ABSORB       EQU $47
+	db SPECIAL ;MEGA_DRAIN   EQU $48
+	db OTHER_M ;LEECH_SEED   EQU $49
+	db OTHER_M ;GROWTH       EQU $4A
+	db SPECIAL ;RAZOR_LEAF   EQU $4B
+	db SPECIAL ;SOLARBEAM    EQU $4C
+	db OTHER_M ;POISONPOWDER EQU $4D
+	db OTHER_M ;STUN_SPORE   EQU $4E
+	db OTHER_M ;SLEEP_POWDER EQU $4F
+	db SPECIAL ;PETAL_DANCE  EQU $50
+	db OTHER_M ;STRING_SHOT  EQU $51
+	db SPECIAL ;DRAGON_RAGE  EQU $52
+	db SPECIAL ;FIRE_SPIN    EQU $53
+	db SPECIAL ;THUNDERSHOCK EQU $54
+	db SPECIAL ;THUNDERBOLT  EQU $55
+	db OTHER_M ;THUNDER_WAVE EQU $56
+	db SPECIAL ;THUNDER      EQU $57
+	db PHYSICAL;ROCK_THROW   EQU $58
+	db PHYSICAL;EARTHQUAKE   EQU $59
+	db PHYSICAL;FISSURE      EQU $5A
+	db PHYSICAL;DIG          EQU $5B
+	db OTHER_M ;TOXIC        EQU $5C
+	db SPECIAL ;CONFUSION    EQU $5D
+	db SPECIAL ;PSYCHIC_M    EQU $5E
+	db OTHER_M ;HYPNOSIS     EQU $5F
+	db OTHER_M ;MEDITATE     EQU $60
+	db OTHER_M ;AGILITY      EQU $61
+	db PHYSICAL;QUICK_ATTACK EQU $62
+	db PHYSICAL;RAGE         EQU $63
+	db OTHER_M ;TELEPORT     EQU $64
+	db SPECIAL ;NIGHT_SHADE  EQU $65
+	db OTHER_M ;MIMIC        EQU $66
+	db OTHER_M ;SCREECH      EQU $67
+	db OTHER_M ;DOUBLE_TEAM  EQU $68
+	db OTHER_M ;RECOVER      EQU $69
+	db OTHER_M ;HARDEN       EQU $6A
+	db OTHER_M ;MINIMIZE     EQU $6B
+	db OTHER_M ;SMOKESCREEN  EQU $6C
+	db OTHER_M ;CONFUSE_RAY  EQU $6D
+	db OTHER_M ;WITHDRAW     EQU $6E
+	db OTHER_M ;DEFENSE_CURL EQU $6F
+	db OTHER_M ;BARRIER      EQU $70
+	db OTHER_M ;LIGHT_SCREEN EQU $71
+	db OTHER_M ;HAZE         EQU $72
+	db OTHER_M ;REFLECT      EQU $73
+	db OTHER_M ;FOCUS_ENERGY EQU $74
+	db PHYSICAL;BIDE         EQU $75
+	db OTHER_M ;METRONOME    EQU $76
+	db OTHER_M ;MIRROR_MOVE  EQU $77
+	db PHYSICAL;SELFDESTRUCT EQU $78
+	db PHYSICAL;EGG_BOMB     EQU $79
+	db PHYSICAL;LICK         EQU $7A
+	db SPECIAL ;SMOG         EQU $7B
+	db SPECIAL ;SLUDGE       EQU $7C
+	db PHYSICAL;BONE_CLUB    EQU $7D
+	db SPECIAL ;FIRE_BLAST   EQU $7E
+	db PHYSICAL;WATERFALL    EQU $7F
+	db PHYSICAL;CLAMP        EQU $80
+	db SPECIAL ;SWIFT        EQU $81
+	db PHYSICAL;SKULL_BASH   EQU $82
+	db PHYSICAL;SPIKE_CANNON EQU $83
+	db PHYSICAL;CONSTRICT    EQU $84
+	db OTHER_M ;AMNESIA      EQU $85
+	db OTHER_M ;KINESIS      EQU $86
+	db OTHER_M ;SOFTBOILED   EQU $87
+	db PHYSICAL;HI_JUMP_KICK EQU $88
+	db OTHER_M ;GLARE        EQU $89
+	db SPECIAL ;DREAM_EATER  EQU $8A
+	db OTHER_M ;POISON_GAS   EQU $8B
+	db PHYSICAL;BARRAGE      EQU $8C
+	db PHYSICAL;LEECH_LIFE   EQU $8D
+	db OTHER_M ;LOVELY_KISS  EQU $8E
+	db PHYSICAL;SKY_ATTACK   EQU $8F
+	db OTHER_M ;TRANSFORM    EQU $90
+	db SPECIAL ;BUBBLE       EQU $91
+	db PHYSICAL;DIZZY_PUNCH  EQU $92
+	db OTHER_M ;SPORE        EQU $93
+	db OTHER_M ;FLASH        EQU $94
+	db SPECIAL ;PSYWAVE      EQU $95
+	db OTHER_M ;SPLASH       EQU $96
+	db OTHER_M ;ACID_ARMOR   EQU $97
+	db PHYSICAL;CRABHAMMER   EQU $98
+	db PHYSICAL;EXPLOSION    EQU $99
+	db PHYSICAL;FURY_SWIPES  EQU $9A
+	db PHYSICAL;BONEMERANG   EQU $9B
+	db OTHER_M ;REST         EQU $9C
+	db PHYSICAL;ROCK_SLIDE   EQU $9D
+	db PHYSICAL;HYPER_FANG   EQU $9E
+	db OTHER_M ;SHARPEN      EQU $9F
+	db OTHER_M ;CONVERSION   EQU $A0
+	db SPECIAL ;TRI_ATTACK   EQU $A1
+	db PHYSICAL;SUPER_FANG   EQU $A2
+	db PHYSICAL;SLASH        EQU $A3
+	db OTHER_M ;SUBSTITUTE   EQU $A4
+	db PHYSICAL;STRUGGLE

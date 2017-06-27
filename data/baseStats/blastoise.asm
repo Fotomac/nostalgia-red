@@ -15,7 +15,7 @@ dw BlastoisePicBack
 db TACKLE
 db TAIL_WHIP
 db BUBBLE
-db WATER_GUN
+db WITHDRAW
 db 3 ; growth rate
 ; learnset
 	tmlearn 1,5,6,8

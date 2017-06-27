@@ -5,23 +5,71 @@ IslandMonsB3:
 		db 31,SEEL
 		db 33,SLOWPOKE
 		db 33,SEEL
-		db 29,HORSEA
+		db 29,SLOWBRO
 		db 31,SHELLDER
-		db 31,HORSEA
+		db 31,SLOWBRO
 		db 29,SHELLDER
-		db 39,SEADRA
+		db 39,DEWGONG
 		db 37,DEWGONG
 	ENDC
-	IF DEF(_BLUE)
+	IF DEF(_GREEN)
 		db 31,PSYDUCK
 		db 31,SEEL
 		db 33,PSYDUCK
 		db 33,SEEL
-		db 29,KRABBY
+		db 29,GOLDUCK
 		db 31,STARYU
-		db 31,KRABBY
+		db 31,GOLDUCK
 		db 29,STARYU
-		db 39,KINGLER
+		db 39,DEWGONG
 		db 37,DEWGONG
 	ENDC
-	db $00
+	IF DEF(_BLUE)
+		db 31,HORSEA
+		db 31,SEEL
+		db 33,HORSEA
+		db 33,SEEL
+		db 29,SEADRA
+		db 31,STARYU
+		db 31,SEADRA
+		db 29,STARYU
+		db 39,DEWGONG
+		db 37,DEWGONG
+	ENDC
+	db $05
+	IF DEF(_RED)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,HORSEA
+		db 30,HORSEA
+		db 35,DEWGONG
+		db 30,SLOWPOKE
+		db 35,SLOWPOKE
+		db 40,SLOWPOKE
+		db 40,SLOWBRO
+	ENDC
+	IF DEF(_GREEN)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,KRABBY
+		db 30,KRABBY
+		db 35,DEWGONG
+		db 30,PSYDUCK
+		db 35,PSYDUCK
+		db 40,PSYDUCK
+		db 40,GOLDUCK
+	ENDC
+	IF DEF(_BLUE)
+		db 25,SEEL
+		db 30,SEEL
+		db 35,SEEL
+		db 25,KRABBY
+		db 30,KRABBY
+		db 35,DEWGONG
+		db 30,HORSEA
+		db 35,HORSEA
+		db 40,HORSEA
+		db 40,SEADRA
+	ENDC

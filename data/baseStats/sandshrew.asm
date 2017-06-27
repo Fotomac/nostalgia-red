@@ -13,7 +13,7 @@ dw SandshrewPicFront
 dw SandshrewPicBack
 ; attacks known at lvl 0
 db SCRATCH
-db 0
+db BIDE
 db 0
 db 0
 db 0 ; growth rate

@@ -1,6 +1,6 @@
-_TM39PreReceiveText::
+_TM27PreReceiveText::
 	text "My #MON's"
-	line "ashes are stored"
+	line "ashes are buried"
 	cont "in #MON TOWER."
 
 	para "You can have this"
@@ -8,21 +8,21 @@ _TM39PreReceiveText::
 	cont "it any more..."
 	prompt
 
-_ReceivedTM39Text::
+_ReceivedTM27Text::
 	text $52, " received"
-	line "TM39!@@"
+	line "TM27!@@"
 
-_TM39ExplanationText::
-	text "TM39 is a move"
-	line "called SWIFT."
+_TM27ExplanationText::
+	text "TM27 is a move"
+	line "called RETURN."
 
-	para "It's very accurate,"
-	line "so use it during"
-	cont "battles you can't"
-	cont "afford to lose."
+	para "It's very powerful,"
+	line "if you love your"
+	cont "#MON as much"
+	cont "as I loved mine."
 	done
 
-_TM39NoRoomText::
+_TM27NoRoomText::
 	text "You don't have"
 	line "room for this."
 	done

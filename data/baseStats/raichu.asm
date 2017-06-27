@@ -13,9 +13,9 @@ dw RaichuPicFront
 dw RaichuPicBack
 ; attacks known at lvl 0
 db THUNDERSHOCK
-db GROWL
-db THUNDER_WAVE
-db 0
+db TAIL_WHIP
+db QUICK_ATTACK
+db THUNDERBOLT
 db 0 ; growth rate
 ; learnset
 	tmlearn 1,5,6,8
@@ -24,5 +24,5 @@ db 0 ; growth rate
 	tmlearn 25,31,32
 	tmlearn 33,34,39,40
 	tmlearn 44,45
-	tmlearn 50,55
+	tmlearn 50,52,53,55
 db 0 ; padding

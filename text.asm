@@ -569,7 +569,7 @@ _CinnabarGymQuizIntroText::
 
 _CinnabarQuizQuestionsText1::
 	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	line "into METAPOD?"
 	done
 
 _CinnabarQuizQuestionsText2::
@@ -584,10 +584,10 @@ _CinnabarQuizQuestionsText3::
 	done
 
 _CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
+	text "Are electric moves"
 	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
+	cont "ground-type"
+	cont "#MON?"
 	done
 
 _CinnabarQuizQuestionsText5::
@@ -599,7 +599,7 @@ _CinnabarQuizQuestionsText5::
 
 _CinnabarQuizQuestionsText6::
 	text "TM28 contains"
-	line "TOMBSTONER?"
+	line "TOMBSTONY?"
 	done
 
 _CinnabarGymQuizCorrectText::
@@ -1077,10 +1077,11 @@ _HurtByLeechSeedText::
 	prompt
 
 _EnemyMonFaintedText::
-	text "Enemy @"
+	text "The enemy"
+	line "@"
 	TX_RAM wEnemyMonNick
 	text ""
-	line "fainted!"
+	cont "fainted!"
 	prompt
 
 _MoneyForWinningText::
@@ -1178,8 +1179,8 @@ _AlreadyOutText::
 	prompt
 
 _MoveNoPPText::
-	text "No PP left for"
-	line "this move!"
+	text "There's no PP left"
+	line "for this move!"
 	prompt
 
 _MoveDisabledText::
@@ -1226,14 +1227,21 @@ _IsFrozenText::
 	line "is frozen solid!"
 	prompt
 
+_DefrostedText::
+	text "<USER>"
+	line "was defrosted!"
+	prompt
+
 _FullyParalyzedText::
 	text "<USER>'s"
-	line "fully paralyzed!"
+	line "paralyzed! It"
+	cont "can't move!"
 	prompt
 
 _FlinchedText::
 	text "<USER>"
-	line "flinched!"
+	line "flinched and"
+	cont "couldn't move!"
 	prompt
 
 _MustRechargeText::
@@ -1355,35 +1363,35 @@ _DoesntAffectMonText::
 	prompt
 
 _CriticalHitText::
-	text "Critical hit!"
+	text "A critical hit!"
 	prompt
 
 _OHKOText::
-	text "One-hit KO!"
+	text "It's a one-hit KO!"
 	prompt
 
 _LoafingAroundText::
 	TX_RAM wBattleMonNick
-	text " is"
+	text "'s"
 	line "loafing around."
 	prompt
 
 _BeganToNapText::
 	TX_RAM wBattleMonNick
-	text " began"
-	line "to nap!"
+	text ""
+	line "began to nap!"
 	prompt
 
 _WontObeyText::
 	TX_RAM wBattleMonNick
-	text " won't"
-	line "obey!"
+	text ""
+	line "won't obey!"
 	prompt
 
 _TurnedAwayText::
 	TX_RAM wBattleMonNick
-	text " turned"
-	line "away!"
+	text ""
+	line "turned away!"
 	prompt
 
 _IgnoredOrdersText::
@@ -1445,7 +1453,7 @@ _GrewLevelText::
 	text "!@@"
 
 _WildMonAppearedText::
-	text "Wild @"
+	text "A wild @"
 	TX_RAM wEnemyMonNick
 	text ""
 	line "appeared!"
@@ -1575,7 +1583,7 @@ _PartyMenuBattleText::
 	done
 
 _PartyMenuUseTMText::
-	text "Use TM on which"
+	text "Teach to which"
 	line "#MON?"
 	done
 
@@ -1612,8 +1620,8 @@ _BurnHealText::
 
 _IceHealText::
 	TX_RAM wcd6d
-	text " was"
-	line "defrosted!"
+	text ""
+	line "was defrosted!"
 	done
 
 _AwakeningText::
@@ -2035,13 +2043,13 @@ _ChooseABoxText::
 	line "<pkmn> BOX.@@"
 
 _EvolvedText::
+	text "Congratulations!"
+	line "@"
 	TX_RAM wcf4b
-	text " evolved"
-	done
+	text " evolved@@"
 
 _IntoText::
-	text ""
-	line "into @"
+	text $4c, "into @"
 	TX_RAM wcd6d
 	text "!"
 	done
@@ -2195,11 +2203,12 @@ _NothingHappenedText::
 	prompt
 
 _NoEffectText::
-	text "No effect!"
+	text "But nothing"
+	line "happened!"
 	prompt
 
 _ButItFailedText::
-	text "But, it failed! "
+	text "But, it failed!"
 	prompt
 
 _DidntAffectText::
@@ -2246,6 +2255,11 @@ _GettingPumpedText::
 _WasSeededText::
 	text "<TARGET>"
 	line "was seeded!"
+	prompt
+
+_AlreadySeededText::
+	text "<TARGET>'s"
+	line "already seeded!"
 	prompt
 
 _EvadedAttackText::
@@ -2707,7 +2721,7 @@ _NotHealthyEnoughText::
 	prompt
 
 _NewBadgeRequiredText::
-	text "No! A new BADGE"
+	text "Sorry! A new BADGE"
 	line "is required."
 	prompt
 
@@ -2771,31 +2785,30 @@ _ItemUseBallText00::
 	prompt
 
 _ItemUseBallText01::
-	text "You missed the"
-	line "#MON!"
-	prompt
-
-_ItemUseBallText02::
-	text "Darn! The #MON"
+	text "Oh no! The #MON"
 	line "broke free!"
 	prompt
 
-_ItemUseBallText03::
+_ItemUseBallText02::
 	text "Aww! It appeared"
-	line "to be caught! "
+	line "to be caught!"
+	prompt
+
+_ItemUseBallText03::
+	text "Aargh! Almost"
+	line "had it!"
 	prompt
 
 _ItemUseBallText04::
-	text "Shoot! It was so"
+	text "Gah! It was so"
 	line "close too!"
 	prompt
 
 _ItemUseBallText05::
-	text "All right!"
-	line "@"
+	text "Gotcha! @"
 	TX_RAM wEnemyMonNick
-	text " was"
-	cont "caught!@@"
+	text ""
+	line "was caught!@@"
 
 _ItemUseBallText07::
 	TX_RAM wBoxMonNicks
@@ -2812,17 +2825,17 @@ _ItemUseBallText08::
 	prompt
 
 _ItemUseBallText06::
-	text "New #DEX data"
-	line "will be added for"
-	cont "@"
+	text "@"
 	TX_RAM wEnemyMonNick
-	text "!@@"
+	text "'s data"
+	line "was added to the"
+	cont "#DEX!"
 
 _SurfingGotOnText::
-	text "<PLAYER> got on"
-	line "@"
+	text "@"
 	TX_RAM wcd6d
-	text "!"
+	text ""
+	line "used SURF!"
 	prompt
 
 _SurfingNoPlaceToGetOffText::
@@ -3187,8 +3200,8 @@ _NothingToCutText::
 
 _UsedCutText::
 	TX_RAM wcd6d
-	text " hacked"
-	line "away with CUT!"
+	text " CUT"
+	line "down a bush!"
 	prompt
 
 

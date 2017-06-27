@@ -2,6 +2,22 @@ _RocketHideout4Text_4557a::
 	text "So! I must say, I"
 	line "am impressed you"
 	cont "got here!"
+
+	para "TEAM ROCKET"
+	line "captures #MON"
+	cont "from around the"
+	cont "world!"
+
+	para "They're important"
+	line "tools for keeping"
+	cont "our criminal"
+	cont "enterprise going!"
+
+	para "I am their leader,"
+	line "GIOVANNI! For"
+	cont "your insolence,"
+	cont "you will feel a"
+	cont "world of pain!"
 	done
 
 _RocketHideout4Text_4557f::

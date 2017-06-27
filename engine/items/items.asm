@@ -518,6 +518,7 @@ ItemUseBall:
 	call PrintText
 
 ; Add the caught Pokémon to the Pokédex.
+	callba PlayDefeatedWildMonMusic
 	predef IndexToPokedex
 	ld a,[wd11e]
 	dec a
@@ -2345,7 +2346,7 @@ ThrowBallAtTrainerMon:
 	call PrintText
 	ld hl,ThrowBallAtTrainerMonText2
 	call PrintText
-	jr RemoveUsedItem
+	ret
 
 NoCyclingAllowedHere:
 	ld hl,NoCyclingAllowedHereText

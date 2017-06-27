@@ -82,8 +82,9 @@ _Route11BattleText6::
 	done
 
 _Route11EndBattleText6::
-	text "My"
-	line "first loss!"
+	text "Aw,"
+	line "hell! My first"
+	cont "loss!"
 	prompt
 
 _Route11AfterBattleText6::

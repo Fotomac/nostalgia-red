@@ -1,0 +1,26 @@
+GymMons:
+	db $00
+	db $05
+	IF DEF(_RED)
+		db 20,SHELLDER
+		db 25,SHELLDER
+		db 30,SHELLDER
+		db 20,GOLDEEN
+		db 25,GOLDEEN
+		db 30,GOLDEEN
+		db 20,HORSEA
+		db 25,HORSEA
+		db 30,HORSEA
+		db 40,CLOYSTER
+	ELSE
+		db 20,STARYU
+		db 25,STARYU
+		db 30,STARYU
+		db 20,GOLDEEN
+		db 25,GOLDEEN
+		db 30,GOLDEEN
+		db 20,KRABBY
+		db 25,KRABBY
+		db 30,KRABBY
+		db 40,STARMIE
+	ENDC

@@ -47,13 +47,13 @@ PewterGymScript_5c3df:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_BROCK
-	lb bc, TM_34, 1
+	lb bc, TM_39, 1
 	call GiveItem
 	jr nc, .BagFull
 	ld a, $5
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM34
+	SetEvent EVENT_GOT_TM39
 	jr .asm_5c408
 .BagFull
 	ld a, $6
@@ -102,7 +102,7 @@ PewterGymText1:
 	TX_ASM
 	CheckEvent EVENT_BEAT_BROCK
 	jr z, .asm_5c46a
-	CheckEventReuseA EVENT_GOT_TM34
+	CheckEventReuseA EVENT_GOT_TM39
 	jr nz, .asm_5c462
 	call z, PewterGymScript_5c3df
 	call DisableWaitingAfterTextDisplay
@@ -143,17 +143,17 @@ PewterGymText_5c4a3:
 	db "@"
 
 PewterGymText4:
-	TX_FAR _TM34PreReceiveText
+	TX_FAR _TM39PreReceiveText
 	db "@"
 
 PewterGymText5:
-	TX_FAR _ReceivedTM34Text
+	TX_FAR _ReceivedTM39Text
 	TX_SFX_ITEM_1
-	TX_FAR _TM34ExplanationText
+	TX_FAR _TM39ExplanationText
 	db "@"
 
 PewterGymText6:
-	TX_FAR _TM34NoRoomText
+	TX_FAR _TM39NoRoomText
 	db "@"
 
 PewterGymText_5c4bc:

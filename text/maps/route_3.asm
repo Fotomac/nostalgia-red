@@ -44,8 +44,9 @@ _Route3AfterBattleText2::
 	done
 
 _Route3BattleText3::
-	text "You looked at me,"
-	line "didn't you?"
+	text "Excuse me! You"
+	line "looked at me,"
+	cont "didn't you?"
 	done
 
 _Route3EndBattleText3::
@@ -96,6 +97,8 @@ _Route3AfterBattleText5::
 _Route3BattleText6::
 	text "Hey! You're not"
 	line "wearing shorts!"
+	cont "What's wrong"
+	cont "with you?"
 	done
 
 _Route3EndBattleText6::

@@ -14,6 +14,10 @@ _Route22GateText_1e715::
 	done
 
 _Route22GateText_1e71a::
-	text "Oh! That is the"
+	text "Only truly skilled"
+	line "trainers are"
+	cont "allowed through."
+
+	para "Oh! That is the"
 	line "BOULDERBADGE!"
 	cont "Go right ahead!@@"

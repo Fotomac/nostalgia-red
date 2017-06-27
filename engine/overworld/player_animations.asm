@@ -386,12 +386,29 @@ FishingAnim:
 	call DelayFrames
 	ld hl, wd736
 	set 6, [hl] ; reserve the last 4 OAM entries
+	ld a, [wPlayerGender] ; added gender check
+	bit 2, a      ; added gender check
+	jr z, .BoySpriteLoad
+	ld de, LeafSprite
+	ld hl, vNPCSprites
+	lb bc, BANK(LeafSprite), $c
+	jr .KeepLoadingSpriteStuff
+.BoySpriteLoad
 	ld de, RedSprite
 	ld hl, vNPCSprites
 	lb bc, BANK(RedSprite), $c
+.KeepLoadingSpriteStuff
 	call CopyVideoData
+	ld a, [wPlayerGender] ; added gender check
+	bit 2, a      ; added gender check
+	jr z, .BoyTiles ; skip loading Leaf's stuff if you're Red
+	ld a, $4
+	ld hl, LeafFishingTiles
+	jr .ContinueRoutine ; go back to main routine after loading Leaf's stuff
+.BoyTiles ; alternately, load Red's stuff
 	ld a, $4
 	ld hl, RedFishingTiles
+.ContinueRoutine
 	call LoadAnimSpriteGfx
 	ld a, [wSpriteStateData1 + 2]
 	ld c, a
@@ -496,6 +513,23 @@ RedFishingTiles:
 
 	dw RedFishingTilesSide
 	db 2, BANK(RedFishingTilesSide)
+	dw vNPCSprites + $a0
+
+	dw RedFishingRodTiles
+	db 3, BANK(RedFishingRodTiles)
+	dw vNPCSprites2 + $7d0
+
+LeafFishingTiles:
+	dw LeafFishingTilesFront
+	db 2, BANK(LeafFishingTilesFront)
+	dw vNPCSprites + $20
+
+	dw LeafFishingTilesBack
+	db 2, BANK(LeafFishingTilesBack)
+	dw vNPCSprites + $60
+
+	dw LeafFishingTilesSide
+	db 2, BANK(LeafFishingTilesSide)
 	dw vNPCSprites + $a0
 
 	dw RedFishingRodTiles

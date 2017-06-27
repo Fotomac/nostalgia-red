@@ -14,8 +14,8 @@ dw ParasectPicBack
 ; attacks known at lvl 0
 db SCRATCH
 db STUN_SPORE
+db POISONPOWDER
 db LEECH_LIFE
-db 0
 db 0 ; growth rate
 ; learnset
 	tmlearn 3,6,8

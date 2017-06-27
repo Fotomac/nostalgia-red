@@ -283,7 +283,13 @@ OverworldLoopLessDelay::
 	bit 6,a ; jumping a ledge?
 	jr nz,.normalPlayerSpriteAdvancement
 	call DoBikeSpeedup
+	jr .notRunning
 .normalPlayerSpriteAdvancement
+	ld a, [hJoyHeld] ; Check what buttons are being pressed
+	and B_BUTTON ; Are you holding B?
+	jr z, .notRunning ; If you aren't holding B, skip ahead to step normally.
+	call DoBikeSpeedup ; Make you go faster if you were holding B
+.notRunning ; Normal code resumes here
 	call AdvancePlayerSprite
 	ld a,[wWalkCounter]
 	and a
@@ -2000,24 +2006,61 @@ RunMapScript::
 	ret
 
 LoadWalkingPlayerSpriteGraphics::
+	xor a
+	ld [wd473],a
+	ld b,BANK(RedSprite)
 	ld de,RedSprite
-	ld hl,vNPCSprites
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr z, .AreGuy1
+	ld de,LeafSprite
+.AreGuy1
+	jr LoadPlayerSpriteGraphicsCommon
+
+LoadSurfingPlayerSpriteGraphics2:: ; 0d69 (0:0d69)
+	ld a,[wd473]
+	and a
+	jr z,.asm_0d75
+	dec a
+	jr z,LoadSurfingPlayerSpriteGraphics
+	dec a
+	jr z,.asm_0d7c
+	dec a
+	jr z,.loadLaprasSurfingSprite
+.asm_0d75
+	ld a,[wd472]
+	bit 6,a
+	jr z,LoadSurfingPlayerSpriteGraphics
+.asm_0d7c
+	ld b,BANK(SurfingPikachuSprite)
+	ld de,SurfingPikachuSprite ; 3f:6def
+	jr LoadPlayerSpriteGraphicsCommon
+.loadLaprasSurfingSprite
+	ld b,BANK(LaprasSprite)
+	ld de,LaprasSprite
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadSurfingPlayerSpriteGraphics::
+	ld b,BANK(SeelSprite)
 	ld de,SeelSprite
-	ld hl,vNPCSprites
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadBikePlayerSpriteGraphics::
+	ld b,BANK(RedCyclingSprite)
 	ld de,RedCyclingSprite
-	ld hl,vNPCSprites
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr LoadPlayerSpriteGraphicsCommon
+	ld de,LeafCyclingSprite
 
 LoadPlayerSpriteGraphicsCommon::
+	ld hl,vNPCSprites
 	push de
 	push hl
-	lb bc, BANK(RedSprite), $0c
+	push bc
+	ld c, $c
 	call CopyVideoData
+	pop bc
 	pop hl
 	pop de
 	ld a,$c0
@@ -2027,7 +2070,7 @@ LoadPlayerSpriteGraphicsCommon::
 	inc d
 .noCarry
 	set 3,h
-	lb bc, BANK(RedSprite), $0c
+	ld c, $c
 	jp CopyVideoData
 
 ; function to load data from the map header

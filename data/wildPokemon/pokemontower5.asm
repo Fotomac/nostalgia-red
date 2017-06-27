@@ -1,13 +1,13 @@
 TowerMons5:
 	db $0A
-	db 20,GASTLY
-	db 21,GASTLY
-	db 22,GASTLY
-	db 23,GASTLY
-	db 19,GASTLY
+	db 15,GASTLY
+	db 16,GASTLY
+	db 17,GASTLY
 	db 18,GASTLY
-	db 25,HAUNTER
-	db 20,CUBONE
-	db 22,CUBONE
-	db 24,GASTLY
+	db 14,GASTLY
+	db 13,GASTLY
+	db 20,HAUNTER
+	db 15,CUBONE
+	db 17,CUBONE
+	db 19,GASTLY
 	db $00

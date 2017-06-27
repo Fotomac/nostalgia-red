@@ -32,12 +32,6 @@ SetDefaultNames:
 	jp CopyData
 
 OakSpeech:
-	ld a,$FF
-	call PlaySound ; stop music
-	ld a, BANK(Music_Routes2)
-	ld c,a
-	ld a, MUSIC_ROUTES2
-	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call SetDefaultNames
@@ -56,6 +50,22 @@ OakSpeech:
 	ld a,[wd732]
 	bit 1,a ; possibly a debug mode bit
 	jp nz,.skipChoosingNames
+	ld hl,BoyGirlText  ; added to the same file as the other oak text
+	call PrintText     ; show this text
+	call BoyGirlChoice ; added routine at the end of this file
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .AfterSettingGirl ; skip setting the girl and leave that flag alone if you chose the boy
+	ld hl, wPlayerGender ; load ram address of Gender
+	set 2, [hl]      ; sets you as a girl
+.AfterSettingGirl: ; resume main intro, jumps here if you were a guy
+	ld a,$FF
+	call PlaySound ; stop music
+	ld a, BANK(Music_Routes2)
+	ld c,a
+	ld a, MUSIC_ROUTES2
+	call PlayMusic
+	call ClearScreen ; clear the screen before resuming normal intro
 	ld de,ProfOakPic
 	lb bc, Bank(ProfOakPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -77,6 +87,12 @@ OakSpeech:
 	call ClearScreen
 	ld de,RedPicFront
 	lb bc, Bank(RedPicFront), $00
+	ld a, [wPlayerGender] ; check gender
+	bit 2, a      ; check gender
+	jr z, .NotLeaf1
+	ld de,LeafPicFront
+	lb bc, Bank(LeafPicFront), $00
+.NotLeaf1:
 	call IntroDisplayPicCenteredOrUpperRight
 	call MovePicLeft
 	ld hl,IntroducePlayerText
@@ -96,6 +112,12 @@ OakSpeech:
 	call ClearScreen
 	ld de,RedPicFront
 	lb bc, Bank(RedPicFront), $00
+	ld a, [wPlayerGender] ; check gender
+	bit 2, a      ; check gender
+	jr z, .NotLeaf2
+	ld de,LeafPicFront
+	lb bc, Bank(LeafPicFront), $00
+.NotLeaf2:
 	call IntroDisplayPicCenteredOrUpperRight
 	call GBFadeInFromWhite
 	ld a,[wd72d]
@@ -114,8 +136,14 @@ OakSpeech:
 	ld c,4
 	call DelayFrames
 	ld de,RedSprite
-	ld hl,vSprites
 	lb bc, BANK(RedSprite), $0C
+	ld a, [wPlayerGender] ; check gender
+	bit 2, a      ; check gender
+	jr z, .NotLeaf3
+	ld de,LeafSprite
+	lb bc, BANK(LeafSprite), $0C
+.NotLeaf3:
+	ld hl,vSprites
 	call CopyVideoData
 	ld de,ShrinkPic1
 	lb bc, BANK(ShrinkPic1), $00
@@ -168,6 +196,9 @@ IntroduceRivalText:
 	db "@"
 OakSpeechText3:
 	TX_FAR _OakSpeechText3
+	db "@"
+BoyGirlText:
+	TX_FAR _BoyGirlText
 	db "@"
 
 FadeInIntroPic:
@@ -231,3 +262,22 @@ IntroDisplayPicCenteredOrUpperRight:
 	xor a
 	ld [hStartTileID],a
 	predef_jump CopyUncompressedPicToTilemap
+
+; displays boy/girl choice
+BoyGirlChoice::
+	call SaveScreenTilesToBuffer1
+	call InitBoyGirlTextBoxParameters
+	jr DisplayBoyGirlChoice
+
+InitBoyGirlTextBoxParameters::
+	ld a, $1 ; loads the value for the unused North/West choice, that was changed to say Boy/Girl
+	ld [wTwoOptionMenuID], a
+	coord hl, 13, 7 
+	ld bc, $80e
+	ret
+
+DisplayBoyGirlChoice::
+	ld a, $14
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	jp LoadScreenTilesFromBuffer1

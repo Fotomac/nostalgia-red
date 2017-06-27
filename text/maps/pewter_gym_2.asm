@@ -1,78 +1,103 @@
 _PewterGymText_5c4a3::
 	text "There are all"
 	line "kinds of trainers"
-	cont "in the world!"
+	cont "in this huge"
+	cont "world of ours!"
 
-	para "You appear to be"
-	line "very gifted as a"
+	para "Some raise #MON"
+	line "for fights. Some"
+	cont "see them as pets."
+
+	para "I'm in training"
+	line "to become a"
+	cont "#MON BREEDER."
+
+	para "And you..."
+	line "You appear to be"
+	cont "very gifted as a"
 	cont "#MON trainer!"
+
+	para "So let me make a"
+	line "suggestion!"
 
 	para "Go to the GYM in"
 	line "CERULEAN and test"
 	cont "your abilities!"
 	done
 
-_TM34PreReceiveText::
+_TM39PreReceiveText::
 	text "Wait! Take this"
 	line "with you!"
 	done
 
-_ReceivedTM34Text::
+_ReceivedTM39Text::
 	text $52, " received"
-	line "TM34!@@"
+	line "TM39!@@"
 
-_TM34ExplanationText::
+_TM39ExplanationText::
 	db $0
-	para "A TM contains a"
-	line "technique that"
-	cont "can be taught to"
+	para "A TM (Technical"
+	line "Machine) contains"
+	cont "a technique for"
 	cont "#MON!"
 
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
+	para "Using a TM"
+	line "teaches the move"
+	cont "it contains to a"
+	cont "#MON!"
+
+	para "A TM is only good"
+	line "for one use! So"
+	cont "when you use one,"
 	cont "pick the #MON"
 	cont "carefully!"
 
-	para "TM34 contains"
-	line "BIDE!"
+	para "Anyways..."
 
-	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	cont "it back double!"
+	para "TM39 contains"
+	line "ROCK TOMB!"
+
+	para "It hurls boulders"
+	line "at the foe and"
+	cont "lowers its SPEED!"
 	done
 
-_TM34NoRoomText::
+_TM39NoRoomText::
 	text "You don't have"
 	line "room for this!"
 	done
 
 _PewterGymText_5c4bc::
 	text "I took"
-	line "you for granted."
+	line "you for granted,"
+	cont "and so I lost."
 
 	para "As proof of your"
-	line "victory, here's"
-	cont "the BOULDERBADGE!"
+	line "victory, I hereby"
+	cont "confer upon you"
+	cont "the official"
+	cont "#MON LEAGUE"
+	cont "BOULDERBADGE!"
 
 	para $52, " received"
 	line "the BOULDERBADGE!@@"
 
 _PewterGymText_5c4c1::
 	db $0
-	para "That's an official"
-	line "#MON LEAGUE"
-	cont "BADGE!"
+	para "Just having the"
+	line "BOULDERBADGE"
+	cont "makes your"
+	cont "#MON more"
+	cont "powerful!"
 
-	para "Its bearer's"
-	line "#MON become"
-	cont "more powerful!"
+	para "It also enables"
+	line "use of the move"
+	cont "FLASH outside of"
+	cont "battle!"
 
-	para "The technique"
-	line "FLASH can now be"
-	cont "used any time!"
+	para "Of course, a"
+	line "#MON must know"
+	cont "FLASH to use it!"
 	prompt
 
 _PewterGymBattleText1::

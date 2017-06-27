@@ -14,25 +14,36 @@ LeechSeedEffect_:
 ; miss if the target is grass-type or already seeded
 	ld a, [de]
 	cp GRASS
-	jr z, .moveMissed
+	jr z, .doesntAffect
 	inc de
 	ld a, [de]
 	cp GRASS
-	jr z, .moveMissed
+	jr z, .doesntAffect
 	bit Seeded, [hl]
-	jr nz, .moveMissed
+	jr nz, .alreadySeeded
 	set Seeded, [hl]
 	callab PlayCurrentMoveAnimation
 	ld hl, WasSeededText
 	jp PrintText
+.alreadySeeded
+	call DelayFrames
+	ld hl, AlreadySeededText
 .moveMissed
 	ld c, 50
 	call DelayFrames
 	ld hl, EvadedAttackText
 	jp PrintText
+.doesntAffect
+	call DelayFrames
+	callba PrintDoesntAffectText
+	ret
 
 WasSeededText:
 	TX_FAR _WasSeededText
+	db "@"
+
+AlreadySeededText:
+	TX_FAR _AlreadySeededText
 	db "@"
 
 EvadedAttackText:

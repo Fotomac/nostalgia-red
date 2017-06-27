@@ -15,7 +15,7 @@ dw CharizardPicBack
 db SCRATCH
 db GROWL
 db EMBER
-db LEER
+db METAL_CLAW
 db 3 ; growth rate
 ; learnset
 	tmlearn 1,3,5,6,8
@@ -24,5 +24,5 @@ db 3 ; growth rate
 	tmlearn 26,27,28,31,32
 	tmlearn 33,34,38,39,40
 	tmlearn 44
-	tmlearn 50,51,54
+	tmlearn 50,51,52,54
 db 0 ; padding

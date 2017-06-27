@@ -164,6 +164,23 @@ const_value = 1
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
+	const METAL_CLAW   ; a5
+	const CRUNCH       ; a6
+	const FAINT_ATTACK ; a7
+	const OUTRAGE      ; a8
+	const TWISTER      ; a9
+	const ROLLOUT      ; aa
+	const ANCIENTPOWER ; ab
+	const ROCK_TOMB    ; ac
+	const SLUDGE_BOMB  ; ad
+	const CROSS_CHOP   ; ae
+	const POWDER_SNOW  ; af
+	const GIGA_DRAIN   ; b0
+	const ZAP_CANNON   ; b1
+	const FLAME_WHEEL  ; b2
+	const RAPID_SPIN   ; b3
+	const SCARY_FACE   ; b4
+	const RETURN       ; b5
 
 NUM_ATTACKS EQU const_value + -1
 

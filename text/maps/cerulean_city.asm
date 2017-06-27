@@ -120,13 +120,13 @@ _CeruleanCityText5::
 	done
 
 _CeruleanCityText6::
-	text "The people here"
-	line "were robbed."
+	text "These poor people"
+	line "here were robbed."
 
-	para "It's obvious that"
-	line "TEAM ROCKET is"
-	cont "behind this most"
-	cont "heinous crime!"
+	para "We're positive"
+	line "that TEAM ROCKET"
+	cont "is behind this"
+	cont "terrible deed."
 
 	para "Even our POLICE"
 	line "force has trouble"
@@ -219,7 +219,7 @@ _CeruleanCityText13::
 _CeruleanCityText16::
 	text "Grass and caves"
 	line "handled easily!"
-	cont "BIKE SHOP"
+	cont "MIRACLE CYCLE"
 	done
 
 _CeruleanCityText17::

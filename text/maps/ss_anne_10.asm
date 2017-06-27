@@ -67,8 +67,9 @@ _SSAnne10AfterBattleText4::
 
 _SSAnne10BattleText5::
 	text "Matey, you're"
-	line "walking the plank"
-	cont "if you lose!"
+	line "walking the"
+	cont "bloody plank if"
+	cont "you lose!"
 	done
 
 _SSAnne10EndBattleText5::

@@ -15,7 +15,7 @@ dw DragonitePicBack
 db WRAP
 db LEER
 db THUNDER_WAVE
-db AGILITY
+db TWISTER
 db 5 ; growth rate
 ; learnset
 	tmlearn 2,6,7,8
@@ -24,5 +24,5 @@ db 5 ; growth rate
 	tmlearn 25,31,32
 	tmlearn 33,34,38,39,40
 	tmlearn 44,45
-	tmlearn 50,53,54
+	tmlearn 50,52,53,54
 db 0 ; padding

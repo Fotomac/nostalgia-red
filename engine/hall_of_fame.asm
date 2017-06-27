@@ -183,8 +183,16 @@ HoFMonInfoText:
 	next "TYPE2/@"
 
 HoFLoadPlayerPics:
+	ld a, [wPlayerGender] ; New gender check
+	bit 2, a      ; New gender check
+	jr nz, .GirlStuff1
 	ld de, RedPicFront
 	ld a, BANK(RedPicFront)
+	jr .Routine ; skip the girl stuff and go to main routine
+.GirlStuff1
+	ld de, LeafPicFront
+	ld a, BANK(LeafPicFront)
+.Routine ; resume original routine
 	call UncompressSpriteFromDE
 	ld hl, sSpriteBuffer1
 	ld de, sSpriteBuffer0
