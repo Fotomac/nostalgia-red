@@ -448,9 +448,9 @@ IF DEF(_RED)
 	INCBIN "gfx/red/intro_nido_3.6x6.2bpp"
 ENDC
 IF DEF(_GREEN)
-	INCBIN "gfx/red/intro_nido_1.6x6.2bpp"
-	INCBIN "gfx/red/intro_nido_2.6x6.2bpp"
-	INCBIN "gfx/red/intro_nido_3.6x6.2bpp"
+	INCBIN "gfx/green/intro_nido_1.6x6.2bpp"
+	INCBIN "gfx/green/intro_nido_2.6x6.2bpp"
+	INCBIN "gfx/green/intro_nido_3.6x6.2bpp"
 ENDC
 IF DEF(_BLUE)
 	INCBIN "gfx/blue/intro_purin_1.6x6.2bpp"
