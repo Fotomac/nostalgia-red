@@ -1383,7 +1383,7 @@ Mon028_EvosMoves:
 	db 0
 ;Learnset
 	db 6,DEFENSE_CURL
-	db 10,SAND_ATTACK
+	db 11,SAND_ATTACK
 	db 17,POISON_STING
 	db 24,SLASH
 	db 33,SWIFT
