@@ -26,8 +26,10 @@ LeechSeedEffect_:
 	ld hl, WasSeededText
 	jp PrintText
 .alreadySeeded
+	ld c, 50
 	call DelayFrames
 	ld hl, AlreadySeededText
+	jp PrintText
 .moveMissed
 	ld c, 50
 	call DelayFrames

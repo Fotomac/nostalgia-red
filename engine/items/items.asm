@@ -185,6 +185,11 @@ ItemUseBall:
 	call Random
 	ld b,a
 
+; Captures always succeed on Route 1.
+	ld a, [wCurMap]
+	cp a,ROUTE_1
+	jp z, .captured
+
 ; Get the item ID.
 	ld hl,wcf91
 	ld a,[hl]

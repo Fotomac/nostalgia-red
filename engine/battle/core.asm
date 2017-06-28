@@ -863,9 +863,6 @@ FaintEnemyPokemon:
 	coord hl, 0, 0
 	lb bc, 4, 11
 	call ClearScreenArea
-	ld a, [wIsInBattle]
-	dec a
-	jr z, .sfxplayed
 	xor a
 	ld [wFrequencyModifier], a
 	ld [wTempoModifier], a
@@ -878,7 +875,6 @@ FaintEnemyPokemon:
 	ld a, SFX_FAINT_THUD
 	call PlaySound
 	call WaitForSoundToFinish
-.sfxplayed
 	ld hl, wBattleMonHP
 	ld a, [hli]
 	or [hl]
@@ -894,17 +890,18 @@ FaintEnemyPokemon:
 	jr nz, .moreAliveMons
 	ret
 .moreAliveMons
-	ld a, [wIsInBattle]
-	dec a
-	jr nz, .trainer
-	call EndLowHealthAlarm
-	ld a, MUSIC_DEFEATED_WILD_MON
-	call PlayBattleVictoryMusic
-.trainer
 	ld hl, EnemyMonFaintedText
 	call PrintText
 	call PrintEmptyString
 	call SaveScreenTilesToBuffer1
+	ld a, [wIsInBattle]
+	dec a
+	jr nz, .trainer
+	call WaitForSoundToFinish
+	call EndLowHealthAlarm
+	ld a, MUSIC_DEFEATED_WILD_MON
+	call PlayBattleVictoryMusic
+.trainer
 	xor a
 	ld [wBattleResult], a
 	ld b, EXP_ALL

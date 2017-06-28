@@ -2829,7 +2829,7 @@ _ItemUseBallText06::
 	TX_RAM wEnemyMonNick
 	text "'s data"
 	line "was added to the"
-	cont "#DEX!"
+	cont "#DEX!@@"
 
 _SurfingGotOnText::
 	text "@"

@@ -297,8 +297,7 @@ _OaksLabText26::
 	line "# BALLs!@@"
 
 _OaksLabText27::
-	text ""
-	para "When a wild"
+	text "When a wild"
 	line "#MON appears,"
 	cont "it's fair game."
 
