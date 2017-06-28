@@ -1017,7 +1017,6 @@ OaksLabText5:
 .asm_1d2c8
 	ld hl, OaksLabAroundWorldText
 	call PrintText
-	jr .asm_1d2ed
 .asm_1d2ed
 	jp TextScriptEnd
 
