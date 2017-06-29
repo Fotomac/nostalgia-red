@@ -70,6 +70,7 @@ RedsHouse1FText2: ; TV
 	bit 2, a
 	jr nz, .girl2
 	ld hl,StandByMeText
+	jr .notUp
 .girl2
 	ld hl,WizardOfOzText
 .notUp

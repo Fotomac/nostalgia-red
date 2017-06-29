@@ -2535,7 +2535,7 @@ MoveSoundTable:
 	db SFX_BATTLE_1E,         $08,$80 ; CRUNCH
 	db SFX_BATTLE_25,         $18,$10 ; FAINT_ATTACK
 	db SFX_BATTLE_26,         $f8,$20 ; OUTRAGE
-	db SFX_BATTLE_12,         $0f,$c0 ; TWISTER
+	db SFX_BATTLE_27,         $0f,$80 ; TWISTER
 	db SFX_BATTLE_0B,         $00,$80 ; ROLLOUT
 	db SFX_BATTLE_14,         $0f,$e0 ; ANCIENTPOWER
 	db SFX_BATTLE_36,         $f8,$20 ; ROCK_TOMB
