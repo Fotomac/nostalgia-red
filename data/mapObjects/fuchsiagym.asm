@@ -8,7 +8,7 @@ FuchsiaGymObject:
 	db $0 ; signs
 
 	db $8 ; objects
-	object SPRITE_BLACKBELT, $4, $a, STAY, DOWN, $1, OPP_KOGA, $1
+	object SPRITE_KOGA, $4, $a, STAY, DOWN, $1, OPP_KOGA, $1
 	object SPRITE_ROCKER, $8, $d, STAY, DOWN, $2, OPP_JUGGLER, $7
 	object SPRITE_ROCKER, $7, $8, STAY, RIGHT, $3, OPP_JUGGLER, $3
 	object SPRITE_ROCKER, $1, $c, STAY, DOWN, $4, OPP_JUGGLER, $8

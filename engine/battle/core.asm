@@ -4281,9 +4281,9 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
-	ld a,[wPlayerMoveNum]
+	ld a,[wPlayerSelectedMove]
 	call PhysicalSpecialSplit
-	dec a
+	cp a, SPECIAL
 	jr z, .specialAttack
 .physicalAttack
 	ld hl, wEnemyMonDefense
@@ -4395,9 +4395,9 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-	ld a,[wEnemyMoveNum]
+	ld a,[wEnemySelectedMove]
 	call PhysicalSpecialSplit
-	dec a
+	cp a, SPECIAL
 	jr z, .specialAttack
 .physicalAttack
 	ld hl, wBattleMonDefense

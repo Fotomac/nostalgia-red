@@ -490,6 +490,46 @@ SpriteSheetPointerTable:
 	db $c0 ; byte count
 	db BANK(SeelSprite)
 
+	; SPRITE_BROCK
+	dw BrockOverworld
+	db $c0 ; byte count
+	db BANK(BrockOverworld)
+
+	; SPRITE_MISTY
+	dw MistyOverworld
+	db $c0 ; byte count
+	db BANK(MistyOverworld)
+
+	; SPRITE_SURGE
+	dw SurgeOverworld
+	db $c0 ; byte count
+	db BANK(SurgeOverworld)
+
+	; SPRITE_KOGA
+	dw KogaOverworld
+	db $c0 ; byte count
+	db BANK(KogaOverworld)
+
+	; SPRITE_SABRINA
+	dw SabrinaOverworld
+	db $c0 ; byte count
+	db BANK(SabrinaOverworld)
+
+	; SPRITE_BLAINE
+	dw BlaineOverworld
+	db $c0 ; byte count
+	db BANK(BlaineOverworld)
+
+	; SPRITE_DIANA
+	dw DianaSprite
+	db $c0 ; byte count
+	db BANK(DianaSprite)
+
+	; SPRITE_OFFICER_JENNY
+	dw OfficerJennySprite
+	db $c0 ; byte count
+	db BANK(OfficerJennySprite)
+
 	; SPRITE_BALL
 	dw BallSprite
 	db $40 ; byte count
