@@ -8,16 +8,17 @@
 	sudo make install
 	cd ..
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/Fotomac/nostalgia-red
+	cd nostalgia-red
 
-To build **pokered.gbc** and **pokeblue.gbc**:
+To build **pokered.gbc**, **pokegreen.gbc**, and **pokeblue.gbc**:
 
 	make
 
 To build them individually:
 
 	make red
+	make green
 	make blue
 
 
@@ -33,8 +34,8 @@ In **Terminal**, run:
 	sudo make install
 	cd ..
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/Fotomac/nostalgia-red
+	cd nostalgia-red
 
 	make
 
@@ -50,7 +51,7 @@ Extract the archive and put `rgbasm.exe`, `rgblink.exe`, `rgbfix.exe` and `rgbgf
 
 In the **Cygwin terminal**:
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/Fotomac/nostalgia-red
+	cd nostalgia-red
 
 	make

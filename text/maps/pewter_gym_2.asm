@@ -123,6 +123,26 @@ _PewterGymAfterBattleText1::
 	cont "as BROCK!"
 	done
 
+_PewterGymBattleText2::
+	text "Rock and roll!"
+	line "Let's rumble!"
+	done
+
+_PewterGymEndBattleText2::
+	text "That"
+	line "was just the"
+	cont "start!"
+	prompt
+
+_PewterGymAfterBattleText2::
+	text "Don't rest on your"
+	line "laurels just yet!"
+
+	para "BROCK is one of"
+	line "the toughest"
+	cont "trainers in town!"
+	done
+
 _PewterGymText_5c515::
 	text "Hiya! I can tell"
 	line "you have what it"

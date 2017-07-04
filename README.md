@@ -1,13 +1,20 @@
-# Pokémon Red and Blue
+# Pokémon Tri-Color Nostalgia Series
 
-This is a disassembly of Pokémon Red and Blue.
+This is based on the [**Pokémon Red disassembly**][pokered]
 
 It builds the following roms:
 
-* Pokemon Red (UE) [S][!].gb  `md5: 3d45c1ee9abd5738df46d2bdda8b57dc`
-* Pokemon Blue (UE) [S][!].gb `md5: 50927e843568814f7ed45ec4f944bd8b`
+* Pokemon Red
+* Pokemon Green
+* Pokemon Blue
 
-To set up the repository, see [**INSTALL.md**](INSTALL.md).
+It's also an update of all three, with bug fixes and new features. It's still a work in progress, but there's still potential.
+
+The current version is v10.0.3 (Summer of Adventure)
+
+To set up the repository, see [**INSTALL.md**](INSTALL.md). Also see the main Pokered repository for more information.
+
+Special thanks to BettyNewbie, _Crystal, DarioEMeloD, MadameFrog, Mateo, and others.
 
 
 ## See also
@@ -15,5 +22,6 @@ To set up the repository, see [**INSTALL.md**](INSTALL.md).
 * Disassembly of [**Pokémon Crystal**][pokecrystal]
 * irc: **irc.freenode.net** [**#pret**][irc]
 
+[pokered]: https://github.com/pret/pokered
 [pokecrystal]: https://github.com/kanzure/pokecrystal
 [irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret

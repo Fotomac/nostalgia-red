@@ -2213,7 +2213,7 @@ Mon020_EvosMoves:
 ;Learnset
 	db 7,QUICK_ATTACK
 	db 14,HYPER_FANG
-	db 20,SCARY_FACE
+	db 16,SCARY_FACE
 	db 27,FOCUS_ENERGY
 	db 41,SUPER_FANG
 	db 0

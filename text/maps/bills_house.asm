@@ -37,10 +37,36 @@ _BillsHouseText_1e86f::
 	cont "OK? All right!"
 	prompt
 
+_BillsHouseText_1e86f_2::
+	text "No!? Come on, you"
+	line "gotta help a guy"
+	cont "in deep trouble!"
+
+	para "What do you say,"
+	line "milady? Please?"
+	cont "OK? All right!"
+	prompt
+
 _BillThankYouText::
 	text "BILL: Yeehah!"
 	line "Thanks, bud! I"
 	cont "owe you one!"
+
+	para "So, did you come"
+	line "to see my #MON"
+	cont "collection?"
+	cont "You didn't?"
+	cont "That's a bummer."
+
+	para "I've got to thank"
+	line "you... Oh here,"
+	cont "maybe this'll do."
+	prompt
+
+_BillThankYouText2::
+	text "BILL: Yeehah!"
+	line "Thanks, milady!"
+	cont "I owe you one!"
 
 	para "So, did you come"
 	line "to see my #MON"
@@ -64,6 +90,11 @@ _SSTicketNoRoomText::
 	line "much stuff, bud!"
 	done
 
+_SSTicketNoRoomText2::
+	text "You've got too"
+	line "much stuff, ma'am!"
+	done
+
 _BillsHouseText_1e8cb::
 	text "That cruise ship,"
 	line "S.S.ANNE, is in"
@@ -81,6 +112,13 @@ _BillsHouseText_1e8cb::
 
 _BillsHouseText_1e8da::
 	text "BILL: Look, bud,"
+	line "just check out"
+	cont "some of my rare"
+	cont "#MON on my PC!"
+	done
+
+_BillsHouseText_1e8da_2::
+	text "BILL: Look, ma'am,"
 	line "just check out"
 	cont "some of my rare"
 	cont "#MON on my PC!"

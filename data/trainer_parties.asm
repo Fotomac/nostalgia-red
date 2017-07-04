@@ -126,6 +126,8 @@ LassData:
 ; Celadon Gym
 	db 23,BELLSPROUT,WEEPINBELL,0
 	db 23,ODDISH,GLOOM,0
+; Pewter Gym
+	db 9,DIGLETT,NIDORAN_F,0
 SailorData:
 ; SS Anne Stern
 	db 18,MACHOP,SHELLDER,0

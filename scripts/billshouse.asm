@@ -139,7 +139,14 @@ BillsHouseText1:
 	ld [wBillsHouseCurScript], a
 	jr .asm_1e862
 .asm_1e85a
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr nz, .girl
 	ld hl, BillsHouseText_1e86f
+	jr .continue
+.girl
+	ld hl, BillsHouseText_1e86f_2
+.continue
 	call PrintText
 	jr .asm_1e84d
 .asm_1e862
@@ -157,11 +164,22 @@ BillsHouseText_1e86f:
 	TX_FAR _BillsHouseText_1e86f
 	db "@"
 
+BillsHouseText_1e86f_2:
+	TX_FAR _BillsHouseText_1e86f_2
+	db "@"
+
 BillsHouseText2:
 	TX_ASM
 	CheckEvent EVENT_GOT_SS_TICKET
 	jr nz, .asm_1e8a9
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr nz, .girl2
 	ld hl, BillThankYouText
+	jr .continue2
+.girl2
+	ld hl, BillThankYouText2
+.continue2
 	call PrintText
 	lb bc, S_S_TICKET, 1
 	call GiveItem
@@ -180,13 +198,24 @@ BillsHouseText2:
 	call PrintText
 	jr .asm_1e8b7
 .BagFull
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr nz, .girl3
 	ld hl, SSTicketNoRoomText
+	jr .continue3
+.girl3
+	ld hl, SSTicketNoRoomText2
+.continue3
 	call PrintText
 .asm_1e8b7
 	jp TextScriptEnd
 
 BillThankYouText:
 	TX_FAR _BillThankYouText
+	db "@"
+
+BillThankYouText2:
+	TX_FAR _BillThankYouText2
 	db "@"
 
 SSTicketReceivedText:
@@ -199,16 +228,31 @@ SSTicketNoRoomText:
 	TX_FAR _SSTicketNoRoomText
 	db "@"
 
+SSTicketNoRoomText2:
+	TX_FAR _SSTicketNoRoomText2
+	db "@"
+
 BillsHouseText_1e8cb:
 	TX_FAR _BillsHouseText_1e8cb
 	db "@"
 
 BillsHouseText3:
 	TX_ASM
+	ld a, [wPlayerGender]
+	bit 2, a
+	jr nz, .girl4
 	ld hl, BillsHouseText_1e8da
+	jr .continue4
+.girl4
+	ld hl, BillsHouseText_1e8da_2
+.continue4
 	call PrintText
 	jp TextScriptEnd
 
 BillsHouseText_1e8da:
 	TX_FAR _BillsHouseText_1e8da
+	db "@"
+
+BillsHouseText_1e8da_2:
+	TX_FAR _BillsHouseText_1e8da_2
 	db "@"

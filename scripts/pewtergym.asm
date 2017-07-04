@@ -43,20 +43,20 @@ PewterGymScript3:
 	ld [wJoyIgnore], a
 
 PewterGymScript_5c3df:
-	ld a, $4
+	ld a, $5
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_BROCK
 	lb bc, TM_39, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld a, $5
+	ld a, $6
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM39
 	jr .asm_5c408
 .BagFull
-	ld a, $6
+	ld a, $7
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .asm_5c408
@@ -75,7 +75,7 @@ PewterGymScript_5c3df:
 	ResetEvents EVENT_1ST_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
 
 	; deactivate gym trainers
-	SetEvent EVENT_BEAT_PEWTER_GYM_TRAINER_0
+	SetEvent EVENT_BEAT_PEWTER_GYM_TRAINER_0, EVENT_BEAT_PEWTER_GYM_TRAINER_1
 
 	jp PewterGymScript_5c3bf
 
@@ -86,6 +86,7 @@ PewterGymTextPointers:
 	dw PewterGymText4
 	dw PewterGymText5
 	dw PewterGymText6
+	dw PewterGymText7
 
 PewterGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_PEWTER_GYM_TRAINER_0
@@ -95,6 +96,15 @@ PewterGymTrainerHeader0:
 	dw PewterGymAfterBattleText1 ; TextAfterBattle
 	dw PewterGymEndBattleText1 ; TextEndBattle
 	dw PewterGymEndBattleText1 ; TextEndBattle
+
+PewterGymTrainerHeader1:
+	dbEventFlagBit EVENT_BEAT_PEWTER_GYM_TRAINER_1
+	db ($0 << 4) ; trainer's view range
+	dwEventFlagAddress EVENT_BEAT_PEWTER_GYM_TRAINER_1
+	dw PewterGymBattleText2 ; TextBeforeBattle
+	dw PewterGymAfterBattleText2 ; TextAfterBattle
+	dw PewterGymEndBattleText2 ; TextEndBattle
+	dw PewterGymEndBattleText2 ; TextEndBattle
 
 	db $ff
 
@@ -142,17 +152,17 @@ PewterGymText_5c4a3:
 	TX_FAR _PewterGymText_5c4a3
 	db "@"
 
-PewterGymText4:
+PewterGymText5:
 	TX_FAR _TM39PreReceiveText
 	db "@"
 
-PewterGymText5:
+PewterGymText6:
 	TX_FAR _ReceivedTM39Text
 	TX_SFX_ITEM_1
 	TX_FAR _TM39ExplanationText
 	db "@"
 
-PewterGymText6:
+PewterGymText7:
 	TX_FAR _TM39NoRoomText
 	db "@"
 
@@ -181,6 +191,24 @@ PewterGymAfterBattleText1:
 	db "@"
 
 PewterGymText3:
+	TX_ASM
+	ld hl, PewterGymTrainerHeader1
+	call TalkToTrainer
+	jp TextScriptEnd
+
+PewterGymBattleText2:
+	TX_FAR _PewterGymBattleText2
+	db "@"
+
+PewterGymEndBattleText2:
+	TX_FAR _PewterGymEndBattleText2
+	db "@"
+
+PewterGymAfterBattleText2:
+	TX_FAR _PewterGymAfterBattleText2
+	db "@"
+
+PewterGymText4:
 	TX_ASM
 	ld a, [wBeatGymFlags]
 	bit 0, a

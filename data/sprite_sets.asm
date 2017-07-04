@@ -520,11 +520,6 @@ SpriteSheetPointerTable:
 	db $c0 ; byte count
 	db BANK(BlaineOverworld)
 
-	; SPRITE_DIANA
-	dw DianaSprite
-	db $c0 ; byte count
-	db BANK(DianaSprite)
-
 	; SPRITE_OFFICER_JENNY
 	dw OfficerJennySprite
 	db $c0 ; byte count

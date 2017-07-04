@@ -115,7 +115,7 @@ const_value = 0
 	const EVENT_070                                  ; 070, (D755, bit 0)
 	const EVENT_071                                  ; 071, (D755, bit 1)
 	const EVENT_BEAT_PEWTER_GYM_TRAINER_0            ; 072, (D755, bit 2)
-	const EVENT_073                                  ; 073, (D755, bit 3)
+	const EVENT_BEAT_PEWTER_GYM_TRAINER_1            ; 073, (D755, bit 3)
 	const EVENT_074                                  ; 074, (D755, bit 4)
 	const EVENT_075                                  ; 075, (D755, bit 5)
 	const EVENT_GOT_TM39                             ; 076, (D755, bit 6)

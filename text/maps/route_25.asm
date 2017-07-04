@@ -56,8 +56,8 @@ _Route25BattleText4::
 	done
 
 _Route25EndBattleText4::
-	text "I was in"
-	line "bad condition!"
+	text "I was"
+	line "in bad condition!"
 	prompt
 
 _Route25AfterBattleText4::
