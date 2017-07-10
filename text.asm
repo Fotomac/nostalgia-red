@@ -230,14 +230,17 @@ INCLUDE "text/maps/rock_tunnel_b2f_2.asm"
 INCLUDE "text/maps/seafoam_islands_b4f.asm"
 
 _AIBattleWithdrawText::
+	text "The @"
 	TX_RAM wTrainerName
-	text " with-"
-	line "drew @"
+	text ""
+	line "withdrew"
+	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!"
 	prompt
 
 _AIBattleUseItemText::
+	text "The @"
 	TX_RAM wTrainerName
 	text ""
 	line "used @"
@@ -1055,10 +1058,10 @@ _WildRanText::
 	prompt
 
 _EnemyRanText::
-	text "Enemy @"
+	text "The enemy"
+	line "@"
 	TX_RAM wEnemyMonNick
-	text ""
-	line "ran!"
+	text " ran!"
 	prompt
 
 _HurtByPoisonText::
@@ -1093,7 +1096,7 @@ _MoneyForWinningText::
 
 _TrainerDefeatedText::
 	text "<PLAYER> defeated"
-	line "@"
+	line "the @"
 	TX_RAM wTrainerName
 	text "!"
 	prompt
@@ -1123,15 +1126,16 @@ _PlayerBlackedOutText2::
 
 _LinkBattleLostText::
 	text "<PLAYER> lost to"
-	line "@"
+	line "the @"
 	TX_RAM wTrainerName
 	text "!"
 	prompt
 
 _TrainerAboutToUseText::
+	text "The @"
 	TX_RAM wTrainerName
-	text " is"
-	line "about to use"
+	text ""
+	line "is about to use"
 	cont"@"
 	TX_RAM wEnemyMonNick
 	text "!"
@@ -1141,9 +1145,11 @@ _TrainerAboutToUseText::
 	done
 
 _TrainerSentOutText::
+	text "The @"
 	TX_RAM wTrainerName
-	text " sent"
-	line "out @"
+	text ""
+	line "sent out"
+	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!"
 	done
@@ -1161,6 +1167,11 @@ _NoRunningText::
 	text "No! There's no"
 	line "running from a"
 	cont "trainer battle!"
+	prompt
+
+_RickRollText::
+	text "No! There's no"
+	line "running around!"
 	prompt
 
 _GotAwayText::
@@ -1468,15 +1479,17 @@ _HookedMonAttackedText::
 	prompt
 
 _EnemyAppearedText::
+	text "A @"
 	TX_RAM wEnemyMonNick
 	text ""
 	line "appeared!"
 	prompt
 
 _TrainerWantsToFightText::
+	text "The @"
 	TX_RAM wTrainerName
-	text " wants"
-	line "to fight!"
+	text ""
+	line "wants to fight!"
 	prompt
 
 _UnveiledGhostText::

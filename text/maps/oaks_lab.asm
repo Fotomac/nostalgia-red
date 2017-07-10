@@ -26,20 +26,41 @@ _OaksLabText40::
 	done
 
 _OaksLabCharmanderText::
-	text "So! You want the"
-	line "fire #MON,"
+	text "Ah! CHARMANDER"
+	line "is your choice!"
+
+	para "You should raise"
+	line "it patiently!"
+
+	para "So, <PLAYER>,"
+	line "you want the"
+	cont "fire #MON,"
 	cont "CHARMANDER?"
 	done
 
 _OaksLabSquirtleText::
-	text "So! You want the"
-	line "water #MON,"
+	text "Hm! SQUIRTLE"
+	line "is your choice!"
+
+	para "It's one worth"
+	line "raising!"
+
+	para "So, <PLAYER>,"
+	line "you want the"
+	cont "water #MON,"
 	cont "SQUIRTLE?"
 	done
 
 _OaksLabBulbasaurText::
-	text "So! You want the"
-	line "plant #MON,"
+	text "I see! BULBASAUR"
+	line "is your choice!"
+
+	para "It's very easy"
+	line "to raise!"
+
+	para "So, <PLAYER>,"
+	line "you want the"
+	cont "grass #MON,"
 	cont "BULBASAUR?"
 	done
 

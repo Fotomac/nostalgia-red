@@ -79,6 +79,7 @@ _SlowbroDexEntry::
 	dex
 
 _IvysaurDexEntry::
+IF DEF(_BLUE)
 	text "When the bulb on"
 	next "its back grows"
 	next "large, it appears"
@@ -86,6 +87,15 @@ _IvysaurDexEntry::
 	page "to lose the"
 	next "ability to stand"
 	next "on its hind legs"
+ELSE
+	text "There is a plant"
+	next "bulb on its back."
+	next "When it absorbs"
+
+	page "nutrients, the"
+	next "bulb blossoms into"
+	next "a large flower"
+ENDC
 	dex
 
 _ExeggutorDexEntry::
@@ -269,6 +279,7 @@ _StaryuDexEntry::
 	dex
 
 _BlastoiseDexEntry::
+IF DEF(_BLUE)
 	text "A brutal #MON"
 	next "with pressurized"
 	next "water jets on its"
@@ -276,6 +287,15 @@ _BlastoiseDexEntry::
 	page "shell. They are"
 	next "used for high"
 	next "speed tackles"
+ELSE
+	text "Crushes its foe"
+	next "underneath to"
+	next "cause fainting."
+
+	page "In a pinch, it"
+	next "will withdraw"
+	next "inside its shell"
+ENDC
 	dex
 
 _PinsirDexEntry::
@@ -1249,6 +1269,16 @@ _StarmieDexEntry::
 	dex
 
 _BulbasaurDexEntry::
+IF DEF(_RED)
+	text "There is a plant"
+	next "seed on its back"
+	next "right when this"
+
+	page "#MON is born."
+	next "The seed slowly"
+	next "grows larger"
+ENDC
+IF DEF(_GREEN)
 	text "A strange seed was"
 	next "planted on its"
 	next "back at birth."
@@ -1256,9 +1286,19 @@ _BulbasaurDexEntry::
 	page "The plant sprouts"
 	next "and grows with"
 	next "this #MON"
+ENDC
+IF DEF(_BLUE)
+	text "For some time"
+	next "after its birth,"
+	next "it grows by being"
+
+	page "nourished by the"
+	next "seed on its back"
+ENDC
 	dex
 
 _VenusaurDexEntry::
+IF DEF(_BLUE)
 	text "The plant blooms"
 	next "when it is"
 	next "absorbing solar"
@@ -1266,6 +1306,15 @@ _VenusaurDexEntry::
 	page "energy. It stays"
 	next "on the move to"
 	next "seek sunlight"
+ELSE
+	text "A bewitching aroma"
+	next "wafts from its"
+	next "flower. The"
+
+	page "fragrance becalms"
+	next "those engaged in"
+	next "a battle"
+ENDC
 	dex
 
 _TentacruelDexEntry::
@@ -1399,6 +1448,25 @@ _MagnemiteDexEntry::
 	dex
 
 _CharmanderDexEntry::
+IF DEF(_RED)
+	text "The flame on its"
+	next "tail indicates its"
+	next "life force. If it"
+
+	page "is healthy, the"
+	next "flame burns"
+	next "brightly"
+ENDC
+IF DEF(_GREEN)
+	text "From the time it"
+	next "is born, a flame"
+	next "burns at the tip"
+
+	page "of its tail. Its"
+	next "life ends if the"
+	next "flame goes out"
+ENDC
+IF DEF(_BLUE)
 	text "Obviously prefers"
 	next "hot places. When"
 	next "it rains, steam"
@@ -1406,9 +1474,20 @@ _CharmanderDexEntry::
 	page "is said to spout"
 	next "from the tip of"
 	next "its tail"
+ENDC
 	dex
 
 _SquirtleDexEntry::
+IF DEF(_RED)
+	text "When it retracts"
+	next "its long neck into"
+	next "its shell, it"
+
+	page "squirts out water"
+	next "with vigorous"
+	next "force"
+ENDC
+IF DEF(_GREEN)
 	text "After birth, its"
 	next "back swells and"
 	next "hardens into a"
@@ -1416,9 +1495,20 @@ _SquirtleDexEntry::
 	page "shell. Powerfully"
 	next "sprays foam from"
 	next "its mouth"
+ENDC
+IF DEF(_BLUE)
+	text "It shelters itself"
+	next "in its shell, then"
+	next "strikes back with"
+
+	page "spouts of water"
+	next "at every"
+	next "opportunity"
+ENDC
 	dex
 
 _CharmeleonDexEntry::
+IF DEF(_BLUE)
 	text "When it swings"
 	next "its burning tail,"
 	next "it elevates the"
@@ -1426,9 +1516,19 @@ _CharmeleonDexEntry::
 	page "temperature to"
 	next "unbearably high"
 	next "levels"
+ELSE
+	text "It lashes about"
+	next "with its tail to"
+	next "knock down its"
+
+	page "foe and mauls the"
+	next "fallen opponent"
+	next "with sharp claws"
+ENDC
 	dex
 
 _WartortleDexEntry::
+IF DEF(_BLUE)
 	text "Often hides in"
 	next "water to stalk"
 	next "unwary prey. For"
@@ -1436,9 +1536,18 @@ _WartortleDexEntry::
 	page "swimming fast, it"
 	next "moves its ears to"
 	next "maintain balance"
+ELSE
+	text "Very popular as a"
+	next "pet. Its fur-"
+	next "covered tail is a"
+
+	page "symbol of its"
+	next "longevity"
+ENDC
 	dex
 
 _CharizardDexEntry::
+IF DEF(_BLUE)
 	text "Spits fire that"
 	next "is hot enough to"
 	next "melt boulders."
@@ -1446,6 +1555,15 @@ _CharizardDexEntry::
 	page "Known to cause"
 	next "forest fires"
 	next "unintentionally"
+ELSE
+	text "Can fly close to"
+	next "an altitude of"
+	next "4,600 feet."
+
+	page "Blows out fire"
+	next "at very high"
+	next "temperatures"
+ENDC
 	dex
 
 _OddishDexEntry::
