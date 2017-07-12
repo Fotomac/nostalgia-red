@@ -1,0 +1,13 @@
+HideoutMons1:
+	db $0A
+	db 24,POLIWAG
+	db 26,EKANS
+	db 26,GROWLITHE
+	db 26,POLIWAG
+	db 24,ODDISH
+	db 26,ODDISH
+	db 24,SANDSHREW
+	db 20,SCYTHER
+	db 24,CLEFABLE
+	db 22,PORYGON
+	db $00

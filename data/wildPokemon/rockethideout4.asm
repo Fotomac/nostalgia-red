@@ -1,0 +1,13 @@
+HideoutMons4:
+	db $0A
+	db 24,SANDSHREW
+	db 26,MAGNEMITE
+	db 8,WEEDLE
+	db 24,POLIWAG
+	db 26,ZUBAT
+	db 24,GROWLITHE
+	db 28,MAGNEMITE
+	db 8,CATERPIE
+	db 24,ODDISH
+	db 28,SANDSLASH
+	db $00

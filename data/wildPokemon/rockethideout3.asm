@@ -1,0 +1,17 @@
+HideoutMons3:
+	db $0A
+	db 24,POLIWAG
+	db 26,EKANS
+	IF DEF(_RED)
+		db 8,WEEDLE
+	ELSE
+		db 8,CATERPIE
+	ENDC
+	db 26,POLIWAG
+	db 24,SANDSHREW
+	db 26,PORYGON
+	db 26,ZUBAT
+	db 28,ELECTRODE
+	db 26,SANDSHREW
+	db 28,SANDSLASH
+	db $00
