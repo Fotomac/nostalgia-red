@@ -1661,6 +1661,10 @@ TryRunningFromBattle:
 	ld hl, CantEscapeText
 	jr .printCantEscapeOrNoRunningText
 .trainerBattle
+	call BattleRandom
+	cp 80
+	ld hl, RickRollText
+	jr c, .printCantEscapeOrNoRunningText
 	ld hl, NoRunningText
 .printCantEscapeOrNoRunningText
 	call PrintText
@@ -1704,6 +1708,10 @@ CantEscapeText:
 
 NoRunningText:
 	TX_FAR _NoRunningText
+	db "@"
+
+RickRollText:
+	TX_FAR _RickRollText
 	db "@"
 
 GotAwayText:

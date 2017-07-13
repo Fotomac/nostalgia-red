@@ -19,6 +19,25 @@ _KangaskhanDexEntry::
 	dex
 
 _NidoranMDexEntry::
+IF DEF(_RED)
+	text "It scans its"
+	next "surroundings by"
+	next "raising its ears"
+
+	page "out of the grass."
+	next "Its toxic horn is"
+	next "for protection"
+ENDC
+IF DEF(_GREEN)
+	text "Its large ears are"
+	next "flapped like wings"
+	next "when listening to"
+
+	page "distant sounds. It"
+	next "extends toxic"
+	next "barbs when angry"
+ENDC
+IF DEF(_BLUE)
 	text "Stiffens its ears"
 	next "to sense danger."
 	next "The larger its"
@@ -26,6 +45,7 @@ _NidoranMDexEntry::
 	page "horns, the more"
 	next "powerful its"
 	next "secreted venom"
+ENDC
 	dex
 
 _ClefairyDexEntry::
@@ -39,6 +59,25 @@ _ClefairyDexEntry::
 	dex
 
 _SpearowDexEntry::
+IF DEF(_RED)
+	text "It busily flits"
+	next "around here and"
+	next "there. Even if it"
+
+	page "is frail, it can"
+	next "be a tough foe"
+	next "with MIRROR MOVE"
+ENDC
+IF DEF(_GREEN)
+	text "Very protective of"
+	next "its territory, it"
+	next "flaps its short"
+
+	page "wings busily to"
+	next "dart around at"
+	next "high speed"
+ENDC
+IF DEF(_BLUE)
 	text "Eats bugs in"
 	next "grassy areas. It"
 	next "has to flap its"
@@ -46,6 +85,7 @@ _SpearowDexEntry::
 	page "short wings at"
 	next "high speed to"
 	next "stay airborne"
+ENDC
 	dex
 
 _VoltorbDexEntry::
@@ -149,6 +189,15 @@ _GengarDexEntry::
 	dex
 
 _NidoranFDexEntry::
+IF DEF(_BLUE)
+	text "Small and very"
+	next "docile, it"
+	next "protects itself"
+
+	page "with its small,"
+	next "poisonous horn"
+	next "when attacked"
+ELSE
 	text "Although small,"
 	next "its venomous"
 	next "barbs render this"
@@ -156,6 +205,7 @@ _NidoranFDexEntry::
 	page "#MON dangerous."
 	next "The female has"
 	next "smaller horns"
+ENDC
 	dex
 
 _NidoqueenDexEntry::
@@ -349,6 +399,16 @@ _FearowDexEntry::
 	dex
 
 _PidgeyDexEntry::
+IF DEF(_RED)
+	text "Does not like to"
+	next "fight. It hides in"
+	next "tall grass and so"
+
+	page "on, foraging for"
+	next "food such as small"
+	next "bugs"
+ENDC
+IF DEF(_GREEN)
 	text "A common sight in"
 	next "forests and woods."
 	next "It flaps its"
@@ -356,6 +416,16 @@ _PidgeyDexEntry::
 	page "wings at ground"
 	next "level to kick up"
 	next "blinding sand"
+ENDC
+IF DEF(_BLUE)
+	text "It is docile and"
+	next "prefers to avoid"
+	next "conflict. If dis-"
+
+	page "turbed, however,"
+	next "it can ferociously"
+	next "strike back"
+ENDC
 	dex
 
 _SlowpokeDexEntry::
@@ -529,6 +599,25 @@ _KoffingDexEntry::
 	dex
 
 _MankeyDexEntry::
+IF DEF(_RED)
+	text "Lives in treetop"
+	next "colonies. If one"
+	next "becomes enraged,"
+
+	page "the whole colony"
+	next "rampages for no"
+	next "reason"
+ENDC
+IF DEF(_GREEN)
+	text "Light and agile on"
+	next "its feet, and"
+	next "ferocious in"
+
+	page "temperament. When"
+	next "angered, it flies"
+	next "into a frenzy"
+ENDC
+IF DEF(_BLUE)
 	text "Extremely quick to"
 	next "anger. It could"
 	next "be docile one"
@@ -536,6 +625,7 @@ _MankeyDexEntry::
 	page "moment then"
 	next "thrashing away"
 	next "the next instant"
+ENDC
 	dex
 
 _SeelDexEntry::
@@ -1029,6 +1119,16 @@ _DewgongDexEntry::
 	dex
 
 _CaterpieDexEntry::
+IF DEF(_RED)
+	text "It is covered with"
+	next "a green skin. When"
+	next "it grows, it"
+
+	page "covers itself with"
+	next "silk to become a"
+	next "cocoon"
+ENDC
+IF DEF(_GREEN)
 	text "Its short feet"
 	next "are tipped with"
 	next "suction pads that"
@@ -1036,6 +1136,16 @@ _CaterpieDexEntry::
 	page "enable it to"
 	next "tirelessly climb"
 	next "slopes and walls"
+ENDC
+IF DEF(_BLUE)
+	text "It crawls into"
+	next "foliage where it"
+	next "camouflages itself"
+
+	page "among leaves that"
+	next "are the same color"
+	next "as its body"
+ENDC
 	dex
 
 _MetapodDexEntry::
@@ -1368,6 +1478,25 @@ _RapidashDexEntry::
 	dex
 
 _RattataDexEntry::
+IF DEF(_RED)
+	text "Living wherever"
+	next "there is food"
+	next "available, it"
+
+	page "ceaselessly sca-"
+	next "venges for edibles"
+	next "the entire day"
+ENDC
+IF DEF(_GREEN)
+	text "Its fangs are long"
+	next "and very sharp."
+	next "They grow continu-"
+
+	page "ously, so it gnaws"
+	next "on hard things to"
+	next "whittle them down"
+ENDC
+IF DEF(_BLUE)
 	text "Bites anything"
 	next "when it attacks."
 	next "Small and very"
@@ -1375,6 +1504,7 @@ _RattataDexEntry::
 	page "quick, it is a"
 	next "common sight in"
 	next "many places"
+ENDC
 	dex
 
 _RaticateDexEntry::

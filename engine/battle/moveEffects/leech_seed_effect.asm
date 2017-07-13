@@ -36,6 +36,7 @@ LeechSeedEffect_:
 	ld hl, EvadedAttackText
 	jp PrintText
 .doesntAffect
+	ld c, 50
 	call DelayFrames
 	callba PrintDoesntAffectText
 	ret
