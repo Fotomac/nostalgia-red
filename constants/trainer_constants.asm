@@ -18,7 +18,7 @@ const_value = 1
 	trainer_const BIKER         ; $0A
 	trainer_const BURGLAR       ; $0B
 	trainer_const ENGINEER      ; $0C
-	trainer_const JUGGLER_X     ; $0D
+	trainer_const SWIMMER_F     ; $0D
 	trainer_const FISHER        ; $0E
 	trainer_const SWIMMER       ; $0F
 	trainer_const CUE_BALL      ; $10
@@ -53,3 +53,4 @@ const_value = 1
 	trainer_const CHANNELER     ; $2D
 	trainer_const AGATHA        ; $2E
 	trainer_const LANCE         ; $2F
+	trainer_const JANINE        ; $30

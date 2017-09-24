@@ -8,11 +8,11 @@ LoneMoves:
 ; second byte: move
 ; unterminated
 	db 1,ROCK_TOMB
-	db 1,BUBBLEBEAM
-	db 2,THUNDERBOLT
-	db 2,MEGA_DRAIN
+	db 1,WATER_PULSE
+	db 2,SHOCK_WAVE
+	db 2,GIGA_DRAIN
 	db 3,TOXIC
-	db 3,PSYWAVE
+	db 3,CALM_MIND
 	db 3,FIRE_BLAST
 	db 4,EARTHQUAKE
 

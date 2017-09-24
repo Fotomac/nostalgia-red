@@ -2,8 +2,8 @@ Route2Mons:
 	db $19
 	db 3,RATTATA
 	db 3,PIDGEY
-	db 4,PIDGEY
-	db 4,RATTATA
+	db 3,PIKABLU
+	db 4,PIKABLU
 	db 5,PIDGEY
 	if DEF(_RED)
 		db 4,WEEDLE
@@ -11,8 +11,8 @@ Route2Mons:
 	if DEF(_GREEN) || DEF(_BLUE)
 		db 4,CATERPIE
 	ENDC
-	db 2,RATTATA
 	db 5,RATTATA
+	db 5,PIKABLU
 	if DEF(_RED)
 		db 4,CATERPIE
 		db 5,WEEDLE

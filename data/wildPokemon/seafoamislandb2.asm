@@ -5,11 +5,11 @@ IslandMonsB2:
 		db 30,SLOWPOKE
 		db 32,SEEL
 		db 32,SLOWPOKE
-		db 28,ZUBAT
+		db 28,PIKABLU
 		db 30,STARYU
-		db 30,ZUBAT
+		db 30,PIKABLU
 		db 28,SHELLDER
-		db 30,GOLBAT
+		db 30,RAIBLU
 		db 37,SLOWBRO
 	ENDC
 	IF DEF(_GREEN)
@@ -17,11 +17,11 @@ IslandMonsB2:
 		db 30,PSYDUCK
 		db 32,SEEL
 		db 32,PSYDUCK
-		db 28,ZUBAT
+		db 28,PIKABLU
 		db 30,SHELLDER
-		db 30,ZUBAT
+		db 30,PIKABLU
 		db 28,STARYU
-		db 30,GOLBAT
+		db 30,RAIBLU
 		db 37,GOLDUCK
 	ENDC
 	IF DEF(_BLUE)
@@ -29,11 +29,11 @@ IslandMonsB2:
 		db 30,HORSEA
 		db 32,SEEL
 		db 32,HORSEA
-		db 28,ZUBAT
+		db 28,PIKABLU
 		db 30,SHELLDER
-		db 30,ZUBAT
+		db 30,PIKABLU
 		db 28,STARYU
-		db 30,GOLBAT
+		db 30,RAIBLU
 		db 37,JYNX
 	ENDC
 	db $00

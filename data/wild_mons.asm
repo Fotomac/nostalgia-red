@@ -198,10 +198,10 @@ WildDataPointers:
 	dw NoMons
 	dw CaveMons
 	dw PlateauMons3
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
+	dw HideoutMons1
+	dw HideoutMons2
+	dw HideoutMons3
+	dw HideoutMons4
 	dw NoMons
 	dw NoMons
 	dw NoMons
@@ -285,6 +285,10 @@ INCLUDE "data/wildPokemon/route12.asm"
 INCLUDE "data/wildPokemon/route8.asm"
 INCLUDE "data/wildPokemon/route7.asm"
 INCLUDE "data/wildPokemon/celadoncity.asm"
+INCLUDE "data/wildPokemon/rockethideout1.asm"
+INCLUDE "data/wildPokemon/rockethideout2.asm"
+INCLUDE "data/wildPokemon/rockethideout3.asm"
+INCLUDE "data/wildPokemon/rockethideout4.asm"
 INCLUDE "data/wildPokemon/pokemontower1.asm"
 INCLUDE "data/wildPokemon/pokemontower2.asm"
 INCLUDE "data/wildPokemon/pokemontower3.asm"

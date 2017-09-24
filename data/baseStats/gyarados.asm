@@ -19,10 +19,10 @@ db 0
 db 5 ; growth rate
 ; learnset
 	tmlearn 6,8
-	tmlearn 9,10,11,12,13,14,15
+	tmlearn 10,11,12,13,14,15
 	tmlearn 20,23,24
 	tmlearn 25,31,32
 	tmlearn 33,34,38,40
 	tmlearn 44
 	tmlearn 50,53,54
-db 0 ; padding
+db BANK(GyaradosPicFront)

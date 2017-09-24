@@ -190,3 +190,17 @@ const_value = 1
 	const BELLSPROUT   ; $BC
 	const WEEPINBELL   ; $BD
 	const VICTREEBEL   ; $BE
+	const MISSINGNO_BF ; $BF
+	const MISSINGNO_C0 ; $C0
+	const MISSINGNO_C1 ; $C1
+	const MISSINGNO_C2 ; $C2
+	const PIKABLU      ; $C3
+	const RAIBLU       ; $C4
+	const MISSINGNO_C5 ; $C5
+	const MISSINGNO_C6 ; $C6
+	const MISSINGNO_C7 ; $C7
+	const MISSINGNO_C8 ; $C8
+	const MISSINGNO_C9 ; $C9
+	const MISSINGNO_CA ; $CA
+	const BELLOSSOM    ; $CB
+

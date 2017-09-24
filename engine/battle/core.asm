@@ -6491,7 +6491,7 @@ LoadPlayerBackPic:
 .next
 	ld a, BANK(RedPicBack)
 	call UncompressSpriteFromDE
-	predef ScaleSpriteByTwo
+	call LoadBackSpriteUnzoomed
 	ld hl, wOAMBuffer
 	xor a
 	ld [hOAMTile], a ; initial tile number
@@ -6523,8 +6523,6 @@ LoadPlayerBackPic:
 	ld e, a
 	dec b
 	jr nz, .loop
-	ld de, vBackPic
-	call InterlaceMergeSpriteBuffers
 	ld a, $a
 	ld [$0], a
 	xor a
@@ -6945,8 +6943,11 @@ InitBattleCommon:
 	sub 200
 	jp c, InitWildBattle
 	ld [wTrainerClass], a
+	ld [wTrainerPicID], a
+	ld [wTrainerAINumber], a
 	call GetTrainerInformation
 	callab ReadTrainer
+	callab LoadTrainerPicPointer
 	call DoBattleTransitionAndInitBattleVariables
 	call _LoadTrainerPic
 	xor a
@@ -7059,12 +7060,7 @@ _LoadTrainerPic:
 	ld e, a
 	ld a, [wTrainerPicPointer + 1]
 	ld d, a ; de contains pointer to trainer pic
-	ld a, [wLinkState]
-	and a
-	ld a, Bank(TrainerPics) ; this is where all the trainer pics are (not counting Red's)
-	jr z, .loadSprite
-	ld a, Bank(RedPicFront)
-.loadSprite
+	ld a, [wTrainerPicBank]
 	call UncompressSpriteFromDE
 	ld de, vFrontPic
 	ld a, $77
@@ -7183,15 +7179,15 @@ LoadMonBackPic:
 	call ClearScreenArea
 	ld hl,  wMonHBackSprite - wMonHeader
 	call UncompressMonSprite
-	predef ScaleSpriteByTwo
-	ld de, vBackPic
-	call InterlaceMergeSpriteBuffers ; combine the two buffers to a single 2bpp sprite
+	call LoadBackSpriteUnzoomed
 	ld hl, vSprites
 	ld de, vBackPic
 	ld c, (2*SPRITEBUFFERSIZE)/16 ; count of 16-byte chunks to be copied
 	ld a, [H_LOADEDROMBANK]
 	ld b, a
 	jp CopyVideoData
+
+	ds $8
 
 JumpMoveEffect:
 	call _JumpMoveEffect
@@ -8797,6 +8793,12 @@ PlayBattleAnimationGotID:
 	pop hl
 	ret
 
+LoadBackSpriteUnzoomed:
+	ld a, $66
+	ld de, vBackPic
+	push de
+	jp LoadUncompressedBackSprite 
+
 PlayDefeatedWildMonMusic:
 	call WaitForSoundToFinish
 	call EndLowHealthAlarm
@@ -8979,19 +8981,27 @@ PhysicalSpecialSplit: ;Determines if a move is Physical or Special
 	db OTHER_M ;SUBSTITUTE   EQU $A4
 	db PHYSICAL;METAL_CLAW   EQU $A5
 	db PHYSICAL;CRUNCH       EQU $A6
-	db PHYSICAL;FAINT_ATTACK EQU $A7
-	db PHYSICAL;OUTRAGE      EQU $A8
-	db SPECIAL ;TWISTER      EQU $A9
-	db PHYSICAL;ROLLOUT      EQU $AA
-	db SPECIAL ;ANCIENTPOWER EQU $AB
-	db PHYSICAL;ROCK_TOMB    EQU $AC
-	db SPECIAL ;SLUDGE_BOMB  EQU $AD
-	db PHYSICAL;CROSS_CHOP   EQU $AE
-	db SPECIAL ;POWDER_SNOW  EQU $AF
-	db SPECIAL ;GIGA_DRAIN   EQU $B0
-	db SPECIAL ;ZAP_CANNON   EQU $B1
-	db PHYSICAL;FLAME_WHEEL  EQU $B2
-	db PHYSICAL;RAPID_SPIN   EQU $B3
-	db OTHER_M ;SCARY_FACE   EQU $B4
-	db PHYSICAL;RETURN       EQU $B5
+	db PHYSICAL;THIEF        EQU $A7
+	db PHYSICAL;FAINT_ATTACK EQU $A8
+	db PHYSICAL;OUTRAGE      EQU $A9
+	db SPECIAL ;TWISTER      EQU $AA
+	db PHYSICAL;ROLLOUT      EQU $AB
+	db SPECIAL ;ANCIENTPOWER EQU $AC
+	db PHYSICAL;ROCK_TOMB    EQU $AD
+	db OTHER_M ;CALM_MIND    EQU $AE
+	db SPECIAL ;SLUDGE_BOMB  EQU $AF
+	db PHYSICAL;CROSS_CHOP   EQU $B0
+	db PHYSICAL;BRICK_BREAK  EQU $B1
+	db SPECIAL ;POWDER_SNOW  EQU $B2
+	db SPECIAL ;GIGA_DRAIN   EQU $B3
+	db PHYSICAL;BULLET_SEED  EQU $B4
+	db SPECIAL ;ZAP_CANNON   EQU $B5
+	db SPECIAL ;SHOCK_WAVE   EQU $B6
+	db SPECIAL ;WATER_PULSE  EQU $B7
+	db PHYSICAL;FLAME_WHEEL  EQU $B8
+	db PHYSICAL;RAPID_SPIN   EQU $B9
+	db OTHER_M ;SCARY_FACE   EQU $BA
+	db PHYSICAL;SECRET_POWER EQU $BB
+	db OTHER_M ;ATTRACT      EQU $BC
+	db PHYSICAL;RETURN       EQU $BD
 	db PHYSICAL;STRUGGLE

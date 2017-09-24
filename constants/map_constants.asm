@@ -209,8 +209,8 @@ ENDM
 	mapconst ROCKET_HIDEOUT_3,           14, 15 ; $C9
 	mapconst ROCKET_HIDEOUT_4,           12, 15 ; $CA
 	mapconst ROCKET_HIDEOUT_ELEVATOR,     4,  3 ; $CB
-	mapconst UNUSED_MAP_CC,               0,  0 ; $CC
-	mapconst UNUSED_MAP_CD,               0,  0 ; $CD
+	mapconst KOGAS_HOUSE_ENTRANCE,        4,  4 ; $CC
+	mapconst KOGAS_HOUSE,                 6,  5 ; $CD
 	mapconst UNUSED_MAP_CE,               0,  0 ; $CE
 	mapconst SILPH_CO_2F,                 9, 15 ; $CF
 	mapconst SILPH_CO_3F,                 9, 15 ; $D0

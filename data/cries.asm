@@ -190,3 +190,17 @@ CryData:
 	db $21, $55, $01; Bellsprout
 	db $25, $44, $20; Weepinbell
 	db $25, $66, $CC; Victreebel
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $19, $CC, $40; Pikablu
+	db $19, $99, $40; Raiblu
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $00, $00, $00; MissingNo.
+	db $23, $88, $40; Bellossom
+

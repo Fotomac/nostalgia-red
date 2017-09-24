@@ -11,10 +11,12 @@ _CeladonGymText_48a5e::
 	line "I am the LEADER"
 	cont "of CELADON GYM."
 
-	para "I teach the art of"
-	line "flower arranging."
-	cont "My #MON are of"
-	cont "the grass-type."
+	para "I am a student of"
+	line "the art of flower"
+	cont "arranging. My"
+	cont "#MON are"
+	cont "solely of the"
+	cont "grass-type."
 
 	para "Oh, I'm sorry, I"
 	line "had no idea that"
@@ -61,24 +63,28 @@ _CeladonGymText9::
 	line "this with you."
 	done
 
-_ReceivedTM21Text::
-	text $52, " received"
+_ReceivedTM19Text::
+	text "<PLAYER> received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
 
-_TM21ExplanationText::
+_TM19ExplanationText::
 	db $0
-	para "TM21 contains"
-	line "MEGA DRAIN."
+	para "TM19 contains"
+	line "GIGA DRAIN."
 
 	para "Half the damage"
 	line "it inflicts is"
 	cont "drained to heal"
 	cont "your #MON!"
+
+	para "Wouldn't you agree"
+	line "it's a wonderful"
+	cont "move?"
 	done
 
-_TM21NoRoomText::
+_TM19NoRoomText::
 	text "You should make"
 	line "room for this."
 	done

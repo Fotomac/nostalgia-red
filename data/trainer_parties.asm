@@ -11,7 +11,7 @@ TrainerDataPointers:
 	dw BikerData
 	dw BurglarData
 	dw EngineerData
-	dw Juggler1Data
+	dw SwimmerFData
 	dw FisherData
 	dw SwimmerData
 	dw CueBallData
@@ -46,6 +46,7 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
+	dw JanineData
 
 ; if first byte != FF, then
 	; first byte is level (of all pokemon on this team)
@@ -128,6 +129,9 @@ LassData:
 	db 23,ODDISH,GLOOM,0
 ; Pewter Gym
 	db 9,DIGLETT,NIDORAN_F,0
+; Koga's House
+	db 25,BULBASAUR,0
+	db 26,GLOOM,EKANS,GLOOM,0
 SailorData:
 ; SS Anne Stern
 	db 18,MACHOP,SHELLDER,0
@@ -157,6 +161,8 @@ JrTrainerMData:
 	db 19,RATTATA,DIGLETT,EKANS,SANDSHREW,0
 ; Route 12
 	db 29,NIDORAN_M,NIDORINO,0
+; Koga's House
+	db 25,NIDORINO,0
 JrTrainerFData:
 ; Cerulean Gym
 	db 19,GOLDEEN,0
@@ -196,6 +202,9 @@ JrTrainerFData:
 	db 30,TENTACOOL,HORSEA,SEEL,0
 ; Route 25
 	db 15,NIDORAN_M,NIDORAN_F,0
+; Vermilion Gym
+	db 20,MAGNEMITE,EEVEE,PIKACHU,0
+	db 26,NIDORINA,0
 PokemaniacData:
 ; Route 10
 	db 30,RHYHORN,LICKITUNG,0
@@ -291,8 +300,16 @@ EngineerData:
 ; Route 11
 	db 21,MAGNEMITE,0
 	db 18,MAGNEMITE,MAGNEMITE,MAGNETON,0
-Juggler1Data:
-; none
+SwimmerFData:
+; Route 19
+	db 27,POLIWAG,GOLDEEN,SEAKING,GOLDEEN,POLIWAG,0
+	db 30,GOLDEEN,SEAKING,0
+	db 29,STARYU,STARYU,STARYU,0
+; Route 20
+	db 30,SEADRA,HORSEA,SEADRA,0
+	db 35,SEAKING,0
+	db 30,SHELLDER,SHELLDER,CLOYSTER,0
+	db 31,POLIWAG,SEAKING,0
 FisherData:
 ; SS Anne 2F Rooms
 	db 17,GOLDEEN,TENTACOOL,GOLDEEN,0
@@ -363,21 +380,11 @@ BeautyData:
 ; Route 13
 	db 27,RATTATA,PIKACHU,RATTATA,0
 	db 29,CLEFAIRY,MEOWTH,0
-; Route 20
-	db 35,SEAKING,0
-	db 30,SHELLDER,SHELLDER,CLOYSTER,0
-	db 31,POLIWAG,SEAKING,0
 ; Route 15
 	db 29,PIDGEOTTO,WIGGLYTUFF,0
 	db 29,BULBASAUR,IVYSAUR,0
 ; Unused
 	db 33,WEEPINBELL,BELLSPROUT,WEEPINBELL,0
-; Route 19
-	db 27,POLIWAG,GOLDEEN,SEAKING,GOLDEEN,POLIWAG,0
-	db 30,GOLDEEN,SEAKING,0
-	db 29,STARYU,STARYU,STARYU,0
-; Route 20
-	db 30,SEADRA,HORSEA,SEADRA,0
 PsychicData:
 ; Saffron Gym
 	db 31,KADABRA,SLOWPOKE,MR_MIME,KADABRA,0
@@ -607,7 +614,7 @@ MistyData:
 LtSurgeData:
 	db $FF,21,VOLTORB,18,PIKACHU,24,RAICHU,0
 ErikaData:
-	db $FF,29,VICTREEBEL,24,TANGELA,29,VILEPLUME,0
+	db $FF,29,VICTREEBEL,24,TANGELA,29,BELLOSSOM,0
 KogaData:
 	db $FF,37,KOFFING,39,MUK,37,KOFFING,43,WEEZING,0
 BlaineData:
@@ -689,3 +696,5 @@ AgathaData:
 	db $FF,56,GENGAR,56,GOLBAT,55,HAUNTER,58,ARBOK,60,GENGAR,0
 LanceData:
 	db $FF,58,GYARADOS,56,DRAGONAIR,56,DRAGONAIR,60,AERODACTYL,62,DRAGONITE,0
+JanineData:
+	db $FF,28,GOLBAT,30,KOFFING,32,WEEZING,0

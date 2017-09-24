@@ -19,10 +19,10 @@ db 0
 db 0 ; growth rate
 ; learnset
 	tmlearn 4,6,8
-	tmlearn 9,10,15
+	tmlearn 10,15
 	tmlearn 20
 	tmlearn 31,32
 	tmlearn 33,34,40
 	tmlearn 43,44
 	tmlearn 49,50,52
-db 0 ; padding
+db BANK(DodrioPicFront)

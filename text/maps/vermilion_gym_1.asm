@@ -1,11 +1,18 @@
 _VermilionGymText_5cb6d::
-	text "Hey, kid! What do"
+	text "Ten-hut! Welcome"
+	line "to VERMILION GYM!"
+
+	para "Huh?"
+
+	para "Hey, kid! What do"
 	line "you think you're"
 	cont "doing here?"
 
 	para "You won't live"
 	line "long in combat!"
-	cont "That's for sure!"
+	cont "Not with your"
+	cont "puny power, that's"
+	cont "for sure!"
 
 	para "I tell you kid,"
 	line "electric #MON"

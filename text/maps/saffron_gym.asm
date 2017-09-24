@@ -6,19 +6,20 @@ _SaffronGymText_5d162::
 	line "powers since I"
 	cont "was a child."
 
-	para "I first learned"
-	line "to bend spoons"
-	cont "with my mind."
+	para "It started when"
+	line "a spoon I"
+	cont "carelessly"
+	cont "tossed, bent."
 
-	para "I dislike fight-"
+	para "I dislike battl-"
 	line "ing, but if you"
 	cont "wish, I will show"
 	cont "you my powers!"
 	done
 
 _SaffronGymText_5d167::
-	text "I'm"
-	line "shocked!"
+	text "This"
+	line "loss shocks me!"
 	cont "But, a loss is a"
 	cont "loss."
 
@@ -30,7 +31,12 @@ _SaffronGymText_5d167::
 	line "MARSHBADGE!@@"
 
 _SaffronGymText_5d16e::
-	text "Everyone has"
+	text "Psychic power"
+	line "isn't something"
+	cont "that only a few"
+	cont "people have!"
+
+	para "Everyone has"
 	line "psychic power!"
 	cont "People just don't"
 	cont "realize it!"
@@ -48,25 +54,27 @@ _SaffronGymText_5d173::
 
 	para "Just don't raise"
 	line "your #MON too"
-	cont "much!"
+	cont "much to avoid"
+	cont "that problem!"
 
 	para "Wait, please take"
 	line "this TM with you!"
 	done
 
-ReceivedTM46Text::
-	text $52, " received"
-	line "TM46!@@"
+ReceivedTM04Text::
+	text "<PLAYER> received"
+	line "TM04!@@"
 
-_TM46ExplanationText::
+_TM04ExplanationText::
 	db $0
-	para "TM46 is PSYWAVE!"
-	line "It uses powerful"
-	cont "psychic waves to"
-	cont "inflict damage!"
+	para "TM04 is CALM MIND!"
+	line "It makes the"
+	cont "#MON concen-"
+	cont "trate to raise"
+	cont "its SPECIAL!"
 	done
 
-_TM46NoRoomText::
+_TM04NoRoomText::
 	text "Your pack is full"
 	line "of other items!"
 	done

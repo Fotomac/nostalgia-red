@@ -16,29 +16,30 @@ _VermilionGymText_5cb77::
 	cont "#MON's SPEED!"
 
 	para "It also lets your"
-	line "#MON FLY any"
-	cont "time, kid!"
+	line "#MON FLY"
+	cont "lightning-quick"
+	cont "any time, kid!"
 
 	para "You're special,"
 	line "kid! Take this!"
 	done
 
-_ReceivedTM24Text::
-	text $52, " received "
+_ReceivedTM34Text::
+	text "<PLAYER> received "
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
 
-_TM24ExplanationText::
+_TM34ExplanationText::
 	db $0
-	para "TM24 contains"
-	line "THUNDERBOLT!"
+	para "TM34 contains"
+	line "SHOCK WAVE!"
 
 	para "Teach it to an"
 	line "electric #MON!"
 	done
 
-_TM24NoRoomText::
+_TM34NoRoomText::
 	text "Yo kid, make room"
 	line "in your pack!"
 	done
@@ -109,6 +110,29 @@ _VermilionGymAfterBattleText3::
 	line "1st lock, the 2nd"
 	cont "lock is right"
 	cont "next to it!"
+	done
+
+_VermilionGymBattleText4::
+	text "I may be just a"
+	line "little girl, but"
+	cont "I volunteered to"
+	cont "defend our LEADER!"
+	done
+
+_VermilionGymEndBattleText4::
+	text "God"
+	line "bless America and"
+	cont "democracy!"
+	prompt
+
+_VermilionGymAfterBattleText4::
+	text "You ever been to"
+	line "DIGLETT'S CAVE?"
+
+	para "It's full of"
+	line "pests, but they"
+	cont "can be useful in"
+	cont "your challenge!"
 	done
 
 _VermilionGymText_5cbf4::

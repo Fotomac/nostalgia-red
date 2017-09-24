@@ -54,3 +54,12 @@ const_value = 0
 	const PAL_BADGE     ; $22
 	const PAL_CAVE      ; $23
 	const PAL_GAMEFREAK ; $24
+	const PAL_BLUE_TRAINER   ; $25 
+	const PAL_RED_TRAINER    ; $26 
+	const PAL_CYAN_TRAINER   ; $27 
+	const PAL_PURPLE_TRAINER ; $28 
+	const PAL_BROWN_TRAINER  ; $29 
+	const PAL_GREEN_TRAINER  ; $2A 
+	const PAL_PINK_TRAINER   ; $2B 
+	const PAL_YELLOW_TRAINER ; $2C
+	const PAL_CHARIZARD ; $2D

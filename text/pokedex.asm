@@ -119,6 +119,24 @@ _SlowbroDexEntry::
 	dex
 
 _IvysaurDexEntry::
+IF DEF(_RED)
+	text "There is a plant"
+	next "bulb on its back."
+	next "When it absorbs"
+
+	page "nutrients, the"
+	next "bulb blossoms into"
+	next "a large flower"
+ENDC
+IF DEF(_GREEN)
+	text "When the bud on"
+	next "its back starts"
+	next "swelling, a sweet"
+
+	page "aroma wafts to"
+	next "indicate the"
+	next "coming bloom"
+ENDC
 IF DEF(_BLUE)
 	text "When the bulb on"
 	next "its back grows"
@@ -127,14 +145,6 @@ IF DEF(_BLUE)
 	page "to lose the"
 	next "ability to stand"
 	next "on its hind legs"
-ELSE
-	text "There is a plant"
-	next "bulb on its back."
-	next "When it absorbs"
-
-	page "nutrients, the"
-	next "bulb blossoms into"
-	next "a large flower"
 ENDC
 	dex
 
@@ -799,6 +809,25 @@ _NinetalesDexEntry::
 	dex
 
 _PikachuDexEntry::
+IF DEF(_RED)
+	text "Raises its tail"
+	next "to check its"
+	next "surroundings. The"
+
+	page "tail is sometimes"
+	next "struck by light-"
+	next "ning in this pose"
+ENDC
+IF DEF(_GREEN)
+	text "Has small electric"
+	next "sacs on both its"
+	next "cheeks. Looses"
+
+	page "electric charges"
+	next "from the sacs if"
+	next "threatened"
+ENDC
+IF DEF(_BLUE)
 	text "When several of"
 	next "these #MON"
 	next "gather, their"
@@ -806,9 +835,28 @@ _PikachuDexEntry::
 	page "electricity could"
 	next "build and cause"
 	next "lightning storms"
+ENDC
 	dex
 
 _RaichuDexEntry::
+IF DEF(_RED)
+	text "Can loose 100,000"
+	next "V of electricity,"
+	next "instantly dropping"
+
+	page "foes several times"
+	next "its own size"
+ENDC
+IF DEF(_GREEN)
+	text "Its electric"
+	next "charges can reach"
+	next "even 100,000 V."
+
+	page "Careless contact"
+	next "can drop even an"
+	next "Indian elephant"
+ENDC
+IF DEF(_BLUE)
 	text "Its long tail"
 	next "serves as a"
 	next "ground to protect"
@@ -816,6 +864,7 @@ _RaichuDexEntry::
 	page "itself from its"
 	next "own high voltage"
 	next "power"
+ENDC
 	dex
 
 _DratiniDexEntry::
@@ -1039,6 +1088,25 @@ _PoliwrathDexEntry::
 	dex
 
 _WeedleDexEntry::
+IF DEF(_RED)
+	text "Often found in"
+	next "forests and"
+	next "grasslands. It has"
+
+	page "a sharp, toxic"
+	next "barb around 2 in."
+	next "atop its head"
+ENDC
+IF DEF(_GREEN)
+	text "Its poison stinger"
+	next "is very powerful."
+	next "Its bright-colored"
+
+	page "body is intended"
+	next "to warn off its"
+	next "enemies"
+ENDC
+IF DEF(_BLUE)
 	text "Often found in"
 	next "forests, eating"
 	next "leaves."
@@ -1046,9 +1114,20 @@ _WeedleDexEntry::
 	page "It has a sharp"
 	next "venomous stinger"
 	next "on its head"
+ENDC
 	dex
 
 _KakunaDexEntry::
+IF DEF(_RED)
+	text "This #MON is in"
+	next "a temporary stage"
+	next "while making its"
+
+	page "body and is almost"
+	next "completely unable"
+	next "to move by itself"
+ENDC
+IF DEF(_GREEN)
 	text "Almost incapable"
 	next "of moving, this"
 	next "#MON can only"
@@ -1056,9 +1135,38 @@ _KakunaDexEntry::
 	page "harden its shell"
 	next "to protect itself"
 	next "from predators"
+ENDC
+IF DEF(_BLUE)
+	text "While awaiting"
+	next "evolution, this"
+	next "#MON hides from"
+
+	page "predators under"
+	next "leaves and in"
+	next "branches"
+ENDC
 	dex
 
 _BeedrillDexEntry::
+IF DEF(_RED)
+	text "May appear in a"
+	next "swarm. Flies at"
+	next "violent speeds,"
+
+	page "all the while"
+	next "using the stinger"
+	next "on its rear"
+ENDC
+IF DEF(_GREEN)
+	text "It has three"
+	next "poisonous stingers"
+	next "on its forelegs"
+
+	page "and tail. They are"
+	next "used to jab its"
+	next "enemy repeatedly"
+ENDC
+IF DEF(_BLUE)
 	text "Flies at high"
 	next "speed and attacks"
 	next "using its large"
@@ -1066,6 +1174,7 @@ _BeedrillDexEntry::
 	page "venomous stingers"
 	next "on its forelegs"
 	next "and tail"
+ENDC
 	dex
 
 _DodrioDexEntry::
@@ -1149,6 +1258,25 @@ ENDC
 	dex
 
 _MetapodDexEntry::
+IF DEF(_RED)
+	text "Though encased in"
+	next "a sturdy shell,"
+	next "the body inside is"
+
+	page "tender. It can't"
+	next "withstand a harsh"
+	next "attack"
+ENDC
+IF DEF(_GREEN)
+	text "A steel-hard shell"
+	next "protects its"
+	next "tender body. It"
+
+	page "quietly endures"
+	next "hardships leading"
+	next "up to evolution"
+ENDC
+IF DEF(_BLUE)
 	text "This #MON is"
 	next "vulnerable to"
 	next "attack while its"
@@ -1156,9 +1284,29 @@ _MetapodDexEntry::
 	page "shell is soft,"
 	next "exposing its weak"
 	next "and tender body"
+ENDC
 	dex
 
 _ButterfreeDexEntry::
+IF DEF(_RED)
+	text "It loves the honey"
+	next "of flowers and can"
+	next "locate flower"
+
+	page "patches that have"
+	next "even tiny amounts"
+	next "of pollen"
+ENDC
+IF DEF(_GREEN)
+	text "The wings are"
+	next "protected by a"
+	next "rainproof dust."
+
+	page "As a result, it"
+	next "can fly about"
+	next "even in rain"
+ENDC
+IF DEF(_BLUE)
 	text "In battle, it"
 	next "flaps its wings"
 	next "at high speed to"
@@ -1166,6 +1314,7 @@ _ButterfreeDexEntry::
 	page "release highly"
 	next "toxic dust into"
 	next "the air"
+ENDC
 	dex
 
 _MachampDexEntry::
@@ -1627,8 +1776,8 @@ IF DEF(_GREEN)
 	next "its mouth"
 ENDC
 IF DEF(_BLUE)
-	text "It shelters itself"
-	next "in its shell, then"
+	text "Shelters itself in"
+	next "its shell, then"
 	next "strikes back with"
 
 	page "spouts of water"
@@ -1658,6 +1807,23 @@ ENDC
 	dex
 
 _WartortleDexEntry::
+IF DEF(_RED)
+	text "Said to live"
+	next "10,000 years. Its"
+	next "furry tail is"
+
+	page "popular as a"
+	next "symbol of"
+	next "longevity"
+ENDC
+IF DEF(_GREEN)
+	text "Very popular as a"
+	next "pet. Its fur-"
+	next "covered tail is a"
+
+	page "symbol of its"
+	next "longevity"
+ENDC
 IF DEF(_BLUE)
 	text "Often hides in"
 	next "water to stalk"
@@ -1666,13 +1832,6 @@ IF DEF(_BLUE)
 	page "swimming fast, it"
 	next "moves its ears to"
 	next "maintain balance"
-ELSE
-	text "Very popular as a"
-	next "pet. Its fur-"
-	next "covered tail is a"
-
-	page "symbol of its"
-	next "longevity"
 ENDC
 	dex
 
@@ -1754,5 +1913,65 @@ _VictreebelDexEntry::
 	page "although no one"
 	next "has ever returned"
 	next "from there"
+	dex
+
+_PikabluDexEntry::
+IF DEF(_RED)
+	text "The end of its"
+	next "tail serves as a"
+	next "buoy that keeps it"
+
+	page "from drowning,"
+	next "even in a vicious"
+	next "current"
+ENDC
+IF DEF(_GREEN)
+	text "The tip of its"
+	next "tail, with an oil"
+	next "lighter than"
+
+	page "water, lets it"
+	next "swim without"
+	next "drowning"
+ENDC
+IF DEF(_BLUE)
+	text "The fur on its"
+	next "body naturally"
+	next "repels water. Can"
+
+	page "stay dry even as"
+	next "it plays in the"
+	next "water"
+ENDC
+	dex
+
+_RaibluDexEntry::
+IF DEF(_RED)
+	text "When it plays in"
+	next "water, it rolls up"
+	next "its elongated ears"
+
+	page "to prevent their"
+	next "insides from"
+	next "getting wet"
+ENDC
+IF DEF(_GREEN)
+	text "By keeping still"
+	next "and listening"
+	next "intently, it can"
+
+	page "tell what is in"
+	next "even wild, fast-"
+	next "moving rivers"
+ENDC
+IF DEF(_BLUE)
+	text "Its long ears are"
+	next "superb sensors. It"
+	next "can distinguish"
+
+	page "the movements of"
+	next "living things on"
+	next "riverbeds"
+ENDC
 	dex
 

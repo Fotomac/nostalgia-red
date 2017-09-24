@@ -42,7 +42,7 @@ ItemNames:
 	db "DOME FOSSIL@"
 	db "HELIX FOSSIL@"
 	db "SECRET KEY@"
-	db "?????@"
+	db "SUN STONE@"
 	db "BIKE VOUCHER@"
 	db "X ACCURACY@"
 	db "LEAF STONE@"

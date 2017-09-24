@@ -488,6 +488,7 @@ UsableItems_PartyMenu:
 	db CARBOS
 	db CALCIUM
 	db RARE_CANDY
+	db SUN_STONE
 	db LEAF_STONE
 	db FULL_HEAL
 	db REVIVE

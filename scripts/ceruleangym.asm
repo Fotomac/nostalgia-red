@@ -47,13 +47,13 @@ CeruleanGymScript_5c70d:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_MISTY
-	lb bc, TM_11, 1
+	lb bc, TM_03, 1
 	call GiveItem
 	jr nc, .BagFull
 	ld a, $6
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM11
+	SetEvent EVENT_GOT_TM03
 	jr .asm_5c736
 .BagFull
 	ld a, $7
@@ -103,7 +103,7 @@ CeruleanGymText1:
 	TX_ASM
 	CheckEvent EVENT_BEAT_MISTY
 	jr z, .asm_5c78d
-	CheckEventReuseA EVENT_GOT_TM11
+	CheckEventReuseA EVENT_GOT_TM03
 	jr nz, .asm_5c785
 	call z, CeruleanGymScript_5c70d
 	call DisableWaitingAfterTextDisplay
@@ -147,7 +147,7 @@ CeruleanGymText5:
 	db "@"
 
 CeruleanGymText6:
-	TX_FAR _ReceivedTM11Text
+	TX_FAR _ReceivedTM03Text
 	TX_SFX_ITEM_1
 	db "@"
 

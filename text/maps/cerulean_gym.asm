@@ -1,11 +1,9 @@
 _CeruleanGymText_5c7be::
-	text "Hi, you're a new"
-	line "face!"
-
-	para "Trainers who want"
-	line "to turn pro have"
-	cont "to have a policy"
-	cont "about #MON!"
+	text "Hey, you! Only"
+	line "those trainers"
+	cont "who have a policy"
+	cont "about #MON can"
+	cont "turn pro!"
 
 	para "What is your"
 	line "approach when you"
@@ -15,11 +13,19 @@ _CeruleanGymText_5c7be::
 	line "all-out offensive"
 	cont "with water-type"
 	cont "#MON!"
+
+	para "I, MISTY, the"
+	line "world-famous"
+	cont "beauty, shall be"
+	cont "your host!"
+
+	para "Are you ready,"
+	line "sweetie?"
 	done
 
 _CeruleanGymText_5c7c3::
-	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+	text "TM03 teaches"
+	line "WATER PULSE!"
 
 	para "Use it on an"
 	line "aquatic #MON!"
@@ -45,9 +51,9 @@ _CeruleanGymText_5c7c8::
 	line "my favorite TM!"
 	done
 
-_ReceivedTM11Text::
-	text $52, " received"
-	line "TM11!@@"
+_ReceivedTM03Text::
+	text "<PLAYER> received"
+	line "TM03!@@"
 
 _CeruleanGymText_5c7d3::
 	text "You better make"
@@ -65,8 +71,9 @@ _CeruleanGymText_5c7d8::
 	cont "show you beat me!@@"
 
 _CeruleanGymBattleText1::
-	text "I'm more than good"
-	line "enough for you!"
+	text "What? You? I'm"
+	line "more than good"
+	cont "enough for you!"
 
 	para "MISTY can wait!"
 	done

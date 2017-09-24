@@ -19,10 +19,10 @@ db 0
 db 3 ; growth rate
 ; learnset
 	tmlearn 6,8
-	tmlearn 9,10,11,12,13,14
+	tmlearn 10,11,12,13,14
 	tmlearn 20
 	tmlearn 29,31,32
 	tmlearn 34,40
 	tmlearn 44,46
 	tmlearn 50,53
-db 0 ; padding
+db BANK(PoliwagPicFront)

@@ -13,9 +13,9 @@ Route19Object:
 	object SPRITE_SWIMMER, $4, $1b, STAY, RIGHT, $4, OPP_SWIMMER, $5
 	object SPRITE_SWIMMER, $10, $1f, STAY, UP, $5, OPP_SWIMMER, $6
 	object SPRITE_SWIMMER, $9, $b, STAY, DOWN, $6, OPP_SWIMMER, $7
-	object SPRITE_SWIMMER, $8, $2b, STAY, LEFT, $7, OPP_BEAUTY, $c
-	object SPRITE_SWIMMER, $b, $2b, STAY, RIGHT, $8, OPP_BEAUTY, $d
+	object SPRITE_SWIMMER, $8, $2b, STAY, LEFT, $7, OPP_SWIMMER_F, $1
+	object SPRITE_SWIMMER, $b, $2b, STAY, RIGHT, $8, OPP_SWIMMER_F, $2
 	object SPRITE_SWIMMER, $9, $2a, STAY, UP, $9, OPP_SWIMMER, $8
-	object SPRITE_SWIMMER, $a, $2c, STAY, DOWN, $a, OPP_BEAUTY, $e
+	object SPRITE_SWIMMER, $a, $2c, STAY, DOWN, $a, OPP_SWIMMER_F, $3
 
 	; warp-to

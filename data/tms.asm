@@ -1,13 +1,13 @@
 TechnicalMachines:
 	db MEGA_PUNCH
 	db RAZOR_WIND
-	db SWORDS_DANCE
-	db WHIRLWIND
-	db MEGA_KICK
+	db WATER_PULSE
+	db CALM_MIND
+	db ROAR
 	db TOXIC
 	db HORN_DRILL
 	db BODY_SLAM
-	db TAKE_DOWN
+	db BULLET_SEED
 	db DOUBLE_EDGE
 	db BUBBLEBEAM
 	db WATER_GUN
@@ -17,7 +17,7 @@ TechnicalMachines:
 	db PAY_DAY
 	db SUBMISSION
 	db COUNTER
-	db SEISMIC_TOSS
+	db GIGA_DRAIN
 	db RAGE
 	db MEGA_DRAIN
 	db SOLARBEAM
@@ -32,7 +32,7 @@ TechnicalMachines:
 	db MIMIC
 	db DOUBLE_TEAM
 	db REFLECT
-	db BIDE
+	db SHOCK_WAVE
 	db METRONOME
 	db SELFDESTRUCT
 	db EGG_BOMB
@@ -41,7 +41,7 @@ TechnicalMachines:
 	db SKULL_BASH
 	db SOFTBOILED
 	db DREAM_EATER
-	db SKY_ATTACK
+	db SECRET_POWER
 	db REST
 	db THUNDER_WAVE
 	db PSYWAVE

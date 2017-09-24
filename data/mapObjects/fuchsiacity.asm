@@ -1,7 +1,7 @@
 FuchsiaCityObject:
 	db $f ; border block
 
-	db $9 ; warps
+	db $a ; warps
 	db $d, $5, $0, FUCHSIA_MART
 	db $1b, $b, $0, FUCHSIA_HOUSE_1
 	db $1b, $13, $0, FUCHSIA_POKECENTER
@@ -11,6 +11,7 @@ FuchsiaCityObject:
 	db $d, $16, $0, FUCHSIA_MEETING_ROOM
 	db $1b, $1f, $1, FUCHSIA_HOUSE_3
 	db $18, $1f, $0, FUCHSIA_HOUSE_3
+	db $1b, $f, $0, KOGAS_HOUSE_ENTRANCE
 
 	db $e ; signs
 	db $17, $f, $b ; FuchsiaCityText11
@@ -50,3 +51,4 @@ FuchsiaCityObject:
 	EVENT_DISP FUCHSIA_CITY_WIDTH, $d, $16 ; FUCHSIA_MEETING_ROOM
 	EVENT_DISP FUCHSIA_CITY_WIDTH, $1b, $1f ; FUCHSIA_HOUSE_3
 	EVENT_DISP FUCHSIA_CITY_WIDTH, $18, $1f ; FUCHSIA_HOUSE_3
+	EVENT_DISP FUCHSIA_CITY_WIDTH, $1b, $f ; KOGAS_HOUSE_ENTRANCE

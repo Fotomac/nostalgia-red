@@ -712,33 +712,20 @@ UncompressMonSprite::
 ; $74 ≤ index < $99, bank $C
 ; $99 ≤ index,       bank $D
 	ld a,[wcf91] ; XXX name for this ram location
-	ld b,a
-	cp MEW
-	ld a,BANK(MewPicFront)
-	jr z,.GotBank
-	ld a,b
 	cp FOSSIL_KABUTOPS
+	jr z, .RecallBank
+	cp FOSSIL_AERODACTYL
+	jr z, .RecallBank
+	cp MON_GHOST
+	jr z, .RecallBank
+	ld a,[wMonHPicBank]
+	jr .GotBank
+.RecallBank
 	ld a,BANK(FossilKabutopsPic)
-	jr z,.GotBank
-	ld a,b
-	cp TANGELA + 1
-	ld a,BANK(TangelaPicFront)
-	jr c,.GotBank
-	ld a,b
-	cp MOLTRES + 1
-	ld a,BANK(MoltresPicFront)
-	jr c,.GotBank
-	ld a,b
-	cp BEEDRILL + 2
-	ld a,BANK(BeedrillPicFront)
-	jr c,.GotBank
-	ld a,b
-	cp STARMIE + 1
-	ld a,BANK(StarmiePicFront)
-	jr c,.GotBank
-	ld a,BANK(VictreebelPicFront)
 .GotBank
 	jp UncompressSpriteData
+
+	ds $19
 
 ; de: destination location
 LoadMonFrontSprite::
@@ -747,6 +734,7 @@ LoadMonFrontSprite::
 	call UncompressMonSprite
 	ld hl, wMonHSpriteDim
 	ld a, [hli]
+LoadUncompressedBackSprite:
 	ld c, a
 	pop de
 	; fall through
@@ -2526,7 +2514,6 @@ PrintEndBattleText::
 	ld [H_LOADEDROMBANK], a
 	ld [MBC1RomBank], a
 	push hl
-	callba SaveTrainerName
 	ld hl, TrainerEndBattleText
 	call PrintText
 	pop hl
@@ -2871,20 +2858,14 @@ GetTrainerInformation::
 	call GetTrainerName
 	ld a, [wLinkState]
 	and a
-	jr nz, .linkBattle
+	ret nz
 	ld a, Bank(TrainerPicAndMoneyPointers)
 	call BankswitchHome
 	ld a, [wTrainerClass]
 	dec a
 	ld hl, TrainerPicAndMoneyPointers
-	ld bc, $5
+	ld bc, $3
 	call AddNTimes
-	ld de, wTrainerPicPointer
-	ld a, [hli]
-	ld [de], a
-	inc de
-	ld a, [hli]
-	ld [de], a
 	ld de, wTrainerBaseMoney
 	ld a, [hli]
 	ld [de], a
@@ -2892,13 +2873,6 @@ GetTrainerInformation::
 	ld a, [hli]
 	ld [de], a
 	jp BankswitchBack
-.linkBattle
-	ld hl, wTrainerPicPointer
-	ld de, RedPicFront
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	ret
 
 GetTrainerName::
 	jpba GetTrainerName_

@@ -288,7 +288,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,0    ; BIKER
 	db 1,3,0  ; BURGLAR
 	db 1,0    ; ENGINEER
-	db 1,2,0  ; JUGGLER_X
+	db 1,3,0  ; SWIMMER_F
 	db 1,3,0  ; FISHER
 	db 1,3,0  ; SWIMMER
 	db 0      ; CUE_BALL
@@ -323,6 +323,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,0    ; CHANNELER
 	db 1,0    ; AGATHA
 	db 1,3,0  ; LANCE
+	db 1,3,0  ; JANINE
 
 INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
 
@@ -344,7 +345,7 @@ TrainerAI:
 	ld a,[wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z
-	ld a,[wTrainerClass] ; what trainer class is this?
+	ld a,[wTrainerAINumber]
 	dec a
 	ld c,a
 	ld b,0
@@ -384,7 +385,7 @@ TrainerAIPointers:
 	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
-	dbw 3,JugglerAI ; juggler_x
+	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
@@ -419,6 +420,7 @@ TrainerAIPointers:
 	dbw 3,GenericAI
 	dbw 2,AgathaAI ; agatha
 	dbw 1,LanceAI ; lance
+	dbw 2,KogaAI ; janine
 
 JugglerAI:
 	cp $40

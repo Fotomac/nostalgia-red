@@ -47,13 +47,13 @@ SaffronGymText_5d068:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_SABRINA
-	lb bc, TM_46, 1
+	lb bc, TM_04, 1
 	call GiveItem
 	jr nc, .BagFull
 	ld a, $b
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM46
+	SetEvent EVENT_GOT_TM04
 	jr .asm_5d091
 .BagFull
 	ld a, $c
@@ -153,7 +153,7 @@ SaffronGymText1:
 	TX_ASM
 	CheckEvent EVENT_BEAT_SABRINA
 	jr z, .asm_5d134
-	CheckEventReuseA EVENT_GOT_TM46
+	CheckEventReuseA EVENT_GOT_TM04
 	jr nz, .asm_5d12c
 	call z, SaffronGymText_5d068
 	call DisableWaitingAfterTextDisplay
@@ -201,13 +201,13 @@ SaffronGymText10:
 	db "@"
 
 SaffronGymText11:
-	TX_FAR ReceivedTM46Text
+	TX_FAR ReceivedTM04Text
 	TX_SFX_ITEM_1
-	TX_FAR _TM46ExplanationText
+	TX_FAR _TM04ExplanationText
 	db "@"
 
 SaffronGymText12:
-	TX_FAR _TM46NoRoomText
+	TX_FAR _TM04NoRoomText
 	db "@"
 
 SaffronGymText2:

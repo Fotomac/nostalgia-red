@@ -208,6 +208,11 @@ EAST_MAP_CONNECTION: MACRO
 	dw wOverworldMap + 7 + \2_WIDTH ; window (position of the upper left block after entering the map)
 ENDM
 
+add_pic: MACRO
+	db BANK(\1)
+	dw \1
+ENDM
+
 tmlearn: MACRO
 x = 0
 	REPT _NARG

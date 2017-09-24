@@ -31,7 +31,7 @@ _TM39PreReceiveText::
 	done
 
 _ReceivedTM39Text::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "TM39!@@"
 
 _TM39ExplanationText::
@@ -79,7 +79,7 @@ _PewterGymText_5c4bc::
 	cont "#MON LEAGUE"
 	cont "BOULDERBADGE!"
 
-	para $52, " received"
+	para "<PLAYER> received"
 	line "the BOULDERBADGE!@@"
 
 _PewterGymText_5c4c1::
