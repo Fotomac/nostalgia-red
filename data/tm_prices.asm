@@ -22,6 +22,6 @@ TechnicalMachinePrices:
 	dn 2, 4  ; TM_39, TM_40
 	dn 2, 2  ; TM_41, TM_42
 	dn 5, 2  ; TM_43, TM_44
-	dn 2, 4  ; TM_45, TM_46
+	dn 2, 3  ; TM_45, TM_46
 	dn 3, 4  ; TM_47, TM_48
 	dn 4, 2  ; TM_49, TM_50

@@ -23,6 +23,6 @@ db 3 ; growth rate
 	tmlearn 20,21,22
 	tmlearn 31,32
 	tmlearn 33,34
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,51
 db BANK(WeepinbellPicFront)

@@ -204,6 +204,7 @@ JrTrainerFData:
 	db 15,NIDORAN_M,NIDORAN_F,0
 ; Vermilion Gym
 	db 20,MAGNEMITE,EEVEE,PIKACHU,0
+; Koga's House
 	db 26,NIDORINA,0
 PokemaniacData:
 ; Route 10

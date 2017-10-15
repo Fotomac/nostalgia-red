@@ -23,6 +23,6 @@ db 3 ; growth rate
 	tmlearn 20
 	tmlearn 31,32
 	tmlearn 33,34
-	tmlearn 43,44
+	tmlearn 43,44,46
 	tmlearn 50,52
 db BANK(PidgeottoPicFront)

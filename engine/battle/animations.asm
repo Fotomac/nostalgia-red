@@ -2547,12 +2547,14 @@ MoveSoundTable:
 	db SFX_BATTLE_2C,         $18,$80 ; POWDER_SNOW
 	db SFX_BATTLE_24,         $80,$c0 ; GIGA_DRAIN
 	db SFX_BATTLE_1B,         $18,$80 ; BULLET_SEED
+	db SFX_BATTLE_12,         $10,$e0 ; MAGICAL_LEAF
 	db SFX_BATTLE_32,         $18,$e0 ; ZAP_CANNON
 	db SFX_BATTLE_2E,         $12,$60 ; SHOCK_WAVE
 	db SFX_BATTLE_2A,         $80,$60 ; WATER_PULSE
 	db SFX_BATTLE_19,         $08,$a0 ; FLAME_WHEEL
 	db SFX_BATTLE_25,         $01,$10 ; RAPID_SPIN
 	db SFX_NOT_VERY_EFFECTIVE,$20,$ff ; SCARY_FACE
+	db SFX_BATTLE_1C,         $10,$a0 ; SWEET_SCENT
 	db SFX_VINE_WHIP,         $01,$80 ; SECRET_POWER
 	db SFX_BATTLE_0B,         $00,$80 ; RETURN
 	db SFX_BATTLE_0B,         $00,$80 ; STRUGGLE

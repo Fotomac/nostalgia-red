@@ -195,6 +195,13 @@ PokedexEntryPointers:
 	dw MissingNoDexEntry
 	dw PikabluDexEntry
 	dw RaibluDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw BellossomDexEntry
 
 ; string: species name
 ; height in feet, inches

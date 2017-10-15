@@ -8797,7 +8797,7 @@ LoadBackSpriteUnzoomed:
 	ld a, $66
 	ld de, vBackPic
 	push de
-	jp LoadUncompressedBackSprite 
+	jp LoadUncompressedBackSprite
 
 PlayDefeatedWildMonMusic:
 	call WaitForSoundToFinish

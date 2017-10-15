@@ -62,20 +62,20 @@ VermilionGymScript3:
 	ld [wJoyIgnore], a
 
 VermilionGymScript_5caaa:
-	ld a, $6
+	ld a, $7
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_LT_SURGE
 	lb bc, TM_34, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld a, $7
+	ld a, $8
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM34
 	jr .asm_5cad3
 .BagFull
-	ld a, $8
+	ld a, $9
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .asm_5cad3
@@ -85,7 +85,7 @@ VermilionGymScript_5caaa:
 	set 2, [hl]
 
 	; deactivate gym trainers
-	SetEventRange EVENT_BEAT_VERMILION_GYM_TRAINER_0, EVENT_BEAT_VERMILION_GYM_TRAINER_2
+	SetEventRange EVENT_BEAT_VERMILION_GYM_TRAINER_0, EVENT_BEAT_VERMILION_GYM_TRAINER_3
 
 	jp VermilionGymScript_5ca8a
 
@@ -98,6 +98,7 @@ VermilionGymTextPointers:
 	dw VermilionGymText6
 	dw VermilionGymText7
 	dw VermilionGymText8
+	dw VermilionGymText9
 
 VermilionGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_VERMILION_GYM_TRAINER_0
@@ -125,6 +126,15 @@ VermilionGymTrainerHeader2:
 	dw VermilionGymAfterBattleText3 ; TextAfterBattle
 	dw VermilionGymEndBattleText3 ; TextEndBattle
 	dw VermilionGymEndBattleText3 ; TextEndBattle
+
+VermilionGymTrainerHeader3:
+	dbEventFlagBit EVENT_BEAT_VERMILION_GYM_TRAINER_3
+	db ($3 << 4) ; trainer's view range
+	dwEventFlagAddress EVENT_BEAT_VERMILION_GYM_TRAINER_3
+	dw VermilionGymBattleText4 ; TextBeforeBattle
+	dw VermilionGymAfterBattleText4 ; TextAfterBattle
+	dw VermilionGymEndBattleText4 ; TextEndBattle
+	dw VermilionGymEndBattleText4 ; TextEndBattle
 
 	db $ff
 
@@ -172,17 +182,17 @@ VermilionGymText_5cb72:
 	TX_FAR _VermilionGymText_5cb72
 	db "@"
 
-VermilionGymText6:
+VermilionGymText7:
 	TX_FAR _VermilionGymText_5cb77
 	db "@"
 
-VermilionGymText7:
+VermilionGymText8:
 	TX_FAR _ReceivedTM34Text
 	TX_SFX_KEY_ITEM
 	TX_FAR _TM34ExplanationText
 	db "@"
 
-VermilionGymText8:
+VermilionGymText9:
 	TX_FAR _TM34NoRoomText
 	db "@"
 
@@ -245,6 +255,24 @@ VermilionGymAfterBattleText3:
 	db "@"
 
 VermilionGymText5:
+	TX_ASM
+	ld hl, VermilionGymTrainerHeader3
+	call TalkToTrainer
+	jp TextScriptEnd
+
+VermilionGymBattleText4:
+	TX_FAR _VermilionGymBattleText4
+	db "@"
+
+VermilionGymEndBattleText4:
+	TX_FAR _VermilionGymEndBattleText4
+	db "@"
+
+VermilionGymAfterBattleText4:
+	TX_FAR _VermilionGymAfterBattleText4
+	db "@"
+
+VermilionGymText6:
 	TX_ASM
 	ld a, [wBeatGymFlags]
 	bit 2, a

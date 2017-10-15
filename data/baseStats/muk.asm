@@ -23,6 +23,6 @@ db 0 ; growth rate
 	tmlearn 20,21,24
 	tmlearn 25,31,32
 	tmlearn 34,36,38,39
-	tmlearn 44,47
+	tmlearn 44,46,47
 	tmlearn 50
 db BANK(MukPicFront)

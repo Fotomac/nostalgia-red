@@ -23,6 +23,6 @@ db 5 ; growth rate
 	tmlearn 20,21
 	tmlearn 31,32
 	tmlearn 33,34,40
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,51,53
 db BANK(TentacoolPicFront)

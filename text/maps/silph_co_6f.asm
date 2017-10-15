@@ -76,8 +76,9 @@ _SilphCo6BattleText3::
 	line "PRESIDENT!"
 
 	para "He shouldn't have"
-	line "sent me to the"
-	cont "TIKSI BRANCH!"
+	line "reassigned me to"
+	cont "our outpost in"
+	cont "PONAYA TUNGUSKA!"
 	done
 
 _SilphCo6EndBattleText3::
@@ -85,9 +86,10 @@ _SilphCo6EndBattleText3::
 	prompt
 
 _SilphCo6AfterBattleText3::
-	text "TIKSI BRANCH?"
-	line "It's in Russian"
-	cont "no man's land!"
+	text "PONAYA TUNGUSKA?"
+	line "It's somewhere"
+	cont "deep in the"
+	cont "Russian outback!"
 	done
 
 _SilphCo6BattleText4::

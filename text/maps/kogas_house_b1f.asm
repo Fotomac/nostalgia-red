@@ -24,26 +24,14 @@ _JanineAfterBattleText::
 	para "I'm training here"
 	line "with my friends"
 	cont "to use poison"
-	cont "#MON as well as"
-	cont "my father!"
+	cont "#MON as well"
+	cont "as my father!"
 	done
 
 _JanineGiveTM46Text::
 	text "You're so tough!"
 	line "I have a special"
 	cont "gift!"
-
-	para "I haven't mastered"
-	line "my father's super"
-	cont "cool poison"
-	cont "technique yet,"
-	cont "but it does take"
-	cont "a little patience!"
-
-	para "Speaking of which,"
-	line "this is what I"
-	cont "have to offer you"
-	cont "as my gift!"
 
 _ReceivedTM46Text::
 	text "<PLAYER> received"

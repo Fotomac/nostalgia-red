@@ -23,6 +23,6 @@ db 5 ; growth rate
 	tmlearn 20,22,23,24
 	tmlearn 25,29,31,32
 	tmlearn 33,34,40
-	tmlearn 44,46
+	tmlearn 44
 	tmlearn 50,53,54
 db BANK(LaprasPicFront)

@@ -10,7 +10,7 @@ IslandMonsB4:
 		db 31,SLOWPOKE
 		db 29,SEEL
 		db 39,SLOWBRO
-		db 32,GOLBAT
+		db 32,RAIBLU
 	ENDC
 	IF DEF(_GREEN)
 		db 31,KRABBY
@@ -22,7 +22,7 @@ IslandMonsB4:
 		db 31,PSYDUCK
 		db 29,SEEL
 		db 39,GOLDUCK
-		db 32,GOLBAT
+		db 32,RAIBLU
 	ENDC
 	IF DEF(_BLUE)
 		db 31,KRABBY
@@ -33,8 +33,8 @@ IslandMonsB4:
 		db 31,SEEL
 		db 31,HORSEA
 		db 29,SEEL
-		db 39,JYNX
-		db 32,GOLBAT
+		db 39,SEADRA
+		db 32,JYNX
 	ENDC
 	db $05
 	IF DEF(_RED)

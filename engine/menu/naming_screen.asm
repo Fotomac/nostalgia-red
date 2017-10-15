@@ -153,7 +153,7 @@ DisplayNamingScreen:
 	ld h, [hl]
 	ld l, a
 	push de
-	jp [hl]
+	jp hl
 
 .submitNickname
 	pop de

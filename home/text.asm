@@ -397,7 +397,7 @@ NextTextCommand::
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	jp [hl]
+	jp hl
 
 ; draw box
 ; 04AAAABBCC
@@ -530,7 +530,7 @@ TextCommand08::
 	pop hl
 	ld de,NextTextCommand
 	push de ; return address
-	jp [hl]
+	jp hl
 
 ; print decimal number (converted from binary number)
 ; 09AAAABB

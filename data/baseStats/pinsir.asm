@@ -23,6 +23,6 @@ db 5 ; growth rate
 	tmlearn 17,19,20
 	tmlearn 31,32
 	tmlearn 34,39
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,51,54
 db BANK(PinsirPicFront)

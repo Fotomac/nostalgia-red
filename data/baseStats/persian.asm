@@ -23,6 +23,6 @@ db 0 ; growth rate
 	tmlearn 20,24
 	tmlearn 25,31,32
 	tmlearn 34,40
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50
 db BANK(PersianPicFront)

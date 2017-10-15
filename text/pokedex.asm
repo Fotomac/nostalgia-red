@@ -20,15 +20,6 @@ _KangaskhanDexEntry::
 
 _NidoranMDexEntry::
 IF DEF(_RED)
-	text "It scans its"
-	next "surroundings by"
-	next "raising its ears"
-
-	page "out of the grass."
-	next "Its toxic horn is"
-	next "for protection"
-ENDC
-IF DEF(_GREEN)
 	text "Its large ears are"
 	next "flapped like wings"
 	next "when listening to"
@@ -36,6 +27,15 @@ IF DEF(_GREEN)
 	page "distant sounds. It"
 	next "extends toxic"
 	next "barbs when angry"
+ENDC
+IF DEF(_GREEN)
+	text "It scans its"
+	next "surroundings by"
+	next "raising its ears"
+
+	page "out of the grass."
+	next "Its toxic horn is"
+	next "for protection"
 ENDC
 IF DEF(_BLUE)
 	text "Stiffens its ears"
@@ -99,6 +99,24 @@ _VoltorbDexEntry::
 	dex
 
 _NidokingDexEntry::
+IF DEF(_RED)
+	text "Recognized by its"
+	next "rock-hard hide and"
+	next "extended horn."
+
+	page "Be careful with"
+	next "the horn, as it"
+	next "contains venom"
+ENDC
+IF DEF(_GREEN)
+	text "One swing of its"
+	next "mighty tail can"
+	next "snap a telephone"
+
+	page "pole as if it were"
+	next "a matchstick"
+ENDC
+IF DEF(_BLUE)
 	text "It uses its"
 	next "powerful tail in"
 	next "battle to smash,"
@@ -106,6 +124,7 @@ _NidokingDexEntry::
 	page "constrict, then"
 	next "break the prey's"
 	next "bones"
+ENDC
 	dex
 
 _SlowbroDexEntry::
@@ -219,6 +238,16 @@ ENDC
 	dex
 
 _NidoqueenDexEntry::
+IF DEF(_RED)
+	text "Uses its scaly,"
+	next "rugged body to"
+	next "seal the entrance"
+
+	page "of its nest and"
+	next "protect its young"
+	next "from predators"
+ENDC
+IF DEF(_GREEN)
 	text "Its hard scales"
 	next "provide strong"
 	next "protection. It"
@@ -226,6 +255,16 @@ _NidoqueenDexEntry::
 	page "uses its hefty"
 	next "bulk to execute"
 	next "powerful moves"
+ENDC
+IF DEF(_BLUE)
+	text "Covered by stiff,"
+	next "needle-like"
+	next "scales. If"
+
+	page "excited, the"
+	next "needles bristle"
+	next "outwards"
+ENDC
 	dex
 
 _CuboneDexEntry::
@@ -269,6 +308,16 @@ _ArcanineDexEntry::
 	dex
 
 _MewDexEntry::
+IF DEF(_RED)
+	text "A #MON from"
+	next "South America"
+	next "thought to have"
+
+	page "been extinct. Very"
+	next "intelligent and"
+	next "learns any move"
+ENDC
+IF DEF(_GREEN)
 	text "So rare that it"
 	next "is still said to"
 	next "be a mirage by"
@@ -276,9 +325,38 @@ _MewDexEntry::
 	page "many experts. Only"
 	next "a few people have"
 	next "seen it worldwide"
+ENDC
+IF DEF(_BLUE)
+	text "Because it can"
+	next "use all kinds of"
+	next "moves, many"
+
+	page "believe it to be"
+	next "the ancestor of"
+	next "#MON"
+ENDC
 	dex
 
 _GyaradosDexEntry::
+IF DEF(_RED)
+	text "Has an extremely"
+	next "aggressive nature."
+	next "The HYPER BEAM it"
+
+	page "shoots from its"
+	next "mouth incinerates"
+	next "all targets"
+ENDC
+IF DEF(_GREEN)
+	text "In ancient"
+	next "literature, there"
+	next "is a record of one"
+
+	page "that razed a"
+	next "village when"
+	next "voilence flared"
+ENDC
+IF DEF(_BLUE)
 	text "Rarely seen in"
 	next "the wild. Huge"
 	next "and vicious, it"
@@ -286,6 +364,7 @@ _GyaradosDexEntry::
 	page "is capable of"
 	next "destroying entire"
 	next "cities in a rage"
+ENDC
 	dex
 
 _ShellderDexEntry::
@@ -339,7 +418,7 @@ _StaryuDexEntry::
 	dex
 
 _BlastoiseDexEntry::
-IF DEF(_BLUE)
+IF DEF(_GREEN)
 	text "A brutal #MON"
 	next "with pressurized"
 	next "water jets on its"
@@ -389,6 +468,16 @@ _GrowlitheDexEntry::
 	dex
 
 _OnixDexEntry::
+IF DEF(_RED)
+	text "Usually lives"
+	next "underground. It"
+	next "searches for food"
+
+	page "while boring its"
+	next "way through the"
+	next "ground at 50 MPH"
+ENDC
+IF DEF(_GREEN)
 	text "As it grows, the"
 	next "stone portions of"
 	next "its body harden"
@@ -396,9 +485,27 @@ _OnixDexEntry::
 	page "to become similar"
 	next "to a diamond, but"
 	next "colored black"
+ENDC
+IF DEF(_BLUE)
+	text "Burrows at high"
+	next "speed in search of"
+	next "food. The tunnels"
+
+	page "it leaves are used"
+	next "as homes by"
+	next "DIGLETT"
+ENDC
 	dex
 
 _FearowDexEntry::
+IF DEF(_BLUE)
+	text "It has the stamina"
+	next "to fly all day on"
+	next "its broad wings."
+
+	page "It fights by using"
+	next "its sharp beak"
+ELSE
 	text "With its huge and"
 	next "magnificent wings,"
 	next "it can keep aloft"
@@ -406,6 +513,7 @@ _FearowDexEntry::
 	page "without ever"
 	next "having to land"
 	next "for rest"
+ENDC
 	dex
 
 _PidgeyDexEntry::

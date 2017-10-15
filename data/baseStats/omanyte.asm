@@ -23,6 +23,6 @@ db 0 ; growth rate
 	tmlearn 20
 	tmlearn 31,32
 	tmlearn 33,34,39
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,53
 db BANK(OmanytePicFront)
