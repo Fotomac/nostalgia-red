@@ -84,6 +84,7 @@ HiddenObjectMaps:
 	db VERMILION_CITY
 	db CERULEAN_CITY
 	db ROUTE_4
+	db PEWTER_CITY
 	db $FF
 
 HiddenObjectPointers:
@@ -173,6 +174,7 @@ HiddenObjectPointers:
 	dw VermilionCityHiddenObjects
 	dw CeruleanCityHiddenObjects
 	dw Route4HiddenObjects
+	dw PewterCityHiddenObjects
 
 ; format: y-coord, x-coord, text id/item id, object routine
 TradeCenterHiddenObjects:
@@ -532,6 +534,8 @@ ViridianForestHiddenObjects:
 	dbw BANK(HiddenItems),HiddenItems
 	db $2a,$10,ANTIDOTE
 	dbw BANK(HiddenItems),HiddenItems
+	db $2a,$20,POTION
+	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 MtMoon3HiddenObjects:
 	db $0c,$12,MOON_STONE
@@ -849,5 +853,9 @@ CeruleanCityHiddenObjects:
 	db $FF
 Route4HiddenObjects:
 	db $03,$28,GREAT_BALL
+	dbw BANK(HiddenItems),HiddenItems
+	db $FF
+PewterCityHiddenObjects:
+	db $05,$07,POKE_BALL
 	dbw BANK(HiddenItems),HiddenItems
 	db $FF

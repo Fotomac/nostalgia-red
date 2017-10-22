@@ -198,8 +198,16 @@ MonsterNameCharsCommon::
 	jr FinishDTE
 
 .Enemy
+	ld a, [wIsInBattle]
+	dec a
+	jr z, .wild
 	; print “Enemy ”
-	ld de,Char5AText
+	ld de,Char5AText_Trainer
+	jr .next
+.wild
+	; print “Wild ”
+	ld de,Char5AText_Wild
+.next
 	call PlaceString
 	ld h,b
 	ld l,c
@@ -225,8 +233,10 @@ Char54Text::
 	db "POKé@"
 Char56Text::
 	db "……@"
-Char5AText::
+Char5AText_Trainer::
 	db "Enemy @"
+Char5AText_Wild::
+	db "Wild @"
 Char4AText::
 	db $E1,$E2,"@" ; PKMN
 

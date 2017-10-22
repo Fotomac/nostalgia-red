@@ -18,7 +18,7 @@ db LOW_KICK
 db KARATE_CHOP
 db 0 ; growth rate
 ; learnset
-	tmlearn 1,5,6,8
+	tmlearn 1,6,8
 	tmlearn 10,15,16
 	tmlearn 17,18,19,20,24
 	tmlearn 25,28,31,32

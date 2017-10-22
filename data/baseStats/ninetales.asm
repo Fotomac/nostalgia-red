@@ -18,7 +18,7 @@ db QUICK_ATTACK
 db ROAR
 db 0 ; growth rate
 ; learnset
-	tmlearn 6,8
+	tmlearn 5,6,8
 	tmlearn 10,15
 	tmlearn 20
 	tmlearn 28,31,32

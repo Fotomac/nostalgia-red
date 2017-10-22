@@ -21,6 +21,8 @@ _ViridianForestEndBattleText1::
 _ViridianFrstAfterBattleText1::
 	text "Ssh! You'll scare"
 	line "the bugs away!"
+
+	para "Another time, OK?"
 	done
 
 _ViridianForestBattleText2::
@@ -44,6 +46,7 @@ _ViridianFrstAfterBattleText2::
 _ViridianForestBattleText3::
 	text "Hey, wait up!"
 	line "What's the hurry?"
+	cont "Why the rush?"
 	done
 
 _ViridianForestEndBattleText3::
@@ -60,6 +63,40 @@ _ViridianFrstAfterBattleText3::
 	para "I'm looking for"
 	line "the stuff I"
 	cont "dropped!"
+	done
+
+_ViridianForestBattleText4::
+	text "I might be little,"
+	line "but I don't want"
+	cont "you to go easy"
+	cont "on me!"
+	done
+
+_ViridianForestEndBattleText4::
+	text "Oh,"
+	line "hell! Nothing"
+	cont "went right!"
+	prompt
+
+_ViridianFrstAfterBattleText4::
+	text "I lost some of my"
+	line "allowance..."
+	done
+
+_ViridianForestBattleText5::
+	text "Did you know that"
+	line "#MON evolve?"
+	done
+
+_ViridianForestEndBattleText5::
+	text "Oh!"
+	line "I lost!"
+	prompt
+
+_ViridianFrstAfterBattleText5::
+	text "BUG #MON evolve"
+	line "quickly! They're"
+	cont "a lot of fun!"
 	done
 
 _ViridianForestText8::

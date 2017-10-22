@@ -18,7 +18,7 @@ db DISABLE
 db 0
 db 3 ; growth rate
 ; learnset
-	tmlearn 1,5,6,8
+	tmlearn 1,6,8
 	tmlearn 10
 	tmlearn 17,18,19,20
 	tmlearn 28,29,30,31,32

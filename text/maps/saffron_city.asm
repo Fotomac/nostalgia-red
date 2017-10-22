@@ -85,8 +85,8 @@ _SaffronCityText15::
 	text "..."
 	line "Snore..."
 
-	para "Hah! He's taking"
-	line "a snooze!"
+	para "<PLAYER>: Hah! He's"
+	line "taking a snooze!"
 	done
 
 _SaffronCityText16::

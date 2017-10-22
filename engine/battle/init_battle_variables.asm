@@ -16,9 +16,11 @@ InitBattleVariables:
 	ld [wPlayerMonNumber], a
 	ld [wEscapedFromBattle], a
 	ld [wMapPalOffset], a
+	ld a, 2 ; HP_BAR_RED
 	ld hl, wPlayerHPBarColor
 	ld [hli], a ; wPlayerHPBarColor
 	ld [hl], a ; wEnemyHPBarColor
+	xor a ; get this back to 0 like it was originally
 	ld hl, wCanEvolveFlags
 	ld b, $3c
 .loop

@@ -18,7 +18,7 @@ db QUICK_ATTACK
 db THUNDERBOLT
 db 0 ; growth rate
 ; learnset
-	tmlearn 1,5,6,8
+	tmlearn 1,6,8
 	tmlearn 10,15,16
 	tmlearn 17,19,20,24
 	tmlearn 25,31,32

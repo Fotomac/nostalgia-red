@@ -18,7 +18,7 @@ db DOUBLESLAP
 db BODY_SLAM
 db 3 ; growth rate
 ; learnset
-	tmlearn 1,5,6,8
+	tmlearn 1,3,6,8
 	tmlearn 10,11,12,13,14,15
 	tmlearn 17,18,19,20
 	tmlearn 26,27,29,31,32

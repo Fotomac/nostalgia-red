@@ -145,23 +145,25 @@ _SilphCo7AfterBattleText4::
 	done
 
 _SilphCo7Text_51ebe::
-	text $53, ": What"
-	line "kept you ", $52, "?"
+	text "<RIVAL>: What"
+	line "kept you <PLAYER>?"
 	done
 
 _SilphCo7Text_51ec3::
-	text $53, ": Hahaha!"
+	text "<RIVAL>: Hahaha!"
 	line "I thought you'd"
 	cont "turn up if I"
 	cont "waited here!"
 
 	para "I guess TEAM"
 	line "ROCKET slowed you"
-	cont "down! Not that I"
-	cont "care!"
+	cont "down! Same thing"
+	cont "happened to me"
+	cont "just now!"
 
-	para "I saw you in"
-	line "SAFFRON, so I"
+	para "Not that I care!"
+	line "I saw you in"
+	cont "SAFFRON, so I"
 	cont "decided to see if"
 	cont "you got better!"
 	done
@@ -170,10 +172,16 @@ _SilphCo7Text_51ec8::
 	text "Oh ho!"
 	line "So, you are ready"
 	cont "for BOSS ROCKET!"
+
+	para "He's too strong"
+	line "even for me! He"
+	cont "somehow kicked"
+	cont "my ass despite"
+	cont "my best efforts!"
 	prompt
 
 _SilphCo7Text_51ecd::
-	text $53, ": How can"
+	text "<RIVAL>: How can"
 	line "I put this?"
 
 	para "You're not good"
@@ -182,7 +190,7 @@ _SilphCo7Text_51ecd::
 	prompt
 
 _SilphCo7Text_51ed2::
-	text "Well, ", $52, "!"
+	text "Well, <PLAYER>!"
 
 	para "I'm moving on up"
 	line "and ahead!"
@@ -202,7 +210,7 @@ _SilphCo7Text_51ed2::
 	line "world's most"
 	cont "powerful trainer!"
 
-	para $52, ", well"
+	para "<PLAYER>, well"
 	line "good luck to you!"
 	cont "Don't sweat it!"
 	cont "Smell ya!"

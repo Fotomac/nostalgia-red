@@ -18,7 +18,7 @@ db NIGHT_SHADE
 db 0
 db 3 ; growth rate
 ; learnset
-	tmlearn 1,5,6,8
+	tmlearn 1,6,8
 	tmlearn 10,15
 	tmlearn 17,18,19,20,21,24
 	tmlearn 25,29,31,32

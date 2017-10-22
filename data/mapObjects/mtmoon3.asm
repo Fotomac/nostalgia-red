@@ -18,7 +18,7 @@ MtMoon3Object:
 	object SPRITE_OMANYTE, $c, $6, STAY, NONE, $6 ; person
 	object SPRITE_OMANYTE, $d, $6, STAY, NONE, $7 ; person
 	object SPRITE_BALL, $19, $15, STAY, NONE, $8, HP_UP
-	object SPRITE_BALL, $1d, $5, STAY, NONE, $9, TM_01
+	object SPRITE_BALL, $1d, $5, STAY, NONE, $9, TM_46
 
 	; warp-to
 	EVENT_DISP MT_MOON_3_WIDTH, $9, $19 ; MT_MOON_2

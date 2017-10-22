@@ -2,6 +2,7 @@ HiddenItemCoords:
 ; map ID, then coords
 	db VIRIDIAN_FOREST,$12,$01
 	db VIRIDIAN_FOREST,$2a,$10
+	db VIRIDIAN_FOREST,$2a,$20
 	db MT_MOON_3,$0c,$12
 	db ROUTE_25,$03,$26
 	db ROUTE_9,$07,$0e
@@ -54,4 +55,5 @@ HiddenItemCoords:
 	db VERMILION_CITY,$0b,$0e
 	db CERULEAN_CITY,$08,$0f
 	db ROUTE_4,$03,$28
+	db PEWTER_CITY,$05,$07
 	db $ff

@@ -2220,6 +2220,7 @@ ELSE
 	page "it is the most"
 	next "pathetic #MON"
 	next "in the world"
+ENDC
 	dex
 
 _MukDexEntry::
@@ -2569,6 +2570,7 @@ IF DEF(_BLUE)
 	page "catching the sun's"
 	next "rays, it fills its"
 	next "body with power"
+ENDC
 	dex
 
 _TentacruelDexEntry::

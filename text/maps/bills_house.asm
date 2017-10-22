@@ -80,7 +80,7 @@ _BillThankYouText2::
 	prompt
 
 _SSTicketReceivedText::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "an @"
 	TX_RAM wcf4b
 	text "!@@"

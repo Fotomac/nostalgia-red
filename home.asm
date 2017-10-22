@@ -557,8 +557,6 @@ GetMonHeader::
 	ld b,$77 ; size of Aerodactyl fossil sprite
 	cp FOSSIL_AERODACTYL ; Aerodactyl fossil
 	jr z,.specialID
-	cp a,MEW
-	jr z,.mew
 	predef IndexToPokedex   ; convert pokemon ID in [wd11e] to pokedex number
 	ld a,[wd11e]
 	dec a
@@ -577,12 +575,6 @@ GetMonHeader::
 	inc hl
 	ld [hl],d
 	jr .done
-.mew
-	ld hl,MewBaseStats
-	ld de,wMonHeader
-	ld bc,MonBaseStatsEnd - MonBaseStats
-	ld a,BANK(MewBaseStats)
-	call FarCopyData
 .done
 	ld a,[wd0b5]
 	ld [wMonHIndex],a
@@ -724,8 +716,6 @@ UncompressMonSprite::
 	ld a,BANK(FossilKabutopsPic)
 .GotBank
 	jp UncompressSpriteData
-
-	ds $19
 
 ; de: destination location
 LoadMonFrontSprite::
@@ -2355,16 +2345,20 @@ EndTrainerBattle::
 	res 0, [hl]                  ; player is no longer engaged by any trainer
 	ld a, [wIsInBattle]
 	cp $ff
-	jp z, ResetButtonPressedAndMapScript
+	jr z, EndTrainerBattleWhiteout
 	ld a, $2
 	call ReadTrainerHeaderInfo
 	ld a, [wTrainerHeaderFlagBit]
 	ld c, a
 	ld b, FLAG_SET
 	call TrainerFlagAction   ; flag trainer as fought
-	ld a, [wEnemyMonOrTrainerClass]
-	cp 200
-	jr nc, .skipRemoveSprite    ; test if trainer was fought (in that case skip removing the corresponding sprite)
+	ld a, [wWasTrainerBattle]
+	and a
+	jr nz, .skipRemoveSprite    ; test if trainer was fought (in that case skip removing the corresponding sprite)
+	ld a, [wCurMap]
+	cp POKEMONTOWER_7
+	jr z, .skipRemoveSprite ; the tower 7f scripts call EndTrainerBattle manually after
+	; wIsTrainerBattle has been unset
 	ld hl, wMissableObjectList
 	ld de, $2
 	ld a, [wSpriteIndex]
@@ -2374,6 +2368,8 @@ EndTrainerBattle::
 	ld [wMissableObjectIndex], a               ; load corresponding missable object index and remove it
 	predef HideObject
 .skipRemoveSprite
+	xor a
+	ld [wWasTrainerBattle], a
 	ld hl, wd730
 	bit 4, [hl]
 	res 4, [hl]
@@ -2388,6 +2384,12 @@ ResetButtonPressedAndMapScript::
 	ld [wCurMapScript], a               ; reset battle status
 	ret
 
+EndTrainerBattleWhiteout:
+	xor a
+	ld [wIsTrainerBattle], a
+	ld [wWasTrainerBattle], a
+	jp ResetButtonPressedAndMapScript
+
 ; calls TrainerWalkUpToPlayer
 TrainerWalkUpToPlayer_Bank0::
 	jpba TrainerWalkUpToPlayer
@@ -2397,12 +2399,14 @@ InitBattleEnemyParameters::
 	ld a, [wEngagedTrainerClass]
 	ld [wCurOpponent], a
 	ld [wEnemyMonOrTrainerClass], a
-	cp 200
+	ld a, [wIsTrainerBattle]
+	and a
+	jr z, .noTrainer
 	ld a, [wEngagedTrainerSet]
-	jr c, .noTrainer
 	ld [wTrainerNo], a
 	ret
 .noTrainer
+	ld a, [wEngagedTrainerSet]
 	ld [wCurEnemyLVL], a
 	ret
 
@@ -2498,7 +2502,17 @@ EngageMapTrainer::
 	ld a, [hli]    ; load trainer class
 	ld [wEngagedTrainerClass], a
 	ld a, [hl]     ; load trainer mon set
+	bit 7, a
+	jr nz, .pokemon
+	ld [wEnemyMonAttackMod], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
+	jp PlayTrainerMusic
+.pokemon
+	and $7F
 	ld [wEngagedTrainerSet], a
+	xor a
+	ld [wIsTrainerBattle], a
 	jp PlayTrainerMusic
 
 PrintEndBattleText::
@@ -3063,21 +3077,15 @@ LoadTextBoxTilePatterns::
 	lb bc, BANK(TextBoxGraphics), (TextBoxGraphicsEnd - TextBoxGraphics) / $10
 	jp CopyVideoData ; if LCD is on, transfer during V-blank
 
-LoadHpBarAndStatusTilePatterns::
-	ld a, [rLCDC]
-	bit 7, a ; is the LCD enabled?
-	jr nz, .on
-.off
-	ld hl, HpBarAndStatusGraphics
-	ld de, vChars2 + $620
-	ld bc, HpBarAndStatusGraphicsEnd - HpBarAndStatusGraphics
-	ld a, BANK(HpBarAndStatusGraphics)
-	jp FarCopyData2 ; if LCD is off, transfer all at once
-.on
-	ld de, HpBarAndStatusGraphics
-	ld hl, vChars2 + $620
-	lb bc, BANK(HpBarAndStatusGraphics), (HpBarAndStatusGraphicsEnd - HpBarAndStatusGraphics) / $10
-	jp CopyVideoData ; if LCD is on, transfer during V-blank
+LoadHpBarAndStatusTilePatterns::	
+	ld de,HpBarAndStatusGraphics
+	ld hl,vChars2 + $620
+	lb bc,BANK(HpBarAndStatusGraphics), (HpBarAndStatusGraphicsEnd - HpBarAndStatusGraphics) / $10
+	call GoodCopyVideoData
+	ld de,EXPBarGraphics
+	ld hl,vChars1 + $400
+	lb bc,BANK(EXPBarGraphics), (EXPBarGraphicsEnd - EXPBarGraphics) / $10
+	jp GoodCopyVideoData
 
 
 FillMemory::
@@ -4668,3 +4676,22 @@ const_value = 1
 	add_tx_pre BookOrSculptureText                  ; 40
 	add_tx_pre ElevatorText                         ; 41
 	add_tx_pre PokemonStuffText                     ; 42
+
+GoodCopyVideoData:
+	ld a,[rLCDC]
+	bit 7,a ; is the LCD enabled?
+	jp nz, CopyVideoData ; if LCD is on, transfer during V-blank
+	ld a, b
+	push hl
+	push de
+	ld h, 0
+	ld l, c
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld b, h
+	ld c, l
+	pop hl
+	pop de
+	jp FarCopyData2 ; if LCD is off, transfer all at once

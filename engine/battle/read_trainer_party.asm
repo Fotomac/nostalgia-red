@@ -15,8 +15,8 @@ ReadTrainer:
 	ld [hl],a
 
 ; get the pointer to trainer data for this class
-	ld a,[wCurOpponent]
-	sub $C9 ; convert value from pokemon to trainer
+	ld a,[wTrainerClass]
+	dec a
 	add a,a
 	ld hl,TrainerDataPointers
 	ld c,a
@@ -93,9 +93,6 @@ ReadTrainer:
 	jr z, .FinishUp
 	ld b, a
 	ld a, [wTrainerClass]
-	ld b, a
-	ld a, [wCurOpponent]
-	sub $c8
 	cp a, b
 	jr nz, .NextEntry
 	ld a, [hli]

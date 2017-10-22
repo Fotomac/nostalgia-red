@@ -2321,6 +2321,11 @@ wEvoStoneItemID:: ; d156
 wSavedNPCMovementDirections2Index:: ; d157
 	ds 1
 
+wIsTrainerBattle::
+	ds 1
+wWasTrainerBattle::
+	ds 1
+
 wPlayerName:: ; d158
 	ds NAME_LENGTH
 
@@ -3240,6 +3245,13 @@ wBoxMonNicks:: ds NAME_LENGTH * MONS_PER_BOX ; de06
 wBoxMonNicksEnd:: ; dee2
 
 wBoxDataEnd::
+
+
+wEXPBarPixelLength:: ds 1
+wEXPBarBaseEXP:: ds 3
+wEXPBarCurEXP:: ds 3
+wEXPBarNeededEXP:: ds 3
+wEXPBarKeepFullFlag:: ds 1
 
 
 SECTION "Stack", WRAMX[$df00], BANK[1]

@@ -67,7 +67,7 @@ _ViridianGymText12::
 	done
 
 _ReceivedTM26Text::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "TM26!@@"
 
 _TM26ExplanationText::

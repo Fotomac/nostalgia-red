@@ -138,6 +138,7 @@ PlaceEnemyHUDTiles:
 	call CopyData
 	coord hl, 1, 2
 	ld de, $1
+	jp EnemyHealthBarUpdated
 	jr PlaceHUDTiles
 
 EnemyBattleHUDGraphicsTiles:
@@ -148,6 +149,7 @@ EnemyBattleHUDGraphicsTiles:
 
 PlaceHUDTiles:
 	ld [hl], $73
+HealthBarUpdateDone:
 	ld bc, SCREEN_WIDTH
 	add hl, bc
 	ld a, [wHUDGraphicsTiles + 1] ; leftmost tile

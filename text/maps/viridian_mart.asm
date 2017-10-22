@@ -16,7 +16,7 @@ ViridianMartParcelQuestText::
 	line "Will you take it"
 	cont "to him?"
 
-	para $52, " got"
+	para "<PLAYER> got"
 	line "OAK's PARCEL!@@"
 
 _ViridianMartText2::
@@ -25,6 +25,7 @@ _ViridianMartText2::
 	done
 
 _ViridianMartText3::
-	text "No! POTIONs are"
-	line "all sold out."
+	text "The shop finally"
+	line "has some POTIONs"
+	cont "in stock."
 	done

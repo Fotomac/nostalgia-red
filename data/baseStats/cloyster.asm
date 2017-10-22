@@ -18,7 +18,7 @@ db CLAMP
 db AURORA_BEAM
 db 5 ; growth rate
 ; learnset
-	tmlearn 6
+	tmlearn 3,6
 	tmlearn 10,11,12,13,14,15
 	tmlearn 20
 	tmlearn 30,31,32

@@ -18,7 +18,7 @@ db LEECH_SEED
 db VINE_WHIP
 db 3 ; growth rate
 ; learnset
-	tmlearn 3,6,8
+	tmlearn 5,6,8
 	tmlearn 9,10,15
 	tmlearn 20,21,22
 	tmlearn 31,32

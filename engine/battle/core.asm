@@ -980,7 +980,7 @@ AnyEnemyPokemonAliveCheck:
 ; stores whether enemy ran in Z flag
 ReplaceFaintedEnemyMon:
 	ld hl, wEnemyHPBarColor
-	ld e, $30
+	ld e, $00
 	call GetBattleHealthBarColor
 	callab DrawEnemyPokeballs
 	ld a, [wLinkState]
@@ -1219,6 +1219,8 @@ ChooseNextMon:
 ; called when player is out of usable mons.
 ; prints appropriate lose message, sets carry flag if player blacked out (special case for initial rival fight)
 HandlePlayerBlackOut:
+	xor a
+	ld [wIsTrainerBattle], a
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .notSony1Battle
@@ -1920,6 +1922,7 @@ DrawPlayerHUDAndHPBar:
 	coord hl, 10, 7
 	call CenterMonName
 	call PlaceString
+	call PrintEXPBar
 	ld hl, wBattleMonSpecies
 	ld de, wLoadedMon
 	ld bc, wBattleMonDVs - wBattleMonSpecies
@@ -1979,7 +1982,7 @@ DrawEnemyHUDAndHPBar:
 	coord hl, 1, 0
 	call CenterMonName
 	call PlaceString
-	coord hl, 4, 1
+	coord hl, 6, 1
 	push hl
 	inc hl
 	ld de, wEnemyMonStatus
@@ -6939,9 +6942,11 @@ InitBattleCommon:
 	push af
 	res 1, [hl]
 	callab InitBattleVariables
+	ld a, [wIsTrainerBattle]
+	and a
+	jp z, InitWildBattle
 	ld a, [wEnemyMonSpecies2]
-	sub 200
-	jp c, InitWildBattle
+	sub 204
 	ld [wTrainerClass], a
 	ld [wTrainerPicID], a
 	ld [wTrainerAINumber], a
@@ -7177,7 +7182,7 @@ LoadMonBackPic:
 	ld b, 7
 	ld c, 8
 	call ClearScreenArea
-	ld hl,  wMonHBackSprite - wMonHeader
+	ld hl, wMonHBackSprite - wMonHeader
 	call UncompressMonSprite
 	call LoadBackSpriteUnzoomed
 	ld hl, vSprites
@@ -8995,13 +9000,14 @@ PhysicalSpecialSplit: ;Determines if a move is Physical or Special
 	db SPECIAL ;POWDER_SNOW  EQU $B2
 	db SPECIAL ;GIGA_DRAIN   EQU $B3
 	db PHYSICAL;BULLET_SEED  EQU $B4
-	db SPECIAL ;ZAP_CANNON   EQU $B5
-	db SPECIAL ;SHOCK_WAVE   EQU $B6
-	db SPECIAL ;WATER_PULSE  EQU $B7
-	db PHYSICAL;FLAME_WHEEL  EQU $B8
-	db PHYSICAL;RAPID_SPIN   EQU $B9
-	db OTHER_M ;SCARY_FACE   EQU $BA
-	db PHYSICAL;SECRET_POWER EQU $BB
-	db OTHER_M ;ATTRACT      EQU $BC
-	db PHYSICAL;RETURN       EQU $BD
+	db SPECIAL ;MAGICAL_LEAF EQU $B5
+	db SPECIAL ;ZAP_CANNON   EQU $B6
+	db SPECIAL ;SHOCK_WAVE   EQU $B7
+	db SPECIAL ;WATER_PULSE  EQU $B8
+	db PHYSICAL;FLAME_WHEEL  EQU $B9
+	db PHYSICAL;RAPID_SPIN   EQU $BA
+	db OTHER_M ;SCARY_FACE   EQU $BB
+	db OTHER_M ;SWEET_SCENT  EQU $BC
+	db PHYSICAL;SECRET_POWER EQU $BD
+	db PHYSICAL;RETURN       EQU $BE
 	db PHYSICAL;STRUGGLE

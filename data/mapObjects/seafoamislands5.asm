@@ -14,7 +14,7 @@ SeafoamIslands5Object:
 	db $3 ; objects
 	object SPRITE_BOULDER, $4, $f, STAY, NONE, $1 ; person
 	object SPRITE_BOULDER, $5, $f, STAY, NONE, $2 ; person
-	object SPRITE_BIRD, $6, $1, STAY, DOWN, $3, ARTICUNO, 50
+	object SPRITE_BIRD, $6, $1, STAY, DOWN, $3, ARTICUNO, 50 | OW_POKEMON
 
 	; warp-to
 	EVENT_DISP SEAFOAM_ISLANDS_5_WIDTH, $11, $14 ; SEAFOAM_ISLANDS_4

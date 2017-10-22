@@ -24,7 +24,7 @@ MtMoon1Object:
 	object SPRITE_BALL, $23, $1f, STAY, NONE, $a, RARE_CANDY
 	object SPRITE_BALL, $24, $17, STAY, NONE, $b, ESCAPE_ROPE
 	object SPRITE_BALL, $14, $21, STAY, NONE, $c, POTION
-	object SPRITE_BALL, $5, $20, STAY, NONE, $d, TM_12
+	object SPRITE_BALL, $5, $20, STAY, NONE, $d, TM_09
 
 	; warp-to
 	EVENT_DISP MT_MOON_1_WIDTH, $23, $e

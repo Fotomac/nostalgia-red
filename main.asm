@@ -25,10 +25,6 @@ INCLUDE "data/facing.asm"
 
 INCLUDE "engine/black_out.asm"
 
-MewPicFront:: INCBIN "pic/bmon/mew.pic"
-MewPicBack::  INCBIN "pic/monback/mewb.pic"
-INCLUDE "data/baseStats/mew.asm"
-
 INCLUDE "engine/battle/safari_zone.asm"
 
 INCLUDE "engine/titlescreen.asm"
@@ -203,6 +199,9 @@ INCLUDE "engine/battle/moveEffects/conversion_effect.asm"
 INCLUDE "engine/battle/moveEffects/haze_effect.asm"
 INCLUDE "engine/battle/get_trainer_name.asm"
 INCLUDE "engine/random.asm"
+
+EXPBarGraphics: INCBIN "gfx/exp_bar.h8.2bpp"
+EXPBarGraphicsEnd:
 
 
 SECTION "NPC Sprites 2", ROMX, BANK[NPC_SPRITES_2]
@@ -556,14 +555,14 @@ LaprasPicFront::      INCBIN "pic/bmon/lapras.pic"
 LaprasPicBack::       INCBIN "pic/monback/laprasb.pic"
 ArcaninePicFront::    INCBIN "pic/bmon/arcanine.pic"
 ArcaninePicBack::     INCBIN "pic/monback/arcanineb.pic"
+MewPicFront::         INCBIN "pic/bmon/mew.pic"
+MewPicBack::          INCBIN "pic/monback/mewb.pic"
 GyaradosPicFront::    INCBIN "pic/bmon/gyarados.pic"
 GyaradosPicBack::     INCBIN "pic/monback/gyaradosb.pic"
 ShellderPicFront::    INCBIN "pic/bmon/shellder.pic"
 ShellderPicBack::     INCBIN "pic/monback/shellderb.pic"
 TentacoolPicFront::   INCBIN "pic/bmon/tentacool.pic"
 TentacoolPicBack::    INCBIN "pic/monback/tentacoolb.pic"
-GastlyPicFront::      INCBIN "pic/bmon/gastly.pic"
-GastlyPicBack::       INCBIN "pic/monback/gastlyb.pic"
 
 
 SECTION "Battle (bank 9)", ROMX, BANK[$9]
@@ -573,6 +572,8 @@ INCLUDE "engine/battle/moveEffects/focus_energy_effect.asm"
 
 SECTION "Pics 2", ROMX, BANK[PICS_2]
 
+GastlyPicFront::      INCBIN "pic/bmon/gastly.pic"
+GastlyPicBack::       INCBIN "pic/monback/gastlyb.pic"
 ScytherPicFront::     INCBIN "pic/bmon/scyther.pic"
 ScytherPicBack::      INCBIN "pic/monback/scytherb.pic"
 StaryuPicFront::      INCBIN "pic/bmon/staryu.pic"
@@ -621,8 +622,6 @@ MagmarPicFront::      INCBIN "pic/bmon/magmar.pic"
 MagmarPicBack::       INCBIN "pic/monback/magmarb.pic"
 ElectabuzzPicFront::  INCBIN "pic/bmon/electabuzz.pic"
 ElectabuzzPicBack::   INCBIN "pic/monback/electabuzzb.pic"
-MagnetonPicFront::    INCBIN "pic/bmon/magneton.pic"
-MagnetonPicBack::     INCBIN "pic/monback/magnetonb.pic"
 
 
 SECTION "Battle (bank A)", ROMX, BANK[$A]
@@ -631,6 +630,8 @@ INCLUDE "engine/battle/moveEffects/leech_seed_effect.asm"
 
 SECTION "Pics 3", ROMX, BANK[PICS_3]
 
+MagnetonPicFront::    INCBIN "pic/bmon/magneton.pic"
+MagnetonPicBack::     INCBIN "pic/monback/magnetonb.pic"
 KoffingPicFront::     INCBIN "pic/bmon/koffing.pic"
 KoffingPicBack::      INCBIN "pic/monback/koffingb.pic"
 MankeyPicFront::      INCBIN "pic/bmon/mankey.pic"
@@ -835,10 +836,212 @@ INCLUDE "engine/battle/moveEffects/heal_effect.asm"
 INCLUDE "engine/battle/moveEffects/transform_effect.asm"
 INCLUDE "engine/battle/moveEffects/reflect_light_screen_effect.asm"
 
+EnemyHealthBarUpdated:
+	ld [hl], $72
+	ld a, [wIsInBattle]
+	dec a
+	jr nz, .noBattle
+	push hl
+	ld a, [wEnemyMon]
+	ld [wd11e], a
+	ld hl, IndexToPokedex
+	ld b, BANK(IndexToPokedex)
+	call Bankswitch
+	ld a, [wd11e]
+	dec a
+	ld c, a
+	ld b, $2
+	ld hl, wPokedexOwned
+	predef FlagActionPredef
+	ld a, c
+	and a
+	jr z, .notOwned
+	coord hl, 1, 1
+	ld [hl], $E9
+.notOwned
+	pop hl
+.noBattle
+	ld de, $0001
+	jp HealthBarUpdateDone
+
 
 SECTION "bankF",ROMX,BANK[$F]
 
 INCLUDE "engine/battle/core.asm"
+
+PrintEXPBar:
+	call CalcEXPBarPixelLength
+	ld a, [H_QUOTIENT + 3] ; pixel length
+	ld [wEXPBarPixelLength], a
+	ld b, a
+	ld c, $08
+	ld d, $08
+	coord hl, 17, 11
+.loop
+	ld a, b
+	sub c
+	jr nc, .skip
+	ld c, b
+	jr .loop
+.skip
+	ld b, a
+	ld a, $c0
+	add c
+.loop2
+	ld [hld], a
+	dec d
+	ret z
+	ld a, b
+	and a
+	jr nz, .loop
+	ld a, $c0
+	jr .loop2
+
+CalcEXPBarPixelLength:
+	ld hl, wEXPBarKeepFullFlag
+	bit 0, [hl]
+	jr z, .start
+	res 0, [hl]
+	ld a, $40
+	ld [H_QUOTIENT + 3], a
+	ret
+.start
+	; get the base exp needed for the current level
+	ld a, [wPlayerBattleStatus3]
+	ld hl, wBattleMonSpecies
+	bit 3, a
+	jr z, .skip
+	ld hl, wPartyMon1
+	call BattleMonPartyAttr
+.skip
+	ld a, [hl]
+	ld [wd0b5], a
+	call GetMonHeader
+	ld a, [wBattleMonLevel]
+	ld d, a
+	ld hl, CalcExperience
+	ld b, BANK(CalcExperience)
+	call Bankswitch
+	ld hl, H_MULTIPLICAND
+	ld de, wEXPBarBaseEXP
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	; get the exp needed to gain a level
+	ld a, [wBattleMonLevel]
+	ld d, a
+	inc d
+	ld hl, CalcExperience
+	ld b, BANK(CalcExperience)
+	call Bankswitch
+	; get the address of the active Pokemon's current experience
+	ld hl, wPartyMon1Exp
+	call BattleMonPartyAttr
+	; current exp - base exp
+	ld b, h
+	ld c, l
+	ld hl, wEXPBarBaseEXP
+	ld de, wEXPBarCurEXP
+	call SubThreeByteNum
+	; exp needed - base exp
+	ld bc, H_MULTIPLICAND
+	ld hl, wEXPBarBaseEXP
+	ld de, wEXPBarNeededEXP
+	call SubThreeByteNum
+	; make the divisor an 8-bit number
+	ld hl, wEXPBarNeededEXP
+	ld de, wEXPBarCurEXP + 1
+	ld a, [hli]
+	and a
+	jr z, .twoBytes
+	ld a, [hli]
+	ld [hld], a
+	dec hl
+	ld a, [hli]
+	ld [hld], a
+	ld a, [de]
+	inc de
+	ld [de], a
+	dec de
+	dec de
+	ld a, [de]
+	inc de
+	ld [de], a
+	dec de
+	xor a
+	ld [hli], a
+	ld [de], a
+	inc de
+.twoBytes
+	ld a, [hl]
+	and a
+	jr z, .oneByte
+	srl a
+	ld [hli], a
+	ld a, [hl]
+	rr a
+	ld [hld], a
+	ld a, [de]
+	srl a
+	ld [de], a
+	inc de
+	ld a, [de]
+	rr a
+	ld [de], a
+	dec de
+	jr .twoBytes
+.oneByte
+	; current exp * (8 tiles * 8 pixels)
+	ld hl, H_MULTIPLICAND
+	ld de, wEXPBarCurEXP
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld a, [de]
+	ld [hl], a
+	ld a, $40
+	ld [H_MULTIPLIER], a
+	call Multiply
+	; product / needed exp = pixel length
+	ld a, [wEXPBarNeededEXP + 2]
+	ld [H_DIVISOR], a
+	ld b, $04
+	jp Divide
+; calculates the three byte number starting at [bc]
+; minus the three byte number starting at [hl]
+; and stores it into the three bytes starting at [de]
+; assumes that [hl] is smaller than [bc]
+SubThreeByteNum:
+	call .subByte
+	call .subByte
+.subByte
+	ld a, [bc]
+	inc bc
+	sub [hl]
+	inc hl
+	ld [de], a
+	jr nc, .noCarry
+	dec de
+	ld a, [de]
+	dec a
+	ld [de], a
+	inc de
+.noCarry
+	inc de
+	ret
+; return the address of the BattleMon's party struct attribute in hl
+BattleMonPartyAttr:
+	ld a, [wPlayerMonNumber]
+	ld bc, wPartyMon2 - wPartyMon1
+	jp AddNTimes
 
 
 SECTION "bank10",ROMX,BANK[$10]
@@ -1410,6 +1613,75 @@ SilphCo8Blocks: INCBIN "maps/silphco8.blk"
 INCLUDE "engine/menu/diploma.asm"
 
 INCLUDE "engine/overworld/trainers.asm"
+
+AnimateEXPBarAgain:
+	call LoadMonData
+	call IsCurrentMonBattleMon
+	ret nz
+	xor a
+	ld [wEXPBarPixelLength], a
+	coord hl, 17, 11
+	ld a, $c0
+	ld c, $08
+.loop
+	ld [hld], a
+	dec c
+	jr nz, .loop
+AnimateEXPBar:
+	call LoadMonData
+	call IsCurrentMonBattleMon
+	ret nz
+	ld a, SFX_HEAL_HP
+	call PlaySoundWaitForCurrent
+	ld hl, CalcEXPBarPixelLength
+	ld b, BANK(CalcEXPBarPixelLength)
+	call Bankswitch
+	ld a, [wEXPBarPixelLength]
+	ld b, a
+	ld a, [H_QUOTIENT + 3]
+	sub b
+	jr z, .done
+	ld b, a
+	ld c, $08
+	coord hl, 17, 11
+.loop1
+	ld a, [hl]
+	cp $c8
+	jr nz, .loop2
+	dec hl
+	dec c
+	jr z, .done
+	jr .loop1
+.loop2
+	inc a
+	ld [hl], a
+	call DelayFrame
+	dec b
+	jr z, .done
+	jr .loop1
+.done
+	ld bc, $08
+	coord hl, 10, 11
+	ld de, wTileMapBackup + 10 + 11 * 20
+	call CopyData
+	ld c, $20
+	jp DelayFrames
+
+KeepEXPBarFull:
+	call IsCurrentMonBattleMon
+	ret nz
+	ld a, [wEXPBarKeepFullFlag]
+	set 0, a
+	ld [wEXPBarKeepFullFlag], a
+	ld a, [wCurEnemyLVL]
+	ret
+
+IsCurrentMonBattleMon:
+	ld a, [wPlayerMonNumber]
+	ld b, a
+	ld a, [wWhichPokemon]
+	cp b
+	ret
 
 
 SECTION "bank16",ROMX,BANK[$16]

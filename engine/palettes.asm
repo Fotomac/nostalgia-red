@@ -280,7 +280,7 @@ DeterminePaletteIDOutOfBattle:
 	ld a, [wTrainerPicID]
 	ld hl, TrainerPalletes
 	jr GetPalletID
-DeterminePaletteIDBack
+DeterminePaletteIDBack:
 	bit 3, a
 	jr z, .skip
 	ld hl, wPartyMon1

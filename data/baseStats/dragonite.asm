@@ -18,7 +18,7 @@ db THUNDER_WAVE
 db TWISTER
 db 5 ; growth rate
 ; learnset
-	tmlearn 2,6,7,8
+	tmlearn 2,3,5,6,7,8
 	tmlearn 10,11,12,13,14,15
 	tmlearn 20,23,24
 	tmlearn 25,31,32

@@ -14,8 +14,8 @@ Route2Object:
 	db $b, $b, $4 ; Route2Text4
 
 	db $2 ; objects
-	object SPRITE_BALL, $d, $36, STAY, NONE, $1, MOON_STONE
-	object SPRITE_BALL, $d, $2d, STAY, NONE, $2, HP_UP
+	object SPRITE_BALL, $d, $36, STAY, NONE, $1, PARLYZ_HEAL
+	object SPRITE_BALL, $d, $2d, STAY, NONE, $2, ETHER
 
 	; warp-to
 	EVENT_DISP ROUTE_2_WIDTH, $9, $c ; DIGLETTS_CAVE_EXIT

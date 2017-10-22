@@ -100,6 +100,9 @@ BugCatcherData:
 ; Route 9
 	db 19,BEEDRILL,BEEDRILL,0
 	db 20,CATERPIE,WEEDLE,VENONAT,0
+; Viridian Forest
+	db 7,CATERPIE,CATERPIE,0
+	db 6,METAPOD,CATERPIE,METAPOD,0
 LassData:
 ; Route 3
 	db 9,PIDGEY,PIDGEY,0
@@ -165,7 +168,7 @@ JrTrainerMData:
 	db 25,NIDORINO,0
 JrTrainerFData:
 ; Cerulean Gym
-	db 19,GOLDEEN,0
+	db 19,PIKABLU,GOLDEEN,0
 ; Route 6
 	db 16,RATTATA,PIKACHU,0
 	db 16,PIDGEY,PIDGEY,PIDGEY,0

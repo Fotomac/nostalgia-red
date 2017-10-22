@@ -41,6 +41,9 @@ _MagikarpSalesmanNoMoneyText::
 _MagikarpSalesmanText2::
 	text "MAN: Well, I don't"
 	line "give refunds!"
+
+	para "You knew what you"
+	line "were getting!"
 	done
 
 _MtMoonPokecenterText5::

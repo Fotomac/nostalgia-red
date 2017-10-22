@@ -9,7 +9,7 @@ _TM27PreReceiveText::
 	prompt
 
 _ReceivedTM27Text::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "TM27!@@"
 
 _TM27ExplanationText::

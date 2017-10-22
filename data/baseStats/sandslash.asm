@@ -18,7 +18,7 @@ db DEFENSE_CURL
 db SAND_ATTACK
 db 0 ; growth rate
 ; learnset
-	tmlearn 3,6,8
+	tmlearn 6,8
 	tmlearn 10,15
 	tmlearn 17,19,20
 	tmlearn 26,27,28,31,32
