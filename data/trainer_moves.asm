@@ -1,32 +1,309 @@
+; entry ≔ trainerclass, trainerid, moveset+, 0
+; moveset ≔ partymon, partymon'smove, moveid
+
 LoneMoves:
-; these are used for gym leaders.
-; this is not automatic! you have to write the number you want to wLoneAttackNo
-; first. e.g., erika's script writes 4 to wLoneAttackNo to get mega drain,
-; the fourth entry in the list.
-
-; first byte:  pokemon in the trainer's party that gets the move
-; second byte: move
-; unterminated
-	db 1,ROCK_TOMB
-	db 1,WATER_PULSE
-	db 2,SHOCK_WAVE
-	db 2,GIGA_DRAIN
-	db 3,TOXIC
-	db 3,CALM_MIND
-	db 3,FIRE_BLAST
-	db 4,EARTHQUAKE
-
 TeamMoves:
-; these are used for elite four.
-; this is automatic, based on trainer class.
-; don't be confused by LoneMoves above, the two data structures are
-	; _completely_ unrelated.
+	db BROCK,$1
+	db 1,1,TACKLE
+	db 1,2,DEFENSE_CURL
+	db 2,1,TACKLE
+	db 2,2,SCREECH
+	db 2,3,ROCK_TOMB
+	db 2,4,BIND
+	db 0
 
-; first byte: trainer (all trainers in this class have this move)
-; second byte: move
-; ff-terminated
-	db LORELEI,BLIZZARD
-	db BRUNO,FISSURE
-	db AGATHA,TOXIC
-	db LANCE,BARRIER
+	db MISTY,$1
+	db 1,1,TACKLE
+	db 1,2,HARDEN
+	db 1,3,RECOVER
+	db 1,4,WATER_PULSE
+	db 2,1,TACKLE
+	db 2,2,RAPID_SPIN
+	db 2,3,RECOVER
+	db 2,4,WATER_PULSE
+	db 0
+
+	db LT_SURGE,$1
+	db 1,1,TACKLE
+	db 1,2,SCREECH
+	db 1,3,SONICBOOM
+	db 1,4,SHOCK_WAVE
+	db 2,1,THUNDERSHOCK
+	db 2,2,QUICK_ATTACK
+	db 2,3,DOUBLE_TEAM
+	db 2,4,SHOCK_WAVE
+	db 3,1,THUNDERBOLT
+	db 3,2,MEGA_PUNCH
+	db 3,3,MEGA_KICK
+	db 3,4,SHOCK_WAVE
+	db 0
+
+	db ERIKA,$1
+	db 1,1,RAZOR_LEAF
+	db 1,2,ACID
+	db 1,3,POISONPOWDER
+	db 1,4,GIGA_DRAIN
+	db 2,1,CONSTRICT
+	db 2,2,BIND
+	db 2,3,VINE_WHIP
+	db 2,4,GIGA_DRAIN
+	db 3,1,PETAL_DANCE
+	db 3,2,MAGICAL_LEAF
+	db 3,3,STUN_SPORE
+	db 3,4,GIGA_DRAIN
+	db 0
+
+	db KOGA,$1
+	db 1,1,SELFDESTRUCT
+	db 1,2,SLUDGE
+	db 1,3,SMOKESCREEN
+	db 1,4,TOXIC
+	db 2,1,MINIMIZE
+	db 2,2,SLUDGE
+	db 2,3,ACID_ARMOR
+	db 2,4,TOXIC
+	db 3,1,SELFDESTRUCT
+	db 3,2,SLUDGE
+	db 3,3,SMOKESCREEN
+	db 3,4,TOXIC
+	db 4,1,TACKLE
+	db 4,2,SLUDGE
+	db 4,3,SMOKESCREEN
+	db 4,4,TOXIC
+	db 0
+
+	db BLAINE,$1
+	db 1,1,BITE
+	db 1,2,ROAR
+	db 1,3,TAKE_DOWN
+	db 1,4,FIRE_BLAST
+	db 2,1,STOMP
+	db 2,2,GROWL
+	db 2,3,FIRE_SPIN
+	db 2,4,FIRE_BLAST
+	db 3,1,STOMP
+	db 3,2,GROWL
+	db 3,3,FIRE_SPIN
+	db 3,4,FIRE_BLAST
+	db 4,1,BITE
+	db 4,2,ROAR
+	db 4,3,TAKE_DOWN
+	db 4,4,FIRE_BLAST
+	db 0
+
+	db SABRINA,$1
+	db 1,1,PSYBEAM
+	db 1,2,REFLECT
+	db 1,3,PSYCHIC_M
+	db 1,4,CALM_MIND
+	db 2,1,BARRIER
+	db 2,2,PSYBEAM
+	db 2,3,LIGHT_SCREEN
+	db 2,4,CALM_MIND
+	db 3,1,POISONPOWDER
+	db 3,2,PSYBEAM
+	db 3,3,LEECH_LIFE
+	db 3,4,SUPERSONIC
+	db 4,1,PSYBEAM
+	db 4,2,REFLECT
+	db 4,3,PSYCHIC_M
+	db 4,4,CALM_MIND
+	db 0
+
+	db GIOVANNI,$3
+	db 1,1,TAKE_DOWN
+	db 1,2,ROCK_BLAST
+	db 1,3,SCARY_FACE
+	db 1,4,EARTHQUAKE
+	db 2,1,SLASH
+	db 2,2,SAND_TOMB
+	db 2,3,MUD_SLAP
+	db 2,4,EARTHQUAKE
+	db 3,1,DOUBLE_KICK
+	db 3,2,EARTHQUAKE
+	db 3,3,POISON_STING
+	db 3,4,BODY_SLAM
+	db 4,1,DOUBLE_KICK
+	db 4,2,EARTHQUAKE
+	db 4,3,POISON_STING
+	db 4,4,THRASH
+	db 5,1,TAKE_DOWN
+	db 5,2,ROCK_BLAST
+	db 5,3,SCARY_FACE
+	db 5,4,EARTHQUAKE
+	db 0
+
+	db LORELEI,$1
+	db 1,1,SURF
+	db 1,2,AURORA_BEAM
+	db 1,3,REST
+	db 1,4,TAKE_DOWN
+	db 2,1,SUPERSONIC
+	db 2,2,CLAMP
+	db 2,3,ICE_BEAM
+	db 2,4,SPIKE_CANNON
+	db 3,1,PSYCHIC_M
+	db 3,2,SURF
+	db 3,3,WITHDRAW
+	db 3,4,AMNESIA
+	db 4,1,DOUBLESLAP
+	db 4,2,ICE_PUNCH
+	db 4,3,LOVELY_KISS
+	db 4,4,THRASH
+	db 5,1,BODY_SLAM
+	db 5,2,CONFUSE_RAY
+	db 5,3,BLIZZARD
+	db 5,4,HYDRO_PUMP
+	db 0
+
+	db BRUNO,$1
+	db 1,1,EARTHQUAKE
+	db 1,2,ROCK_TOMB
+	db 1,3,IRON_TAIL
+	db 1,4,ROAR
+	db 2,1,ICE_PUNCH
+	db 2,2,THUNDERPUNCH
+	db 2,3,FIRE_PUNCH
+	db 2,4,COUNTER
+	db 3,1,DOUBLE_KICK
+	db 3,2,MEGA_KICK
+	db 3,3,HI_JUMP_KICK
+	db 3,4,DOUBLE_TEAM
+	db 4,1,DOUBLE_EDGE
+	db 4,2,IRON_TAIL
+	db 4,3,EARTHQUAKE
+	db 4,4,SAND_TOMB
+	db 5,1,BULK_UP
+	db 5,2,CROSS_CHOP
+	db 5,3,SCARY_FACE
+	db 5,4,ROCK_TOMB
+	db 0
+
+	db AGATHA,$1
+	db 1,1,CONFUSE_RAY
+	db 1,2,SHADOW_PUNCH
+	db 1,3,DOUBLE_TEAM
+	db 1,4,TOXIC
+	db 2,1,SUPERSONIC
+	db 2,2,TOXIC
+	db 2,3,WING_ATTACK
+	db 2,4,LEECH_LIFE
+	db 3,1,CONFUSE_RAY
+	db 3,2,LICK
+	db 3,3,HYPNOSIS
+	db 3,4,DREAM_EATER
+	db 4,1,BITE
+	db 4,2,SLUDGE_BOMB
+	db 4,3,SCREECH
+	db 4,4,IRON_TAIL
+	db 5,1,SHADOW_BALL
+	db 5,2,SLUDGE_BOMB
+	db 5,3,HYPNOSIS
+	db 5,4,DREAM_EATER
+	db 0
+
+	db LANCE,$1
+	db 1,1,DRAGON_RAGE
+	db 1,2,BITE
+	db 1,3,TWISTER
+	db 1,4,HYPER_BEAM
+	db 2,1,THUNDER_WAVE
+	db 2,2,OUTRAGE
+	db 2,3,THUNDERBOLT
+	db 2,4,HYPER_BEAM
+	db 3,1,ICE_BEAM
+	db 3,2,OUTRAGE
+	db 3,3,DRAGON_RAGE
+	db 3,4,HYPER_BEAM
+	db 4,1,WING_ATTACK
+	db 4,2,ANCIENTPOWER
+	db 4,3,SCARY_FACE
+	db 4,4,HYPER_BEAM
+	db 5,1,BARRIER
+	db 5,2,OUTRAGE
+	db 5,3,WING_ATTACK
+	db 5,4,HYPER_BEAM
+	db 0
+
+	db SONY3,$1
+	db 1,1,WING_ATTACK
+	db 1,2,MIRROR_MOVE
+	db 1,3,SKY_ATTACK
+	db 1,4,WHIRLWIND
+	db 2,1,PSYBEAM
+	db 2,2,PSYCHIC_M
+	db 2,3,REFLECT
+	db 2,4,KINESIS
+	db 3,1,TAKE_DOWN
+	db 3,2,EARTHQUAKE
+	db 3,3,ROCK_TOMB
+	db 3,4,SCARY_FACE
+	db 4,1,TAKE_DOWN
+	db 4,2,FLAMETHROWER
+	db 4,3,ROAR
+	db 4,4,BITE
+	db 5,1,GIGA_DRAIN
+	db 5,2,EGG_BOMB
+	db 5,3,SLEEP_POWDER
+	db 5,4,LIGHT_SCREEN
+	db 6,1,HYDRO_PUMP
+	db 6,2,BLIZZARD
+	db 6,3,SKULL_BASH
+	db 6,4,BITE
+	db 0
+
+	db SONY3,$2
+	db 1,1,WING_ATTACK
+	db 1,2,MIRROR_MOVE
+	db 1,3,SKY_ATTACK
+	db 1,4,WHIRLWIND
+	db 2,1,PSYBEAM
+	db 2,2,PSYCHIC_M
+	db 2,3,REFLECT
+	db 2,4,KINESIS
+	db 3,1,TAKE_DOWN
+	db 3,2,EARTHQUAKE
+	db 3,3,ROCK_TOMB
+	db 3,4,SCARY_FACE
+	db 4,1,HYDRO_PUMP
+	db 4,2,DRAGON_RAGE
+	db 4,3,BITE
+	db 4,4,THRASH
+	db 5,1,TAKE_DOWN
+	db 5,2,FLAMETHROWER
+	db 5,3,ROAR
+	db 5,4,BITE
+	db 6,1,GROWTH
+	db 6,2,GIGA_DRAIN
+	db 6,3,RAZOR_LEAF
+	db 6,4,SOLARBEAM
+	db 0
+
+	db SONY3,$3
+	db 1,1,WING_ATTACK
+	db 1,2,MIRROR_MOVE
+	db 1,3,SKY_ATTACK
+	db 1,4,WHIRLWIND
+	db 2,1,PSYBEAM
+	db 2,2,PSYCHIC_M
+	db 2,3,REFLECT
+	db 2,4,KINESIS
+	db 3,1,TAKE_DOWN
+	db 3,2,EARTHQUAKE
+	db 3,3,ROCK_TOMB
+	db 3,4,SCARY_FACE
+	db 4,1,GIGA_DRAIN
+	db 4,2,EGG_BOMB
+	db 4,3,SLEEP_POWDER
+	db 4,4,LIGHT_SCREEN
+	db 5,1,HYDRO_PUMP
+	db 5,2,DRAGON_RAGE
+	db 5,3,BITE
+	db 5,4,THRASH
+	db 6,1,FIRE_BLAST
+	db 6,2,FLY
+	db 6,3,SLASH
+	db 6,4,FIRE_SPIN
+	db 0
+
 	db $FF

@@ -813,23 +813,10 @@ INCLUDE "engine/game_corner_slots.asm"
 
 SECTION "bankE",ROMX,BANK[$E]
 
-INCLUDE "data/moves.asm"
-BaseStats: INCLUDE "data/base_stats.asm"
-INCLUDE "data/cries.asm"
 INCLUDE "engine/battle/unused_stats_functions.asm"
 INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
 INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
-
-TradingAnimationGraphics:
-	INCBIN "gfx/game_boy.norepeat.2bpp"
-	INCBIN "gfx/link_cable.2bpp"
-TradingAnimationGraphicsEnd:
-
-TradingAnimationGraphics2:
-; Pokeball traveling through the link cable.
-	INCBIN "gfx/trade2.2bpp"
-TradingAnimationGraphics2End:
 
 INCLUDE "engine/evos_moves.asm"
 INCLUDE "engine/battle/moveEffects/heal_effect.asm"
@@ -1050,6 +1037,8 @@ INCLUDE "engine/menu/pokedex.asm"
 INCLUDE "engine/trade.asm"
 INCLUDE "engine/intro.asm"
 INCLUDE "engine/trade2.asm"
+INCLUDE "data/moves.asm"
+INCLUDE "data/cries.asm"
 
 
 SECTION "bank11",ROMX,BANK[$11]
@@ -2292,8 +2281,6 @@ INCLUDE "engine/evolution.asm"
 
 INCLUDE "engine/overworld/elevator.asm"
 
-INCLUDE "engine/items/tm_prices.asm"
-
 
 SECTION "Pics 6",ROMX,BANK[PICS_6]
 
@@ -2384,6 +2371,16 @@ JaninePic::            INCBIN "pic/trainer/janine.pic"
 
 SECTION "bank2F",ROMX,BANK[$2F]
 
+TradingAnimationGraphics:
+	INCBIN "gfx/game_boy.norepeat.2bpp"
+	INCBIN "gfx/link_cable.2bpp"
+TradingAnimationGraphicsEnd:
+
+TradingAnimationGraphics2:
+; Pokeball traveling through the link cable.
+	INCBIN "gfx/trade2.2bpp"
+TradingAnimationGraphics2End:
+
 RedPicBack::           INCBIN "pic/trainer/redb.pic"
 LeafPicBack::          INCBIN "pic/trainer/leafb.pic"
 OldManPic::            INCBIN "pic/trainer/oldman.pic"
@@ -2419,6 +2416,13 @@ ClipboardSprite:       INCBIN "gfx/sprites/clipboard.2bpp"
 SnorlaxSprite:         INCBIN "gfx/sprites/snorlax.2bpp"
 OldAmberSprite:        INCBIN "gfx/sprites/old_amber.2bpp"
 LyingOldManSprite:     INCBIN "gfx/sprites/lying_old_man.2bpp"
+
+
+SECTION "bank30",ROMX,BANK[$30]
+
+BaseStats: INCLUDE "data/base_stats.asm"
+
+INCLUDE "engine/items/tm_prices.asm"
 
 
 SECTION "bank37",ROMX,BANK[$37]

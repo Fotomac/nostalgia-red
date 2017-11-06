@@ -542,6 +542,10 @@ MtMoon3HiddenObjects:
 	dbw BANK(HiddenItems),HiddenItems
 	db $09,$21,ETHER
 	dbw BANK(HiddenItems),HiddenItems
+	db $06,$15,REVIVE
+	dbw BANK(HiddenItems),HiddenItems
+	db $08,$07,ANTIDOTE
+	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 IndigoPlateauHiddenObjects:
 	db $0d,$08,$ff
@@ -852,7 +856,7 @@ CeruleanCityHiddenObjects:
 	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 Route4HiddenObjects:
-	db $03,$28,GREAT_BALL
+	db $02,$24,GREAT_BALL
 	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 PewterCityHiddenObjects:

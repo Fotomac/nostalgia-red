@@ -165,31 +165,38 @@ const_value = 1
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
 	const METAL_CLAW   ; a5
-	const CRUNCH       ; a6
-	const THIEF        ; a7
-	const FAINT_ATTACK ; a8
-	const OUTRAGE      ; a9
-	const TWISTER      ; aa
-	const ROLLOUT      ; ab
-	const ANCIENTPOWER ; ac
-	const ROCK_TOMB    ; ad
-	const CALM_MIND    ; ae
-	const SLUDGE_BOMB  ; af
-	const CROSS_CHOP   ; b0
-	const BRICK_BREAK  ; b1
-	const POWDER_SNOW  ; b2
-	const GIGA_DRAIN   ; b3
-	const BULLET_SEED  ; b4
-	const MAGICAL_LEAF ; b5
-	const ZAP_CANNON   ; b6
-	const SHOCK_WAVE   ; b7
-	const WATER_PULSE  ; b8
-	const FLAME_WHEEL  ; b9
-	const RAPID_SPIN   ; ba
-	const SCARY_FACE   ; bb
-	const SWEET_SCENT  ; bc
-	const SECRET_POWER ; bd
-	const RETURN       ; be
+	const IRON_TAIL    ; a6
+	const CRUNCH       ; a7
+	const THIEF        ; a8
+	const FAINT_ATTACK ; a9
+	const OUTRAGE      ; aa
+	const TWISTER      ; ab
+	const SHADOW_BALL  ; ac
+	const SHADOW_PUNCH ; ad
+	const ROLLOUT      ; ae
+	const ANCIENTPOWER ; af
+	const ROCK_TOMB    ; b0
+	const ROCK_BLAST   ; b1
+	const CALM_MIND    ; b2
+	const MUD_SLAP     ; b3
+	const SAND_TOMB    ; b4
+	const SLUDGE_BOMB  ; b5
+	const CROSS_CHOP   ; b6
+	const BRICK_BREAK  ; b7
+	const BULK_UP      ; b8
+	const POWDER_SNOW  ; b9
+	const GIGA_DRAIN   ; ba
+	const BULLET_SEED  ; bb
+	const MAGICAL_LEAF ; bc
+	const ZAP_CANNON   ; bd
+	const SHOCK_WAVE   ; be
+	const WATER_PULSE  ; bf
+	const FLAME_WHEEL  ; c0
+	const RAPID_SPIN   ; c1
+	const SCARY_FACE   ; c2
+	const SWEET_SCENT  ; c3
+	const SECRET_POWER ; c4
+	const RETURN       ; c5
 
 NUM_ATTACKS EQU const_value + -1
 

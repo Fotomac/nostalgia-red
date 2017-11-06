@@ -210,6 +210,7 @@ Mon112_EvosMoves:
 ;Learnset
 	db 13,STOMP
 	db 19,FURY_ATTACK
+	db 25,ROCK_BLAST
 	db 31,SCARY_FACE
 	db 37,HORN_DRILL
 	db 54,TAKE_DOWN
@@ -388,6 +389,7 @@ Mon094_EvosMoves:
 ;Evolutions
 	db 0
 ;Learnset
+	db 25,SHADOW_PUNCH
 	db 29,HYPNOSIS
 	db 38,DREAM_EATER
 	db 0
@@ -438,6 +440,7 @@ Mon111_EvosMoves:
 ;Learnset
 	db 13,STOMP
 	db 19,FURY_ATTACK
+	db 25,ROCK_BLAST
 	db 31,SCARY_FACE
 	db 37,HORN_DRILL
 	db 49,TAKE_DOWN
@@ -646,6 +649,7 @@ Mon095_EvosMoves:
 	db 23,HARDEN
 	db 27,RAGE
 	db 36,SLAM
+	db 45,IRON_TAIL
 	db 0
 
 Mon022_EvosMoves:
@@ -968,7 +972,7 @@ Mon050_EvosMoves:
 	db 5,GROWL
 	db 9,DIG
 	db 17,FURY_SWIPES
-	db 25,SAND_ATTACK
+	db 25,MUD_SLAP
 	db 33,SLASH
 	db 41,EARTHQUAKE
 	db 49,FISSURE
@@ -1681,8 +1685,8 @@ Mon051_EvosMoves:
 	db 5,GROWL
 	db 9,DIG
 	db 17,FURY_SWIPES
-	db 25,SAND_ATTACK
-	db 26,TRI_ATTACK
+	db 25,MUD_SLAP
+	db 26,SAND_TOMB
 	db 37,SLASH
 	db 49,EARTHQUAKE
 	db 61,FISSURE
@@ -2000,6 +2004,7 @@ Mon093_EvosMoves:
 	db EV_TRADE,1,GENGAR
 	db 0
 ;Learnset
+	db 25,SHADOW_PUNCH
 	db 29,HYPNOSIS
 	db 38,DREAM_EATER
 	db 0

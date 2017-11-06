@@ -82,6 +82,7 @@ ItemPrices:
 	money 0     ; MAX_ETHER
 	money 0     ; ELIXER
 	money 0     ; MAX_ELIXER
+	money 9800  ; STAR_PIECE
 	money 0     ; FLOOR_B2F
 	money 0     ; FLOOR_B1F
 	money 0     ; FLOOR_1F
