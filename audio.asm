@@ -2,6 +2,7 @@
 AUDIO_1 EQU $2
 AUDIO_2 EQU $8
 AUDIO_3 EQU $1f
+AUDIO_5 EQU $31
 
 INCLUDE "constants.asm"
 
@@ -15,6 +16,9 @@ INCLUDE "audio/headers/sfxheaders2.asm"
 SECTION "Sound Effect Headers 3", ROMX, BANK[AUDIO_3]
 INCLUDE "audio/headers/sfxheaders3.asm"
 
+SECTION "Sound Effect Headers 5", ROMX, BANK[AUDIO_5]
+INCLUDE "audio/headers/sfxheaders5.asm"
+
 
 
 SECTION "Music Headers 1", ROMX, BANK[AUDIO_1]
@@ -24,6 +28,9 @@ SECTION "Music Headers 2", ROMX, BANK[AUDIO_2]
 INCLUDE "audio/headers/musicheaders2.asm"
 
 SECTION "Music Headers 3", ROMX, BANK[AUDIO_3]
+INCLUDE "audio/headers/musicheaders3.asm"
+
+SECTION "Music Headers 5", ROMX, BANK[AUDIO_5]
 INCLUDE "audio/headers/musicheaders3.asm"
 
 
@@ -86,7 +93,6 @@ INCLUDE "audio/sfx/push_boulder_1.asm"
 INCLUDE "audio/sfx/ss_anne_horn_1.asm"
 INCLUDE "audio/sfx/withdraw_deposit_1.asm"
 INCLUDE "audio/sfx/safari_zone_pa.asm"
-INCLUDE "audio/sfx/unused_1.asm"
 INCLUDE "audio/sfx/cry09_1.asm"
 INCLUDE "audio/sfx/cry23_1.asm"
 INCLUDE "audio/sfx/cry24_1.asm"
@@ -125,6 +131,8 @@ INCLUDE "audio/sfx/cry1f_1.asm"
 INCLUDE "audio/sfx/cry20_1.asm"
 INCLUDE "audio/sfx/cry21_1.asm"
 INCLUDE "audio/sfx/cry22_1.asm"
+INCLUDE "audio/sfx/cry26_1.asm"
+INCLUDE "audio/sfx/cry27_1.asm"
 
 
 SECTION "Sound Effects 2", ROMX, BANK[AUDIO_2]
@@ -211,7 +219,6 @@ INCLUDE "audio/sfx/battle_33.asm"
 INCLUDE "audio/sfx/battle_34.asm"
 INCLUDE "audio/sfx/battle_35.asm"
 INCLUDE "audio/sfx/battle_36.asm"
-INCLUDE "audio/sfx/unused_2.asm"
 INCLUDE "audio/sfx/cry09_2.asm"
 INCLUDE "audio/sfx/cry23_2.asm"
 INCLUDE "audio/sfx/cry24_2.asm"
@@ -250,6 +257,8 @@ INCLUDE "audio/sfx/cry1f_2.asm"
 INCLUDE "audio/sfx/cry20_2.asm"
 INCLUDE "audio/sfx/cry21_2.asm"
 INCLUDE "audio/sfx/cry22_2.asm"
+INCLUDE "audio/sfx/cry26_2.asm"
+INCLUDE "audio/sfx/cry27_2.asm"
 
 
 SECTION "Sound Effects 3", ROMX, BANK[AUDIO_3]
@@ -318,7 +327,6 @@ INCLUDE "audio/sfx/slots_stop_wheel.asm"
 INCLUDE "audio/sfx/slots_reward.asm"
 INCLUDE "audio/sfx/slots_new_spin.asm"
 INCLUDE "audio/sfx/shooting_star.asm"
-INCLUDE "audio/sfx/unused_3.asm"
 INCLUDE "audio/sfx/cry09_3.asm"
 INCLUDE "audio/sfx/cry23_3.asm"
 INCLUDE "audio/sfx/cry24_3.asm"
@@ -357,6 +365,116 @@ INCLUDE "audio/sfx/cry1f_3.asm"
 INCLUDE "audio/sfx/cry20_3.asm"
 INCLUDE "audio/sfx/cry21_3.asm"
 INCLUDE "audio/sfx/cry22_3.asm"
+INCLUDE "audio/sfx/cry26_3.asm"
+INCLUDE "audio/sfx/cry27_3.asm"
+
+
+SECTION "Sound Effects 5", ROMX, BANK[AUDIO_5]
+
+INCLUDE "audio/sfx/snare1_5.asm"
+INCLUDE "audio/sfx/snare2_5.asm"
+INCLUDE "audio/sfx/snare3_5.asm"
+INCLUDE "audio/sfx/snare4_5.asm"
+INCLUDE "audio/sfx/snare5_5.asm"
+INCLUDE "audio/sfx/triangle1_5.asm"
+INCLUDE "audio/sfx/triangle2_5.asm"
+INCLUDE "audio/sfx/snare6_5.asm"
+INCLUDE "audio/sfx/snare7_5.asm"
+INCLUDE "audio/sfx/snare8_5.asm"
+INCLUDE "audio/sfx/snare9_5.asm"
+INCLUDE "audio/sfx/cymbal1_5.asm"
+INCLUDE "audio/sfx/cymbal2_5.asm"
+INCLUDE "audio/sfx/cymbal3_5.asm"
+INCLUDE "audio/sfx/muted_snare1_5.asm"
+INCLUDE "audio/sfx/triangle3_5.asm"
+INCLUDE "audio/sfx/muted_snare2_5.asm"
+INCLUDE "audio/sfx/muted_snare3_5.asm"
+INCLUDE "audio/sfx/muted_snare4_5.asm"
+
+Audio5_WavePointers: INCLUDE "audio/wave_instruments.asm"
+
+INCLUDE "audio/sfx/start_menu_3.asm"
+INCLUDE "audio/sfx/cut_3.asm"
+INCLUDE "audio/sfx/go_inside_3.asm"
+INCLUDE "audio/sfx/swap_3.asm"
+INCLUDE "audio/sfx/tink_3.asm"
+INCLUDE "audio/sfx/59_3.asm"
+INCLUDE "audio/sfx/purchase_3.asm"
+INCLUDE "audio/sfx/collision_3.asm"
+INCLUDE "audio/sfx/go_outside_3.asm"
+INCLUDE "audio/sfx/press_ab_3.asm"
+INCLUDE "audio/sfx/save_3.asm"
+INCLUDE "audio/sfx/heal_hp_3.asm"
+INCLUDE "audio/sfx/poisoned_3.asm"
+INCLUDE "audio/sfx/heal_ailment_3.asm"
+INCLUDE "audio/sfx/trade_machine_3.asm"
+INCLUDE "audio/sfx/turn_on_pc_3.asm"
+INCLUDE "audio/sfx/turn_off_pc_3.asm"
+INCLUDE "audio/sfx/enter_pc_3.asm"
+INCLUDE "audio/sfx/shrink_3.asm"
+INCLUDE "audio/sfx/switch_3.asm"
+INCLUDE "audio/sfx/healing_machine_3.asm"
+INCLUDE "audio/sfx/teleport_exit1_3.asm"
+INCLUDE "audio/sfx/teleport_enter1_3.asm"
+INCLUDE "audio/sfx/teleport_exit2_3.asm"
+INCLUDE "audio/sfx/ledge_3.asm"
+INCLUDE "audio/sfx/teleport_enter2_3.asm"
+INCLUDE "audio/sfx/fly_3.asm"
+INCLUDE "audio/sfx/denied_3.asm"
+INCLUDE "audio/sfx/arrow_tiles_3.asm"
+INCLUDE "audio/sfx/push_boulder_3.asm"
+INCLUDE "audio/sfx/ss_anne_horn_3.asm"
+INCLUDE "audio/sfx/withdraw_deposit_3.asm"
+INCLUDE "audio/sfx/intro_lunge.asm"
+INCLUDE "audio/sfx/intro_hip.asm"
+INCLUDE "audio/sfx/intro_hop.asm"
+INCLUDE "audio/sfx/intro_raise.asm"
+INCLUDE "audio/sfx/intro_crash.asm"
+INCLUDE "audio/sfx/intro_whoosh.asm"
+INCLUDE "audio/sfx/slots_stop_wheel.asm"
+INCLUDE "audio/sfx/slots_reward.asm"
+INCLUDE "audio/sfx/slots_new_spin.asm"
+INCLUDE "audio/sfx/shooting_star.asm"
+INCLUDE "audio/sfx/cry09_3.asm"
+INCLUDE "audio/sfx/cry23_3.asm"
+INCLUDE "audio/sfx/cry24_3.asm"
+INCLUDE "audio/sfx/cry11_3.asm"
+INCLUDE "audio/sfx/cry25_3.asm"
+INCLUDE "audio/sfx/cry03_3.asm"
+INCLUDE "audio/sfx/cry0f_3.asm"
+INCLUDE "audio/sfx/cry10_3.asm"
+INCLUDE "audio/sfx/cry00_3.asm"
+INCLUDE "audio/sfx/cry0e_3.asm"
+INCLUDE "audio/sfx/cry06_3.asm"
+INCLUDE "audio/sfx/cry07_3.asm"
+INCLUDE "audio/sfx/cry05_3.asm"
+INCLUDE "audio/sfx/cry0b_3.asm"
+INCLUDE "audio/sfx/cry0c_3.asm"
+INCLUDE "audio/sfx/cry02_3.asm"
+INCLUDE "audio/sfx/cry0d_3.asm"
+INCLUDE "audio/sfx/cry01_3.asm"
+INCLUDE "audio/sfx/cry0a_3.asm"
+INCLUDE "audio/sfx/cry08_3.asm"
+INCLUDE "audio/sfx/cry04_3.asm"
+INCLUDE "audio/sfx/cry19_3.asm"
+INCLUDE "audio/sfx/cry16_3.asm"
+INCLUDE "audio/sfx/cry1b_3.asm"
+INCLUDE "audio/sfx/cry12_3.asm"
+INCLUDE "audio/sfx/cry13_3.asm"
+INCLUDE "audio/sfx/cry14_3.asm"
+INCLUDE "audio/sfx/cry1e_3.asm"
+INCLUDE "audio/sfx/cry15_3.asm"
+INCLUDE "audio/sfx/cry17_3.asm"
+INCLUDE "audio/sfx/cry1c_3.asm"
+INCLUDE "audio/sfx/cry1a_3.asm"
+INCLUDE "audio/sfx/cry1d_3.asm"
+INCLUDE "audio/sfx/cry18_3.asm"
+INCLUDE "audio/sfx/cry1f_3.asm"
+INCLUDE "audio/sfx/cry20_3.asm"
+INCLUDE "audio/sfx/cry21_3.asm"
+INCLUDE "audio/sfx/cry22_3.asm"
+INCLUDE "audio/sfx/cry26_3.asm"
+INCLUDE "audio/sfx/cry27_3.asm"
 
 
 
@@ -595,7 +713,7 @@ PokedexRatingSfxPointers:
 	db SFX_GET_ITEM_2,     BANK(SFX_Get_Item2_1)
 
 OwnedMonValues:
-	db 10, 40, 60, 90, 120, 150, $ff
+	db 10, 40, 60, 90, 121, 153, $ff
 
 
 INCLUDE "audio/engine_3.asm"
@@ -634,7 +752,6 @@ INCLUDE "audio/music/pokecenter.asm"
 SECTION "Music 2", ROMX, BANK[AUDIO_2]
 
 INCLUDE "audio/sfx/pokeflute_ch4_ch5.asm"
-INCLUDE "audio/sfx/unused2_2.asm"
 INCLUDE "audio/music/gymleaderbattle.asm"
 INCLUDE "audio/music/trainerbattle.asm"
 INCLUDE "audio/music/wildbattle.asm"

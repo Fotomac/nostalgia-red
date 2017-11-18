@@ -172,11 +172,20 @@ SFX_Cry24_3::
 SFX_Cry25_3::
 	audio SFX_Cry25_3, Ch4, Ch5, Ch7
 
+SFX_Cry26_3::
+	audio SFX_Cry26_3, Ch4, Ch5, Ch7
+
+SFX_Cry27_3::
+	audio SFX_Cry27_3, Ch4, Ch5, Ch7
+
 SFX_Get_Item1_3::
 	audio SFX_Get_Item1_3, Ch4, Ch5, Ch6
 
 SFX_Get_Item2_3::
 	audio SFX_Get_Item2_3, Ch4, Ch5, Ch6
+
+SFX_Level_Up_3::
+	audio SFX_Level_Up_3, Ch4, Ch5, Ch6
 
 SFX_Tink_3::
 	audio SFX_Tink_3, Ch4

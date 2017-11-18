@@ -172,11 +172,20 @@ SFX_Cry24_2::
 SFX_Cry25_2::
 	audio SFX_Cry25_2, Ch4, Ch5, Ch7
 
-SFX_Level_Up::
-	audio SFX_Level_Up, Ch4, Ch5, Ch6
+SFX_Cry26_2::
+	audio SFX_Cry26_2, Ch4, Ch5, Ch7
+
+SFX_Cry27_2::
+	audio SFX_Cry27_2, Ch4, Ch5, Ch7
+
+SFX_Get_Item1_2::
+	audio SFX_Get_Item1_2, Ch4, Ch5, Ch6
 
 SFX_Get_Item2_2::
 	audio SFX_Get_Item2_2, Ch4, Ch5, Ch6
+
+SFX_Level_Up_2::
+	audio SFX_Level_Up_2, Ch4, Ch5, Ch6
 
 SFX_Tink_2::
 	audio SFX_Tink_2, Ch4
@@ -192,6 +201,12 @@ SFX_Start_Menu_2::
 
 SFX_Press_AB_2::
 	audio SFX_Press_AB_2, Ch4
+
+SFX_Pokedex_Rating_2::
+	audio SFX_Pokedex_Rating_2, Ch4, Ch5, Ch6
+
+SFX_Get_Key_Item_2::
+	audio SFX_Get_Key_Item_2, Ch4, Ch5, Ch6
 
 SFX_Ball_Toss::
 	audio SFX_Ball_Toss, Ch4, Ch5

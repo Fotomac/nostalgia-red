@@ -44,8 +44,6 @@ music_const: MACRO
 ENDM
 
 	; AUDIO_1
-	music_const MUSIC_PALLET_TOWN,         Music_PalletTown
-	music_const MUSIC_POKECENTER,          Music_Pokecenter
 	music_const MUSIC_GYM,                 Music_Gym
 	music_const MUSIC_CITIES1,             Music_Cities1
 	music_const MUSIC_CITIES2,             Music_Cities2
@@ -58,12 +56,6 @@ ENDM
 	music_const MUSIC_MEET_RIVAL,          Music_MeetRival
 	music_const MUSIC_MUSEUM_GUY,          Music_MuseumGuy
 	music_const MUSIC_SAFARI_ZONE,         Music_SafariZone
-	music_const MUSIC_PKMN_HEALED,         Music_PkmnHealed
-	music_const MUSIC_ROUTES1,             Music_Routes1
-	music_const MUSIC_ROUTES2,             Music_Routes2
-	music_const MUSIC_ROUTES3,             Music_Routes3
-	music_const MUSIC_ROUTES4,             Music_Routes4
-	music_const MUSIC_INDIGO_PLATEAU,      Music_IndigoPlateau
 
 	; AUDIO_2
 	music_const MUSIC_GYM_LEADER_BATTLE,   Music_GymLeaderBattle
@@ -90,11 +82,21 @@ ENDM
 	music_const MUSIC_CINNABAR_MANSION,    Music_CinnabarMansion
 	music_const MUSIC_POKEMON_TOWER,       Music_PokemonTower
 	music_const MUSIC_SILPH_CO,            Music_SilphCo
+
+	; AUDIO_5
+	music_const MUSIC_PALLET_TOWN,         Music_PalletTown
+	music_const MUSIC_POKECENTER,          Music_Pokecenter
+	music_const MUSIC_PKMN_HEALED,         Music_PkmnHealed
+	music_const MUSIC_ROUTES1,             Music_Routes1
+	music_const MUSIC_ROUTES2,             Music_Routes2
+	music_const MUSIC_ROUTES3,             Music_Routes3
+	music_const MUSIC_ROUTES4,             Music_Routes4
+	music_const MUSIC_INDIGO_PLATEAU,      Music_IndigoPlateau
 	music_const MUSIC_MEET_EVIL_TRAINER,   Music_MeetEvilTrainer
 	music_const MUSIC_MEET_FEMALE_TRAINER, Music_MeetFemaleTrainer
 	music_const MUSIC_MEET_MALE_TRAINER,   Music_MeetMaleTrainer
 
-	; AUDIO_1 AUDIO_2 AUDIO_3
+	; AUDIO_1 AUDIO_2 AUDIO_3 AUDIO_5
 	music_const SFX_SNARE_1,            SFX_Snare1_1
 	music_const SFX_SNARE_2,            SFX_Snare2_1
 	music_const SFX_SNARE_3,            SFX_Snare3_1
@@ -152,19 +154,22 @@ ENDM
 	music_const SFX_CRY_23,             SFX_Cry23_1
 	music_const SFX_CRY_24,             SFX_Cry24_1
 	music_const SFX_CRY_25,             SFX_Cry25_1
+	music_const SFX_CRY_26,             SFX_Cry26_1
+	music_const SFX_CRY_27,             SFX_Cry27_1
 
+	music_const SFX_GET_ITEM_1,         SFX_Get_Item1_1
 	music_const SFX_GET_ITEM_2,         SFX_Get_Item2_1
+	music_const SFX_LEVEL_UP,           SFX_Level_Up
 	music_const SFX_TINK,               SFX_Tink_1
 	music_const SFX_HEAL_HP,            SFX_Heal_HP_1
 	music_const SFX_HEAL_AILMENT,       SFX_Heal_Ailment_1
 	music_const SFX_START_MENU,         SFX_Start_Menu_1
 	music_const SFX_PRESS_AB,           SFX_Press_AB_1
-
-	; AUDIO_1 AUDIO_3
-	music_const SFX_GET_ITEM_1,         SFX_Get_Item1_1
-
 	music_const SFX_POKEDEX_RATING,     SFX_Pokedex_Rating_1
 	music_const SFX_GET_KEY_ITEM,       SFX_Get_Key_Item_1
+
+	; AUDIO_1 AUDIO_3 AUDIO_5
+
 	music_const SFX_POISONED,           SFX_Poisoned_1
 	music_const SFX_TRADE_MACHINE,      SFX_Trade_Machine_1
 	music_const SFX_TURN_ON_PC,         SFX_Turn_On_PC_1
@@ -194,11 +199,10 @@ ENDM
 	music_const SFX_SAVE,               SFX_Save_1
 
 	; AUDIO_1
-	music_const SFX_POKEFLUTE,           SFX_Pokeflute
+	music_const SFX_POKEFLUTE,          SFX_Pokeflute
 	music_const SFX_SAFARI_ZONE_PA,     SFX_Safari_Zone_PA
 
 	; AUDIO_2
-	music_const SFX_LEVEL_UP,           SFX_Level_Up
 
 	music_const SFX_BALL_TOSS,          SFX_Ball_Toss
 	music_const SFX_BALL_POOF,          SFX_Ball_Poof
@@ -256,7 +260,7 @@ ENDM
 	music_const SFX_BATTLE_36,          SFX_Battle_36
 	music_const SFX_SILPH_SCOPE,        SFX_Silph_Scope
 
-	; AUDIO_3
+	; AUDIO_3 AUDIO_5
 	music_const SFX_INTRO_LUNGE,        SFX_Intro_Lunge
 	music_const SFX_INTRO_HIP,          SFX_Intro_Hip
 	music_const SFX_INTRO_HOP,          SFX_Intro_Hop

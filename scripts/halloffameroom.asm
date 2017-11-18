@@ -41,6 +41,7 @@ HallofFameRoomScript2:
 	ld [wHallOfFameRoomCurScript], a
 	; Elite 4 events
 	ResetEventRange ELITE4_EVENTS_START, ELITE4_CHAMPION_EVENTS_END, 1
+	ResetEvents EVENT_BEAT_ARTICUNO, EVENT_BEAT_ZAPDOS, EVENT_BEAT_MOLTRES
 	xor a
 	ld [wHallOfFameRoomCurScript], a
 	ld a, PALLET_TOWN

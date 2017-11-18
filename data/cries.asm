@@ -194,13 +194,13 @@ CryData:
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
-	db $19, $CC, $40; Pikablu
-	db $19, $99, $40; Raiblu
+	db $26, $CC, $A0; Pikablu
+	db $26, $83, $FF; Raiblu
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
 	db $00, $00, $00; MissingNo.
-	db $23, $88, $40; Bellossom
+	db $27, $84, $D0; Bellossom
 

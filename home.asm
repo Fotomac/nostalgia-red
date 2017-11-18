@@ -574,7 +574,6 @@ GetMonHeader::
 	ld [hl],e ; write front sprite pointer
 	inc hl
 	ld [hl],d
-	jr .done
 .done
 	ld a,[wd0b5]
 	ld [wMonHIndex],a
