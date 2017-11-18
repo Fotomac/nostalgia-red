@@ -184,9 +184,6 @@ SFX_Get_Item1_5::
 SFX_Get_Item2_5::
 	audio SFX_Get_Item2_5, Ch4, Ch5, Ch6
 
-SFX_Level_Up_5::
-	audio SFX_Level_Up_5, Ch4, Ch5, Ch6
-
 SFX_Tink_5::
 	audio SFX_Tink_5, Ch4
 
@@ -207,6 +204,9 @@ SFX_Pokedex_Rating_5::
 
 SFX_Get_Key_Item_5::
 	audio SFX_Get_Key_Item_5, Ch4, Ch5, Ch6
+
+SFX_Level_Up_5::
+	audio SFX_Level_Up_5, Ch4, Ch5, Ch6
 
 SFX_Poisoned_5::
 	audio SFX_Poisoned_5, Ch4

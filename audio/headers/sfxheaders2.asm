@@ -184,9 +184,6 @@ SFX_Get_Item1_2::
 SFX_Get_Item2_2::
 	audio SFX_Get_Item2_2, Ch4, Ch5, Ch6
 
-SFX_Level_Up_2::
-	audio SFX_Level_Up_2, Ch4, Ch5, Ch6
-
 SFX_Tink_2::
 	audio SFX_Tink_2, Ch4
 

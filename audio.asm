@@ -698,7 +698,7 @@ PokedexRatingSfxPointers:
 	db SFX_POKEDEX_RATING, BANK(SFX_Pokedex_Rating_1)
 	db SFX_GET_ITEM_1,     BANK(SFX_Get_Item1_1)
 	db SFX_CAUGHT_MON,     BANK(SFX_Caught_Mon)
-	db SFX_LEVEL_UP_1,     BANK(SFX_Level_Up_1)
+	db SFX_LEVEL_UP,       BANK(SFX_Level_Up_1)
 	db SFX_GET_KEY_ITEM,   BANK(SFX_Get_Key_Item_1)
 	db SFX_GET_ITEM_2,     BANK(SFX_Get_Item2_1)
 
@@ -746,7 +746,6 @@ INCLUDE "audio/music/wildbattle.asm"
 INCLUDE "audio/music/finalbattle.asm"
 INCLUDE "audio/sfx/pokedex_rating_2.asm"
 INCLUDE "audio/sfx/get_item2_2.asm"
-INCLUDE "audio/sfx/level_up_2.asm"
 INCLUDE "audio/sfx/caught_mon.asm"
 INCLUDE "audio/sfx/get_key_item_2.asm"
 

@@ -307,7 +307,7 @@ ReviveText:
 
 RareCandyText:
 	TX_FAR _RareCandyText
-	TX_SFX_ITEM_1 ; probably supposed to play SFX_LEVEL_UP but the wrong music bank is loaded
+	TX_SFX_ITEM_1
 	TX_BLINK
 	db "@"
 

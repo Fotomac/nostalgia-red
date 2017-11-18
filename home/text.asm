@@ -629,7 +629,7 @@ TextCommand0B::
 
 ; format: text command ID, sound ID or cry ID
 TextCommandSounds::
-	db $0B, SFX_GET_ITEM_1 ; actually plays SFX_LEVEL_UP when the battle music engine is loaded
+	db $0B, SFX_LEVEL_UP
 	db $12, SFX_CAUGHT_MON
 	db $0E, SFX_POKEDEX_RATING ; unused?
 	db $0F, SFX_GET_ITEM_1 ; unused?

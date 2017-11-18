@@ -159,7 +159,6 @@ ENDM
 
 	music_const SFX_GET_ITEM_1,         SFX_Get_Item1_1
 	music_const SFX_GET_ITEM_2,         SFX_Get_Item2_1
-	music_const SFX_LEVEL_UP,           SFX_Level_Up
 	music_const SFX_TINK,               SFX_Tink_1
 	music_const SFX_HEAL_HP,            SFX_Heal_HP_1
 	music_const SFX_HEAL_AILMENT,       SFX_Heal_Ailment_1
@@ -170,6 +169,7 @@ ENDM
 
 	; AUDIO_1 AUDIO_3 AUDIO_5
 
+	music_const SFX_LEVEL_UP,           SFX_Level_Up_1
 	music_const SFX_POISONED,           SFX_Poisoned_1
 	music_const SFX_TRADE_MACHINE,      SFX_Trade_Machine_1
 	music_const SFX_TURN_ON_PC,         SFX_Turn_On_PC_1

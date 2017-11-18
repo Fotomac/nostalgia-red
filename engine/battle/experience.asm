@@ -371,5 +371,5 @@ ExpPointsText:
 
 GrewLevelText:
 	TX_FAR _GrewLevelText
-	TX_SFX_LEVEL_UP
+	TX_SFX_ITEM_1
 	db "@"

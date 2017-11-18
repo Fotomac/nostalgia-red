@@ -188,7 +188,7 @@ SaffronGymText_5d162:
 
 SaffronGymText_5d167:
 	TX_FAR _SaffronGymText_5d167
-	TX_SFX_KEY_ITEM ; actually plays the second channel of SFX_BALL_POOF due to the wrong music bank being loaded
+	TX_SFX_KEY_ITEM
 	TX_BLINK
 	db "@"
 
