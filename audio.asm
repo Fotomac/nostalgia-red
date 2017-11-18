@@ -717,6 +717,11 @@ INCLUDE "audio/engine_5.asm"
 
 SECTION "Music 1", ROMX, BANK[AUDIO_1]
 
+INCLUDE "audio/music/routes1.asm"
+INCLUDE "audio/music/routes2.asm"
+INCLUDE "audio/music/routes3.asm"
+INCLUDE "audio/music/routes4.asm"
+INCLUDE "audio/music/indigoplateau.asm"
 INCLUDE "audio/music/cities1.asm"
 INCLUDE "audio/sfx/get_item1_1.asm"
 INCLUDE "audio/music/museumguy.asm"
@@ -778,11 +783,6 @@ SECTION "Music 5", ROMX, BANK[AUDIO_5]
 
 INCLUDE "audio/music/pkmnhealed.asm"
 INCLUDE "audio/sfx/get_item1_5.asm"
-INCLUDE "audio/music/routes1.asm"
-INCLUDE "audio/music/routes2.asm"
-INCLUDE "audio/music/routes3.asm"
-INCLUDE "audio/music/routes4.asm"
-INCLUDE "audio/music/indigoplateau.asm"
 INCLUDE "audio/sfx/pokedex_rating_5.asm"
 INCLUDE "audio/sfx/get_item2_5.asm"
 INCLUDE "audio/sfx/level_up_5.asm"

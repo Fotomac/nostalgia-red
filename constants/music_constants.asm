@@ -56,6 +56,11 @@ ENDM
 	music_const MUSIC_MEET_RIVAL,          Music_MeetRival
 	music_const MUSIC_MUSEUM_GUY,          Music_MuseumGuy
 	music_const MUSIC_SAFARI_ZONE,         Music_SafariZone
+	music_const MUSIC_ROUTES1,             Music_Routes1
+	music_const MUSIC_ROUTES2,             Music_Routes2
+	music_const MUSIC_ROUTES3,             Music_Routes3
+	music_const MUSIC_ROUTES4,             Music_Routes4
+	music_const MUSIC_INDIGO_PLATEAU,      Music_IndigoPlateau
 
 	; AUDIO_2
 	music_const MUSIC_GYM_LEADER_BATTLE,   Music_GymLeaderBattle
@@ -84,11 +89,6 @@ ENDM
 	music_const MUSIC_PALLET_TOWN,         Music_PalletTown
 	music_const MUSIC_POKECENTER,          Music_Pokecenter
 	music_const MUSIC_PKMN_HEALED,         Music_PkmnHealed
-	music_const MUSIC_ROUTES1,             Music_Routes1
-	music_const MUSIC_ROUTES2,             Music_Routes2
-	music_const MUSIC_ROUTES3,             Music_Routes3
-	music_const MUSIC_ROUTES4,             Music_Routes4
-	music_const MUSIC_INDIGO_PLATEAU,      Music_IndigoPlateau
 	music_const MUSIC_MEET_EVIL_TRAINER,   Music_MeetEvilTrainer
 	music_const MUSIC_MEET_FEMALE_TRAINER, Music_MeetFemaleTrainer
 	music_const MUSIC_MEET_MALE_TRAINER,   Music_MeetMaleTrainer

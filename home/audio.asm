@@ -80,14 +80,22 @@ UpdateMusic6Times::
 
 .checkForAudio2
 	cp BANK(Audio2_UpdateMusic)
-	jr nz, .audio3
+	jr nz, .checkForAudio3
 
 ; audio 2
 	ld hl, Audio2_UpdateMusic
 	jr .next
 
-.audio3
+.checkForAudio3
+	cp BANK(Audio3_UpdateMusic)
+	jr nz, .audio5
+
+; audio3
 	ld hl, Audio3_UpdateMusic
+	jr .next
+
+.audio5
+	ld hl, Audio5_UpdateMusic
 
 .next
 	ld c, 6
@@ -185,16 +193,25 @@ PlaySound::
 
 .checkForAudio2
 	cp BANK(Audio2_PlaySound)
-	jr nz, .audio3
+	jr nz, .checkForAudio3
 
 ; audio 2
 	ld a, b
 	call Audio2_PlaySound
 	jr .next2
 
-.audio3
+.checkForAudio3
+	cp BANK(Audio3_PlaySound)
+	jr nz, .audio5
+
+; audio3
 	ld a, b
 	call Audio3_PlaySound
+	jr .next2
+
+.audio5
+	ld a, b
+	call Audio5_PlaySound
 
 .next2
 	ld a, [hSavedROMBank]

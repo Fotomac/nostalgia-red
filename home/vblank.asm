@@ -63,13 +63,19 @@ VBlank::
 	jr .afterMusic
 .checkForAudio2
 	cp BANK(Audio2_UpdateMusic)
-	jr nz, .audio3
+	jr nz, .checkForAudio3
 .audio2
 	call Music_DoLowHealthAlarm
 	call Audio2_UpdateMusic
 	jr .afterMusic
+.checkForAudio3
+	cp BANK(Audio3_UpdateMusic)
+	jr nz, .audio5
 .audio3
 	call Audio3_UpdateMusic
+	jr .afterMusic
+.audio5
+	call Audio5_UpdateMusic
 .afterMusic
 
 	callba TrackPlayTime ; keep track of time played

@@ -35,3 +35,23 @@ Music_MuseumGuy::
 
 Music_SafariZone::
 	audio Music_SafariZone, Ch0, Ch1, Ch2
+
+; Routes 1 and 2
+Music_Routes1::
+	audio Music_Routes1, Ch0, Ch1, Ch2, Ch3
+
+; Routes 24 and 25
+Music_Routes2::
+	audio Music_Routes2, Ch0, Ch1, Ch2, Ch3
+
+; Routes 3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18, 19, 20, 21, 22
+Music_Routes3::
+	audio Music_Routes3, Ch0, Ch1, Ch2, Ch3
+
+; Routes 11, 12, 13, 14, 15
+Music_Routes4::
+	audio Music_Routes4, Ch0, Ch1, Ch2, Ch3
+
+; Route 23, Indigo Plateau
+Music_IndigoPlateau::
+	audio Music_IndigoPlateau, Ch0, Ch1, Ch2, Ch3
