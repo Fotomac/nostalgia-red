@@ -1,4 +1,4 @@
-SFX_Level_Up_Ch4:
+SFX_Level_Up_5_Ch4:
 	executemusic
 	tempo 256
 	volume 7, 7
@@ -20,7 +20,7 @@ SFX_Level_Up_Ch4:
 	endchannel
 
 
-SFX_Level_Up_Ch5:
+SFX_Level_Up_5_Ch5:
 	executemusic
 	vibrato 4, 2, 2
 	duty 2
@@ -40,7 +40,7 @@ SFX_Level_Up_Ch5:
 	endchannel
 
 
-SFX_Level_Up_Ch6:
+SFX_Level_Up_5_Ch6:
 	executemusic
 	notetype 6, 1, 0
 	octave 5

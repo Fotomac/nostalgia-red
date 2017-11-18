@@ -62,9 +62,6 @@ ENDM
 	music_const MUSIC_TRAINER_BATTLE,      Music_TrainerBattle
 	music_const MUSIC_WILD_BATTLE,         Music_WildBattle
 	music_const MUSIC_FINAL_BATTLE,        Music_FinalBattle
-	music_const MUSIC_DEFEATED_TRAINER,    Music_DefeatedTrainer
-	music_const MUSIC_DEFEATED_WILD_MON,   Music_DefeatedWildMon
-	music_const MUSIC_DEFEATED_GYM_LEADER, Music_DefeatedGymLeader
 
 	; AUDIO_3
 	music_const MUSIC_TITLE_SCREEN,        Music_TitleScreen
@@ -95,6 +92,9 @@ ENDM
 	music_const MUSIC_MEET_EVIL_TRAINER,   Music_MeetEvilTrainer
 	music_const MUSIC_MEET_FEMALE_TRAINER, Music_MeetFemaleTrainer
 	music_const MUSIC_MEET_MALE_TRAINER,   Music_MeetMaleTrainer
+	music_const MUSIC_DEFEATED_TRAINER,    Music_DefeatedTrainer
+	music_const MUSIC_DEFEATED_WILD_MON,   Music_DefeatedWildMon
+	music_const MUSIC_DEFEATED_GYM_LEADER, Music_DefeatedGymLeader
 
 	; AUDIO_1 AUDIO_2 AUDIO_3 AUDIO_5
 	music_const SFX_SNARE_1,            SFX_Snare1_1
@@ -260,7 +260,7 @@ ENDM
 	music_const SFX_BATTLE_36,          SFX_Battle_36
 	music_const SFX_SILPH_SCOPE,        SFX_Silph_Scope
 
-	; AUDIO_3 AUDIO_5
+	; AUDIO_3
 	music_const SFX_INTRO_LUNGE,        SFX_Intro_Lunge
 	music_const SFX_INTRO_HIP,          SFX_Intro_Hip
 	music_const SFX_INTRO_HOP,          SFX_Intro_Hop

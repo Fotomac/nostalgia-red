@@ -1,4 +1,4 @@
-; The third of three duplicated sound engines.
+; The third of five duplicated sound engines.
 
 Audio3_UpdateMusic::
 	ld c, Ch0

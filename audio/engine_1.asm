@@ -1,4 +1,4 @@
-; The first of three duplicated sound engines.
+; The first of five duplicated sound engines.
 
 Audio1_UpdateMusic::
 	ld c, Ch0
