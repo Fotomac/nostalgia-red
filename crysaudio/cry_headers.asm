@@ -154,6 +154,18 @@ RaichuCryHeader: ; 0xf281d
 	db $00  ; echo
 	dw $088 ; length
 
+MarillCryHeader: ; 0xf2bcb
+	dw $26  ; cry id
+	db $1b  ; pitch
+	db $01  ; echo
+	dw $120 ; length
+
+AzumarillCryHeader: ; 0xf2bd1
+	dw $26  ; cry id
+	db $b6  ; pitch
+	db $00  ; echo
+	dw $180 ; length
+
 SandshrewCryHeader: ; 0xf2823
 	dw $00  ; cry id
 	db $20  ; pitch
@@ -267,6 +279,12 @@ VileplumeCryHeader: ; 0xf288f
 	db $22  ; pitch
 	db $00  ; echo
 	dw $17f ; length
+
+BellossomCryHeader: ; 0xf2bc5
+	dw $34  ; cry id
+	db $84  ; pitch
+	db $00  ; echo
+	dw $150 ; length
 
 ParasCryHeader: ; 0xf2895
 	dw $1e  ; cry id
@@ -1083,24 +1101,6 @@ AmpharosCryHeader: ; 0xf2bbf
 	db $84  ; pitch
 	db $ff  ; echo
 	dw $0e8 ; length
-
-BellossomCryHeader: ; 0xf2bc5
-	dw $34  ; cry id
-	db $84  ; pitch
-	db $00  ; echo
-	dw $150 ; length
-
-MarillCryHeader: ; 0xf2bcb
-	dw $26  ; cry id
-	db $1b  ; pitch
-	db $01  ; echo
-	dw $120 ; length
-
-AzumarillCryHeader: ; 0xf2bd1
-	dw $26  ; cry id
-	db $b6  ; pitch
-	db $00  ; echo
-	dw $180 ; length
 
 SudowoodoCryHeader: ; 0xf2bd7
 	dw $34  ; cry id
