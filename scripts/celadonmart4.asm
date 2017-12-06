@@ -7,6 +7,8 @@ CeladonMart4TextPointers:
 	dw CeladonMart4Text3
 	dw CeladonMart4Text4
 
+INCLUDE "data/martInventories/celadon_4.asm"
+
 CeladonMart4Text2:
 	TX_FAR _CeladonMart4Text2
 	db "@"

@@ -6,6 +6,8 @@ CinnabarMartTextPointers:
 	dw CinnabarMartText2
 	dw CinnabarMartText3
 
+INCLUDE "data/martInventories/cinnabar.asm"
+
 CinnabarMartText2:
 	TX_FAR _CinnabarMartText2
 	db "@"

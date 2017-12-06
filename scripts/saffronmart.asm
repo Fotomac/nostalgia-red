@@ -6,6 +6,8 @@ SaffronMartTextPointers:
 	dw SaffronMartText2
 	dw SaffronMartText3
 
+INCLUDE "data/martInventories/saffron.asm"
+
 SaffronMartText2:
 	TX_FAR _SaffronMartText2
 	db "@"

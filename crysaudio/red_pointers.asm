@@ -5,6 +5,7 @@ tbp: MACRO
 	tbp Music_Nothing
 	tbp Music_RBYPalletTown
 	tbp Music_Pokecenter
+	tbp Music_Shop
 	tbp Music_RBYGym
 	tbp Music_Cities1
 	tbp Music_Cities2

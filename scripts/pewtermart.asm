@@ -9,6 +9,8 @@ PewterMartTextPointers:
 	dw PewterMartText2
 	dw PewterMartText3
 
+INCLUDE "data/martInventories/pewter.asm"
+
 PewterMartText2:
 	TX_ASM
 	ld hl, .Text

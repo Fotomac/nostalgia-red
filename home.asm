@@ -892,8 +892,6 @@ UpdateSprites::
 	ld [MBC1RomBank], a
 	ret
 
-INCLUDE "data/mart_inventories.asm"
-
 TextScriptEndingChar::
 	db "@"
 TextScriptEnd::

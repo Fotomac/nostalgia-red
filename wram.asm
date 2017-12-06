@@ -201,7 +201,10 @@ wFrequencyModifier:: ; c0f1
 wTempoModifier:: ; c0f2
 	ds 1
 
-	ds 13
+	ds 11
+
+wHaltAudio:: ds 1
+wSFXDontWait:: ds 1
 
 
 SECTION "Sprite State Data", WRAM0[$c100]

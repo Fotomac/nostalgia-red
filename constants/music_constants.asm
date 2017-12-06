@@ -93,18 +93,17 @@ const_value = 1
 
 const_value = 1
 
-	; AUDIO_1 AUDIO_2 AUDIO_3
 	const SFX_GET_ITEM_1
+
 	const SFX_GET_ITEM_2
 	const SFX_TINK
 	const SFX_HEAL_HP
 	const SFX_HEAL_AILMENT
 	const SFX_START_MENU
 	const SFX_PRESS_AB
-	const SFX_GET_KEY_ITEM
 
-	; AUDIO_1 AUDIO_3
 	const SFX_POKEDEX_RATING
+	const SFX_GET_KEY_ITEM
 	const SFX_POISONED
 	const SFX_TRADE_MACHINE
 	const SFX_TURN_ON_PC
@@ -132,12 +131,11 @@ const_value = 1
 	const SFX_GO_OUTSIDE
 	const SFX_SAVE
 
-	; AUDIO_1
 	const SFX_POKEFLUTE
 	const SFX_SAFARI_ZONE_PA
 
-	; AUDIO_2
 	const SFX_LEVEL_UP
+
 	const SFX_BALL_TOSS
 	const SFX_BALL_POOF
 	const SFX_FAINT_THUD
@@ -192,7 +190,6 @@ const_value = 1
 	const SFX_BATTLE_36
 	const SFX_SILPH_SCOPE
 
-	; AUDIO_3
 	const SFX_INTRO_LUNGE
 	const SFX_INTRO_HIP
 	const SFX_INTRO_HOP

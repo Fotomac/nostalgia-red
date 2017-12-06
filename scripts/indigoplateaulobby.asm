@@ -21,6 +21,8 @@ IndigoPlateauLobbyTextPointers:
 	dw IndigoCashierText
 	dw IndigoTradeNurseText
 
+INCLUDE "data/martInventories/indigo_plateau.asm"
+
 IndigoHealNurseText:
 	TX_POKECENTER_NURSE
 

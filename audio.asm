@@ -295,7 +295,7 @@ PlayBattleMusic::
 	xor a
 	ld [wAudioFadeOutControl], a
 	ld [wLowHealthAlarm], a
-	ld [wMusicFade], a
+	ld [MusicFade], a
 	dec a
 	ld [wNewSoundID], a
 	call PlayMusic ; stop music
@@ -408,7 +408,7 @@ PokedexRatingSfxPointers:
 	db SFX_POKEDEX_RATING, BANK(SFX_Pokedex_Rating_1)
 	db SFX_GET_ITEM_1,     BANK(SFX_Get_Item1_1)
 	db SFX_CAUGHT_MON,     BANK(SFX_Caught_Mon)
-	db SFX_LEVEL_UP,       BANK(SFX_Level_Up_1)
+	db SFX_LEVEL_UP,       BANK(SFX_Level_Up)
 	db SFX_GET_KEY_ITEM,   BANK(SFX_Get_Key_Item_1)
 	db SFX_GET_ITEM_2,     BANK(SFX_Get_Item2_1)
 

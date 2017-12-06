@@ -1,5 +1,5 @@
 SFX_Level_Up::
-	audio SFX_Level_Up_1, Ch4, Ch5, Ch6
+	audio SFX_Level_Up, Ch4, Ch5, Ch6
 
 SFX_Ball_Toss::
 	audio SFX_Ball_Toss, Ch4, Ch5

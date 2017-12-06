@@ -6,6 +6,8 @@ LavenderMartTextPointers:
 	dw LavenderMartText2
 	dw LavenderMartText3
 
+INCLUDE "data/martInventories/lavender.asm"
+
 LavenderMartText2:
 	TX_FAR _LavenderMartText2
 	db "@"
