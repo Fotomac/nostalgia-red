@@ -45,3 +45,15 @@ Music_PokemonTower::
 
 Music_SilphCo::
 	audio Music_SilphCo, Ch0, Ch1, Ch2
+
+Music_MeetEvilTrainer::
+	audio Music_MeetEvilTrainer, Ch0, Ch1, Ch2
+
+Music_MeetCuteTrainer::
+	audio Music_MeetCuteTrainer, Ch0, Ch1, Ch2
+
+Music_MeetFemaleTrainer::
+	audio Music_MeetFemaleTrainer, Ch0, Ch1, Ch2
+
+Music_MeetMaleTrainer::
+	audio Music_MeetMaleTrainer, Ch0, Ch1, Ch2

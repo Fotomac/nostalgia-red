@@ -1,9 +1,12 @@
 FemaleTrainerList::
 	db OPP_LASS
-	db OPP_JR_TRAINER_F
 	db OPP_SWIMMER_F
 	db OPP_BEAUTY
 	db OPP_COOLTRAINER_F
+	db $FF
+
+CuteTrainerList::
+	db OPP_JR_TRAINER_F
 	db $FF
 
 EvilTrainerList::

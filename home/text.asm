@@ -629,13 +629,11 @@ TextCommand0B::
 
 ; format: text command ID, sound ID or cry ID
 TextCommandSounds::
-	db $0B, SFX_LEVEL_UP
+	db $0B, SFX_GET_ITEM_1
 	db $12, SFX_CAUGHT_MON
 	db $0E, SFX_POKEDEX_RATING ; unused?
-	db $0F, SFX_GET_ITEM_1 ; unused?
 	db $10, SFX_GET_ITEM_2
 	db $11, SFX_GET_KEY_ITEM
-	db $13, SFX_DEX_PAGE_ADDED
 	db $14, NIDORINA ; used in OakSpeech
 	db $15, PIDGEOT  ; used in SaffronCityText12
 	db $16, DEWGONG  ; unused?

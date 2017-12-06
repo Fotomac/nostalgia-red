@@ -1,3 +1,12 @@
+Music_PalletTown::
+	audio Music_PalletTown, Ch0, Ch1, Ch2
+
+Music_Pokecenter::
+	audio Music_Pokecenter, Ch0, Ch1, Ch2
+
+Music_Shop::
+	audio Music_Shop, Ch0, Ch1, Ch2, Ch3
+
 Music_Gym::
 	audio Music_Gym, Ch0, Ch1, Ch2
 
@@ -35,6 +44,9 @@ Music_MuseumGuy::
 
 Music_SafariZone::
 	audio Music_SafariZone, Ch0, Ch1, Ch2
+
+Music_PkmnHealed::
+	audio Music_PkmnHealed, Ch0, Ch1, Ch2
 
 ; Routes 1 and 2
 Music_Routes1::

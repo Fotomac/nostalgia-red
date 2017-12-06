@@ -128,6 +128,7 @@ INCLUDE "engine/pathfinding.asm"
 INCLUDE "engine/hp_bar.asm"
 INCLUDE "engine/hidden_object_functions3.asm"
 
+
 SECTION "NPC Sprites 1", ROMX, BANK[NPC_SPRITES_1]
 
 OakAideSprite:         INCBIN "gfx/sprites/oak_aide.2bpp"
@@ -148,6 +149,7 @@ SsCaptainSprite:       INCBIN "gfx/sprites/ss_captain.2bpp"
 Fisher2Sprite:         INCBIN "gfx/sprites/fisher2.2bpp"
 BlackbeltSprite:       INCBIN "gfx/sprites/blackbelt.2bpp"
 GuardSprite:           INCBIN "gfx/sprites/guard.2bpp"
+RocketSprite:          INCBIN "gfx/sprites/rocket.2bpp"
 
 
 SECTION "Graphics", ROMX, BANK[GFX]
@@ -213,11 +215,9 @@ LeafCyclingSprite:    INCBIN "gfx/sprites/leafcycling.2bpp"
 BlueSprite:           INCBIN "gfx/sprites/blue.2bpp"
 OakSprite:            INCBIN "gfx/sprites/oak.2bpp"
 BugCatcherSprite:     INCBIN "gfx/sprites/bug_catcher.2bpp"
-SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
 LassSprite:           INCBIN "gfx/sprites/lass.2bpp"
 BlackHairBoy1Sprite:  INCBIN "gfx/sprites/black_hair_boy_1.2bpp"
 LittleGirlSprite:     INCBIN "gfx/sprites/little_girl.2bpp"
-BirdSprite:           INCBIN "gfx/sprites/bird.2bpp"
 FatBaldGuySprite:     INCBIN "gfx/sprites/fat_bald_guy.2bpp"
 GamblerSprite:        INCBIN "gfx/sprites/gambler.2bpp"
 BlackHairBoy2Sprite:  INCBIN "gfx/sprites/black_hair_boy_2.2bpp"
@@ -231,7 +231,6 @@ SailorSprite:         INCBIN "gfx/sprites/sailor.2bpp"
 CookSprite:           INCBIN "gfx/sprites/cook.2bpp"
 BikeShopGuySprite:    INCBIN "gfx/sprites/bike_shop_guy.2bpp"
 MrFujiSprite:         INCBIN "gfx/sprites/mr_fuji.2bpp"
-RocketSprite:         INCBIN "gfx/sprites/rocket.2bpp"
 MediumSprite:         INCBIN "gfx/sprites/medium.2bpp"
 WaiterSprite:         INCBIN "gfx/sprites/waiter.2bpp"
 MomGeishaSprite:      INCBIN "gfx/sprites/mom_geisha.2bpp"
@@ -241,7 +240,6 @@ MomSprite:            INCBIN "gfx/sprites/mom.2bpp"
 BaldingGuySprite:     INCBIN "gfx/sprites/balding_guy.2bpp"
 YoungBoySprite:       INCBIN "gfx/sprites/young_boy.2bpp"
 GameboyKidSprite:     INCBIN "gfx/sprites/gameboy_kid.2bpp"
-ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
 AgathaSprite:         INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite:          INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite:        INCBIN "gfx/sprites/lorelei.2bpp"
@@ -2397,6 +2395,10 @@ SeelSprite:            INCBIN "gfx/sprites/seel.2bpp"
 SurfingPikachuSprite:  INCBIN "gfx/sprites/surfing_pikachu.2bpp"
 LaprasSprite:          INCBIN "gfx/sprites/lapras.2bpp"
 
+SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
+BirdSprite:           INCBIN "gfx/sprites/bird.2bpp"
+ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
+
 BrockOverworld:        INCBIN "gfx/sprites/brock.2bpp"
 MistyOverworld:        INCBIN "gfx/sprites/misty.2bpp"
 SurgeOverworld:        INCBIN "gfx/sprites/surge.2bpp"
@@ -2429,4 +2431,24 @@ SECTION "bank37",ROMX,BANK[$37]
 
 Overworld_GFX:     INCBIN "gfx/tilesets/overworld.t2.2bpp"
 Overworld_Block:   INCBIN "gfx/blocksets/overworld.bst"
+
+
+SECTION "bank38",ROMX,BANK[$38]
+SpriteBank1:
+    ds $4000
+SECTION "bank39",ROMX,BANK[$39]
+SpriteBank2:
+    ds $4000
+SECTION "bank3a",ROMX,BANK[$3A]
+SpriteBank3:
+    ds $4000
+SECTION "bank3b",ROMX,BANK[$3b]
+SpriteBank4:
+    ds $4000
+SECTION "bank3e",ROMX,BANK[$3e]
+SpriteBank5:
+    ds $4000
+SECTION "bank3f",ROMX,BANK[$3f]
+SpriteBank6:
+    ds $4000
 
