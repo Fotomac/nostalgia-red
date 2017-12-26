@@ -18,6 +18,7 @@ PrintBeginningBattleText:
 .notFishing
 	jr .wildBattle
 .trainerBattle
+	call .playSFX
 	ld c, 20
 	call DelayFrames
 	ld hl, TrainerWantsToFightText
@@ -57,6 +58,15 @@ PrintBeginningBattleText:
 	callab MarowakAnim
 	ld hl, WildMonAppearedText
 	call PrintText
+
+.playSFX
+	xor a
+	ld [wFrequencyModifier], a
+	ld a, $80
+	ld [wTempoModifier], a
+	ld a, SFX_SILPH_SCOPE
+	call PlaySound
+	jp WaitForSoundToFinish
 .done
 	ret
 

@@ -29,7 +29,7 @@ AnimateHealingMachine:
 	dec b
 	jr nz, .partyLoop
 	ld a, [wAudioROMBank]
-	cp $1f ; 0 ; BANK(Audio5_UpdateMusic) XXXXX
+	cp $1f ; 0 ; BANK(Audio3_UpdateMusic) XXXXX
 	ld [wAudioSavedROMBank], a
 	jr nz, .next
 	ld a, $ff

@@ -13,6 +13,9 @@ SFX_Faint_Thud::
 SFX_Run::
 	audio SFX_Run, Ch7
 
+SFX_Dex_Page_Added::
+	audio SFX_Dex_Page_Added, Ch4, Ch5
+
 SFX_Caught_Mon::
 	audio SFX_Caught_Mon, Ch4, Ch5, Ch6
 
@@ -60,6 +63,9 @@ SFX_Battle_14::
 
 SFX_Vine_Whip::
 	audio SFX_Vine_Whip, Ch7
+
+SFX_Battle_16::
+	audio SFX_Battle_16, Ch7
 
 SFX_Battle_17::
 	audio SFX_Battle_17, Ch7

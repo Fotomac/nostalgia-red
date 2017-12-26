@@ -140,6 +140,7 @@ const_value = 1
 	const SFX_BALL_POOF
 	const SFX_FAINT_THUD
 	const SFX_RUN
+	const SFX_DEX_PAGE_ADDED
 	const SFX_CAUGHT_MON
 	const SFX_PECK
 	const SFX_FAINT_FALL
@@ -156,6 +157,7 @@ const_value = 1
 	const SFX_BATTLE_13
 	const SFX_BATTLE_14
 	const SFX_VINE_WHIP
+	const SFX_BATTLE_16
 	const SFX_BATTLE_17
 	const SFX_BATTLE_18
 	const SFX_BATTLE_19

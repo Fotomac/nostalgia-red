@@ -56,6 +56,7 @@ RedSfxHeaderPointers:
 	dbw BANK(SFX_Ball_Poof), SFX_Ball_Poof
 	dbw BANK(SFX_Faint_Thud), SFX_Faint_Thud
 	dbw BANK(SFX_Run), SFX_Run
+	dbw BANK(SFX_Dex_Page_Added), SFX_Dex_Page_Added
 	dbw BANK(SFX_Caught_Mon), SFX_Caught_Mon
 	dbw BANK(SFX_Peck), SFX_Peck
 	dbw BANK(SFX_Faint_Fall), SFX_Faint_Fall
@@ -72,6 +73,7 @@ RedSfxHeaderPointers:
 	dbw BANK(SFX_Battle_13), SFX_Battle_13
 	dbw BANK(SFX_Battle_14), SFX_Battle_14
 	dbw BANK(SFX_Vine_Whip), SFX_Vine_Whip
+	dbw BANK(SFX_Battle_16), SFX_Battle_16
 	dbw BANK(SFX_Battle_17), SFX_Battle_17
 	dbw BANK(SFX_Battle_18), SFX_Battle_18
 	dbw BANK(SFX_Battle_19), SFX_Battle_19
