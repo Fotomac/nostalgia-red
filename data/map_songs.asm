@@ -41,7 +41,7 @@ MapSongBanks:
 	db MUSIC_PALLET_TOWN, 0 ; BluesHouse
 	db MUSIC_OAKS_LAB, 0 ; OaksLab
 	db MUSIC_POKECENTER, 0 ; ViridianPokecenter
-	db MUSIC_CITIES1, 0 ; ViridianMart
+	db MUSIC_SHOP, 0 ; ViridianMart
 	db MUSIC_CITIES1, 0 ; School
 	db MUSIC_CITIES1, 0 ; ViridianHouse
 	db MUSIC_GYM, 0 ; ViridianGym
@@ -55,7 +55,7 @@ MapSongBanks:
 	db MUSIC_CITIES1, 0 ; Museum2F
 	db MUSIC_GYM, 0 ; PewterGym
 	db MUSIC_CITIES1, 0 ; PewterHouse1
-	db MUSIC_CITIES1, 0 ; PewterMart
+	db MUSIC_SHOP, 0 ; PewterMart
 	db MUSIC_CITIES1, 0 ; PewterHouse2
 	db MUSIC_POKECENTER, 0 ; PewterPokecenter
 	db MUSIC_DUNGEON3, 0 ; MtMoon1
@@ -66,7 +66,7 @@ MapSongBanks:
 	db MUSIC_POKECENTER, 0 ; CeruleanPokecenter
 	db MUSIC_GYM, 0 ; CeruleanGym
 	db MUSIC_CITIES2, 0 ; BikeShop
-	db MUSIC_CITIES2, 0 ; CeruleanMart
+	db MUSIC_SHOP, 0 ; CeruleanMart
 	db MUSIC_POKECENTER, 0 ; MtMoonPokecenter
 	db MUSIC_DUNGEON3, 0 ; CeruleanHouseTrashed
 	db MUSIC_CITIES1, 0 ; Route5Gate
@@ -90,7 +90,7 @@ MapSongBanks:
 	db MUSIC_CITIES2, 0 ; BillsHouse
 	db MUSIC_POKECENTER, 0 ; VermilionPokecenter
 	db MUSIC_VERMILION, 0 ; FanClub
-	db MUSIC_VERMILION, 0 ; VermilionMart
+	db MUSIC_SHOP, 0 ; VermilionMart
 	db MUSIC_GYM, 0 ; VermilionGym
 	db MUSIC_VERMILION, 0 ; VermilionHouse1
 	db MUSIC_SS_ANNE, 0 ; VermilionDock
@@ -121,12 +121,12 @@ MapSongBanks:
 	db MUSIC_ROUTES1, 0 ; UndergroundPathNS
 	db MUSIC_INDIGO_PLATEAU, 0 ; Gary
 	db MUSIC_ROUTES1, 0 ; UndergroundPathWE
-	db MUSIC_CELADON, 0 ; CeladonMart1
-	db MUSIC_CELADON, 0 ; CeladonMart2
-	db MUSIC_CELADON, 0 ; CeladonMart3
-	db MUSIC_CELADON, 0 ; CeladonMart4
-	db MUSIC_CELADON, 0 ; CeladonMartRoof
-	db MUSIC_CELADON, 0 ; CeladonMartElevator
+	db MUSIC_SHOP, 0 ; CeladonMart1
+	db MUSIC_SHOP, 0 ; CeladonMart2
+	db MUSIC_SHOP, 0 ; CeladonMart3
+	db MUSIC_SHOP, 0 ; CeladonMart4
+	db MUSIC_SHOP, 0 ; CeladonMartRoof
+	db MUSIC_SHOP, 0 ; CeladonMartElevator
 	db MUSIC_CELADON, 0 ; CeladonMansion1
 	db MUSIC_CELADON, 0 ; CeladonMansion2
 	db MUSIC_CELADON, 0 ; CeladonMansion3
@@ -135,7 +135,7 @@ MapSongBanks:
 	db MUSIC_POKECENTER, 0 ; CeladonPokecenter
 	db MUSIC_GYM, 0 ; CeladonGym
 	db MUSIC_GAME_CORNER, 0 ; CeladonGameCorner
-	db MUSIC_CELADON, 0 ; CeladonMart5
+	db MUSIC_SHOP, 0 ; CeladonMart5
 	db MUSIC_CELADON, 0 ; CeladonPrizeRoom
 	db MUSIC_CELADON, 0 ; CeladonDiner
 	db MUSIC_CELADON, 0 ; CeladonHouse
@@ -149,9 +149,9 @@ MapSongBanks:
 	db MUSIC_POKEMON_TOWER, 0 ; PokemonTower6
 	db MUSIC_POKEMON_TOWER, 0 ; PokemonTower7
 	db MUSIC_LAVENDER, 0 ; LavenderHouse1
-	db MUSIC_LAVENDER, 0 ; LavenderMart
+	db MUSIC_SHOP, 0 ; LavenderMart
 	db MUSIC_LAVENDER, 0 ; LavenderHouse2
-	db MUSIC_CITIES2, 0 ; FuchsiaMart
+	db MUSIC_SHOP, 0 ; FuchsiaMart
 	db MUSIC_CITIES2, 0 ; FuchsiaHouse1
 	db MUSIC_POKECENTER, 0 ; FuchsiaPokecenter
 	db MUSIC_CITIES2, 0 ; FuchsiaHouse2
@@ -171,7 +171,7 @@ MapSongBanks:
 	db MUSIC_CINNABAR, 0 ; Lab3
 	db MUSIC_CINNABAR, 0 ; Lab4
 	db MUSIC_POKECENTER, 0 ; CinnabarPokecenter
-	db MUSIC_CINNABAR, 0 ; CinnabarMart
+	db MUSIC_SHOP, 0 ; CinnabarMart
 	db MUSIC_CINNABAR, 0
 	db MUSIC_INDIGO_PLATEAU, 0 ; IndigoPlateauLobby
 	db MUSIC_CITIES1, 0 ; CopycatsHouse1F
@@ -179,7 +179,7 @@ MapSongBanks:
 	db MUSIC_CITIES1, 0 ; FightingDojo
 	db MUSIC_GYM, 0 ; SaffronGym
 	db MUSIC_CITIES1, 0 ; SaffronHouse1
-	db MUSIC_CITIES1, 0 ; SaffronMart
+	db MUSIC_SHOP, 0 ; SaffronMart
 	db MUSIC_SILPH_CO, 0 ; SilphCo1
 	db MUSIC_POKECENTER, 0 ; SaffronPokecenter
 	db MUSIC_CITIES1, 0 ; SaffronHouse2

@@ -64,6 +64,7 @@ PlayDefaultMusicCommon::
 	ld a, b
 	ld [wLastMusicSoundID], a
 	ld [wNewSoundID], a
+
 	ld [MusicFadeID], a
 	ld a, 8
 	ld [MusicFade], a
@@ -81,9 +82,9 @@ CompareMapMusicBankWithCurrentBank:
 PlaySound::
 	push de
 	cp $ff
-    jr nz, .notff
-    xor a
-    call PlayMusic
+	jr nz, .notff
+	xor a
+	call PlayMusic
 	pop de
 	ret
 .notff

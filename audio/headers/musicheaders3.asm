@@ -49,6 +49,9 @@ Music_SilphCo::
 Music_MeetEvilTrainer::
 	audio Music_MeetEvilTrainer, Ch0, Ch1, Ch2
 
+Music_MeetCuteTrainer::
+	audio Music_MeetCuteTrainer, Ch0, Ch1, Ch2
+
 Music_MeetFemaleTrainer::
 	audio Music_MeetFemaleTrainer, Ch0, Ch1, Ch2
 
