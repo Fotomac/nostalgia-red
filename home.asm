@@ -2596,16 +2596,6 @@ PlayTrainerMusic::
 	ld a, MUSIC_MEET_EVIL_TRAINER
 	jr .PlaySound
 .noEvilTrainer
-	ld hl, CuteTrainerList
-.cuteTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .noCuteTrainer
-	cp b
-	jr nz, .cuteTrainerListLoop
-	ld a, MUSIC_MEET_CUTE_TRAINER
-	jr .PlaySound
-.noCuteTrainer
 	ld hl, FemaleTrainerList
 .femaleTrainerListLoop
 	ld a, [hli]

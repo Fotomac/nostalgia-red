@@ -5,7 +5,6 @@ tbp: MACRO
 	tbp Music_Nothing
 	tbp Music_RBYPalletTown
 	tbp Music_Pokecenter
-	tbp Music_Shop
 	tbp Music_RBYGym
 	tbp Music_Cities1
 	tbp Music_Cities2
@@ -47,6 +46,5 @@ tbp: MACRO
 	tbp Music_PokemonTower
 	tbp Music_SilphCo
 	tbp Music_MeetEvilTrainer
-	tbp Music_MeetCuteTrainer
 	tbp Music_MeetFemaleTrainer
 	tbp Music_MeetMaleTrainer
