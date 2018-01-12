@@ -6,7 +6,7 @@ Music_MeetCuteTrainer:
 Music_MeetCuteTrainer_Ch1:
 	tempo 112
 	volume 119
-	dutycycle 1
+	dutycycle 3
 	
 	notetype 12, 178
 	note __, 4
@@ -156,12 +156,13 @@ Music_MeetCuteTrainer_branch_2:
 
 Music_MeetCuteTrainer_Ch3:
 	note __, 4
+	tempo 152
 	note __, 12
 
 Music_MeetCuteTrainer_branch_3:
 	note __, 11
 	notetype 12, 16
-	octave 4
+	octave 5
 	note G#, 1
 	note A#, 2
 	note G#, 1

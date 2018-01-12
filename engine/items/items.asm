@@ -631,7 +631,7 @@ ItemUseBallText06:
 ;"New DEX data will be added..."
 ;play sound
 	TX_FAR _ItemUseBallText06
-	TX_BLINK
+	TX_SFX_DEX_ADD_PAGE
 	db "@"
 
 ItemUseTownMap:

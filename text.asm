@@ -233,6 +233,18 @@ _AIBattleWithdrawText::
 	text "The @"
 	TX_RAM wTrainerName
 	text ""
+	line "@"
+	TX_RAM wCurTrainerName
+	text " withdrew"
+	cont "@"
+	TX_RAM wEnemyMonNick
+	text "!"
+	prompt
+
+_AIBattleWithdrawText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
 	line "withdrew"
 	cont "@"
 	TX_RAM wEnemyMonNick
@@ -240,6 +252,21 @@ _AIBattleWithdrawText::
 	prompt
 
 _AIBattleUseItemText::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
+	text " used"
+	cont "@"
+	TX_RAM wcd6d
+	text " on"
+	cont "@"
+	TX_RAM wEnemyMonNick
+	text "!"
+	prompt
+
+_AIBattleUseItemText2::
 	text "The @"
 	TX_RAM wTrainerName
 	text ""
@@ -1098,6 +1125,16 @@ _TrainerDefeatedText::
 	text "<PLAYER> defeated"
 	line "the @"
 	TX_RAM wTrainerName
+	text ""
+	cont "@"
+	TX_RAM wCurTrainerName
+	text "!"
+	prompt
+
+_TrainerDefeatedText2::
+	text "<PLAYER> defeated"
+	line "the @"
+	TX_RAM wTrainerName
 	text "!"
 	prompt
 
@@ -1135,7 +1172,23 @@ _TrainerAboutToUseText::
 	text "The @"
 	TX_RAM wTrainerName
 	text ""
-	line "is about to use"
+	line "@"
+	TX_RAM wCurTrainerName
+	text " is"
+	cont "about to use"
+	cont "@"
+	TX_RAM wEnemyMonNick
+	text "!"
+
+	para "Will <PLAYER>"
+	line "change #MON?"
+	done
+
+_TrainerAboutToUseText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text " is"
+	line "about to use"
 	cont"@"
 	TX_RAM wEnemyMonNick
 	text "!"
@@ -1148,10 +1201,21 @@ _TrainerSentOutText::
 	text "The @"
 	TX_RAM wTrainerName
 	text ""
-	line "sent out"
+	line "@"
+	TX_RAM wCurTrainerName
+	text " sent"
 	cont "@"
 	TX_RAM wEnemyMonNick
-	text "!"
+	text " out!"
+	done
+
+_TrainerSentOutText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text " sent"
+	line "@"
+	TX_RAM wEnemyMonNick
+	text " out!"
 	done
 
 _NoWillText::
@@ -1486,6 +1550,16 @@ _EnemyAppearedText::
 	prompt
 
 _TrainerWantsToFightText::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
+	text " wants"
+	cont "to fight!"
+	prompt
+
+_TrainerWantsToFightText2::
 	text "The @"
 	TX_RAM wTrainerName
 	text ""
@@ -2842,8 +2916,7 @@ _ItemUseBallText06::
 	TX_RAM wEnemyMonNick
 	text "'s data"
 	line "was added to the"
-	cont "#DEX!"
-	prompt
+	cont "#DEX!@@"
 
 _SurfingGotOnText::
 	text "@"

@@ -398,7 +398,7 @@ StaryuDexEntry:
 	db "@"
 
 BlastoiseDexEntry:
-	db "SHELLFISH@"
+	db "SHELL@"
 	db 5,3
 	dw 1890
 	TX_FAR _BlastoiseDexEntry

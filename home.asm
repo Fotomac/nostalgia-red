@@ -2549,7 +2549,6 @@ GetSavedEndBattleTextPointer::
 	ret
 
 TrainerEndBattleText::
-	TX_FAR _TrainerNameText
 	TX_ASM
 	call GetSavedEndBattleTextPointer
 	call TextCommandProcessor
@@ -4741,3 +4740,40 @@ GoodCopyVideoData:
 	pop hl
 	pop de
 	jp FarCopyData2 ; if LCD is off, transfer all at once
+
+SetCustomName:
+; INPUTS: hl = pointer to name
+; OUTPUTS: trainer name stored in wCurTrainerName, hl points to byte immediately after name
+	ld de, wCurTrainerName
+.loop
+	ld a, [hli]
+	ld [de],a
+	inc de
+	cp "@"
+	ret z
+	jr .loop
+
+IsTrainerSpecial::
+    ld hl, SpecialTrainerIDs
+    ld a, [wTrainerClass]
+    ld de, 1
+    jp IsInArray
+
+SpecialTrainerIDs:
+    db SONY1
+    db GIOVANNI
+    db BRUNO
+    db BROCK
+    db MISTY
+    db LT_SURGE
+    db ERIKA
+    db KOGA
+    db BLAINE
+    db SABRINA
+    db SONY2
+    db SONY3
+    db LORELEI
+    db AGATHA
+    db LANCE
+	db JANINE
+    db $FF

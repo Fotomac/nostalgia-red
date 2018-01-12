@@ -24,6 +24,7 @@ Music_RBYGym_Ch1: ; bcbb (2:7cbb)
 	note B_, 4
 
 Music_RBYGym_branch_bcd8:
+	octave 3
 	note G#, 4
 	note A_, 2
 	note B_, 2
