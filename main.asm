@@ -2408,6 +2408,7 @@ SabrinaOverworld:      INCBIN "gfx/sprites/sabrina.2bpp"
 BlaineOverworld:       INCBIN "gfx/sprites/blaine.2bpp"
 GiovanniSprite:        INCBIN "gfx/sprites/giovanni.2bpp"
 OfficerJennySprite:    INCBIN "gfx/sprites/officer_jenny.2bpp"
+BillSprite:            INCBIN "gfx/sprites/bill.2bpp"
 
 BallSprite:            INCBIN "gfx/sprites/ball.2bpp"
 OmanyteSprite:         INCBIN "gfx/sprites/omanyte.2bpp"
