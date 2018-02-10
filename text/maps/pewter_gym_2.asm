@@ -130,7 +130,7 @@ _PewterGymBattleText2::
 
 _PewterGymEndBattleText2::
 	text "That was just the"
-	cont "start!"
+	line "start!"
 	prompt
 
 _PewterGymAfterBattleText2::
