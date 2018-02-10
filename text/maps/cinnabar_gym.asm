@@ -14,7 +14,7 @@ _BlaineBattleText::
 	done
 
 _BlaineEndBattleText::
-	text "I have"
+	text "BLAINE: I have"
 	line "burnt out!"
 
 	para "You have earned"
@@ -92,8 +92,7 @@ _CinnabarGymText_75994::
 	done
 
 _CinnabarGymText_75999::
-	text "I"
-	line "surrender!"
+	text "I surrender!"
 	prompt
 
 _CinnabarGymText_7599e::
@@ -109,8 +108,7 @@ _CinnabarGymText_759c9::
 	done
 
 _CinnabarGymText_759ce::
-	text "Waah!"
-	line "My studies!"
+	text "Waah! My studies!"
 	prompt
 
 _CinnabarGymText_759d3::
@@ -125,8 +123,7 @@ _CinnabarGymText_759fe::
 	done
 
 _CinnabarGymText_75a03::
-	text "Too hot"
-	line "to handle!"
+	text "Too hot to handle!"
 	prompt
 
 _CinnabarGymText_75a08::
@@ -162,8 +159,7 @@ _CinnabarGymText_75a68::
 	done
 
 _CinnabarGymText_75a6d::
-	text "Yowza!"
-	line "Too hot!"
+	text "Yowza! Too hot!"
 	prompt
 
 _CinnabarGymText_75a72::
@@ -178,8 +174,7 @@ _CinnabarGymText_75a9d::
 	done
 
 _CinnabarGymText_75aa2::
-	text "Oh!"
-	line "Snuffed out!"
+	text "Oh! Snuffed out!"
 	prompt
 
 _CinnabarGymText_75aa7::

@@ -84,8 +84,7 @@ _SilphCo7BattleText1::
 	done
 
 _SilphCo7EndBattleText1::
-	text "Lights"
-	line "out!"
+	text "Lights out!"
 	prompt
 
 _SilphCo7AfterBattleText1::
@@ -102,8 +101,7 @@ _SilphCo7BattleText2::
 	done
 
 _SilphCo7EndBattleText2::
-	text "I'm"
-	line "done!"
+	text "I'm done!"
 	prompt
 
 _SilphCo7AfterBattleText2::
@@ -134,8 +132,7 @@ _SilphCo7BattleText4::
 	done
 
 _SilphCo7EndBattleText4::
-	text "Fine!"
-	line "I lost!"
+	text "Fine! I lost!"
 	prompt
 
 _SilphCo7AfterBattleText4::
@@ -169,7 +166,7 @@ _SilphCo7Text_51ec3::
 	done
 
 _SilphCo7Text_51ec8::
-	text "Oh ho!"
+	text "<RIVAL>: Oh ho!"
 	line "So, you are ready"
 	cont "for BOSS ROCKET!"
 

@@ -23,7 +23,7 @@ _AgathaBeforeBattleText::
 	done
 
 _AgathaEndBattleText::
-	text "Oh ho!"
+	text "AGATHA: Oh ho!"
 	line "You're something"
 	cont "special, child!"
 	prompt

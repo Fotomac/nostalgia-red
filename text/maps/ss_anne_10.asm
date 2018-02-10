@@ -24,8 +24,8 @@ _SSAnne10BattleText2::
 	done
 
 _SSAnne10EndBattleText2::
-	text "Your"
-	line "spirit sank me!"
+	text "Your spirit sank"
+	line "me!"
 	prompt
 
 _SSAnne10AfterBattleText2::
@@ -40,8 +40,7 @@ _SSAnne10BattleText3::
 	done
 
 _SSAnne10EndBattleText3::
-	text "OK, "
-	line "you're not bad."
+	text "OK, you're not bad."
 	prompt
 
 _SSAnne10AfterBattleText3::
@@ -55,8 +54,7 @@ _SSAnne10BattleText4::
 	line "kids like you!@@"
 
 _SSAnne10EndBattleText4::
-	text "Argh!"
-	line "Lost it!"
+	text "Argh! Lost it!"
 	prompt
 
 _SSAnne10AfterBattleText4::

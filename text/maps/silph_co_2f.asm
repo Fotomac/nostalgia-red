@@ -36,9 +36,8 @@ _SilphCo2BattleText1::
 	done
 
 _SilphCo2EndBattleText1::
-	text "How"
-	line "did you know I"
-	cont "was a ROCKET?"
+	text "How did you know"
+	cont "I was a ROCKET?"
 	prompt
 
 _SilphCo2AfterBattleText1::
@@ -53,8 +52,7 @@ _SilphCo2BattleText2::
 	done
 
 _SilphCo2EndBattleText2::
-	text "You're"
-	line "good."
+	text "You're good."
 	prompt
 
 _SilphCo2AfterBattleText2::

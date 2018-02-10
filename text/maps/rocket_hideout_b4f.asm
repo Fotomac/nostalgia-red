@@ -21,7 +21,7 @@ _RocketHideout4Text_4557a::
 	done
 
 _RocketHideout4Text_4557f::
-	text "WHAT!"
+	text "GIOVANNI: WHAT!"
 	line "This cannot be!"
 	prompt
 
@@ -49,8 +49,7 @@ _RocketHideout4BattleText2::
 	done
 
 _RocketHideout4EndBattleText2::
-	text "Burned"
-	line "again!"
+	text "Burned again!"
 	prompt
 
 _RocketHide4AfterBattleText2::

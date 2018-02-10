@@ -11,7 +11,7 @@ _PokemonTower2Text_6062d::
 	done
 
 _PokemonTower2Text_60632::
-	text "What?"
+	text "<RIVAL>: What?"
 	line "You stinker!"
 
 	para "I took it easy on"

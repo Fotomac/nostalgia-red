@@ -5,8 +5,7 @@ _Route8BattleText1::
 	done
 
 _Route8EndBattleText1::
-	text "Ow!"
-	line "Meltdown!"
+	text "Ow! Meltdown!"
 	prompt
 
 _Route8AfterBattleText1::
@@ -20,13 +19,13 @@ _Route8BattleText2::
 	done
 
 _Route8EndBattleText2::
-	text "Drat!"
-	line "Came up short!"
+	text "Drat! Came up"
+	line "short!"
 	prompt
 
 _Route8AfterBattleText2::
-	text "Lady Luck's not"
-	line "with me today!"
+	text "Lady Luck must not"
+	line "be with me today!"
 	done
 
 _Route8BattleText3::
@@ -35,8 +34,7 @@ _Route8BattleText3::
 	done
 
 _Route8EndBattleText3::
-	text "It's"
-	line "not logical!"
+	text "It's not logical!"
 	prompt
 
 _Route8AfterBattleText3::
@@ -67,8 +65,8 @@ _Route8BattleText5::
 	done
 
 _Route8EndBattleText5::
-	text "I'll"
-	line "stay with school."
+	text "I'll stay with"
+	line "school."
 	prompt
 
 _Route8AfterBattleText5::
@@ -99,8 +97,7 @@ _Route8BattleText7::
 	done
 
 _Route8EndBattleText7::
-	text "Look what"
-	line "you did!"
+	text "Look what you did!"
 	prompt
 
 _Route8AfterBattleText7::
@@ -116,8 +113,8 @@ _Route8BattleText8::
 	done
 
 _Route8EndBattleText8::
-	text "Missed"
-	line "the big score!"
+	text "Missed the big"
+	line "score!"
 	prompt
 
 _Route8AfterBattleText8::

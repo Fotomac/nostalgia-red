@@ -17,13 +17,13 @@ _CeruleanCityText_19668::
 	done
 
 _CeruleanCityText_1966d::
-	text "Hey!"
+	text "<RIVAL>: Hey!"
 	line "Take it easy!"
 	cont "You won already!"
 	prompt
 
 _CeruleanCityText_19672::
-	text "Heh!"
+	text "<RIVAL>: Heh!"
 	line "You're no match"
 	cont "for my genius!"
 	prompt
@@ -86,9 +86,9 @@ _TM28NoRoomText::
 	done
 
 _CeruleanCityText_196ee::
-	text "Stop!"
-	line "I give up! I'll"
-	cont "leave quietly!"
+	text "Stop! I give up!"
+	line "I'll leave"
+	cont "quietly!"
 	prompt
 
 _CeruleanCityText_196f3::
@@ -134,24 +134,24 @@ _CeruleanCityText6::
 	done
 
 _CeruleanCityText_19730::
-	text "OK! SLOWBRO!"
+	text "OK! ELECTRODE!"
 	line "Use SONICBOOM!"
-	cont "Come on, SLOWBRO"
+	cont "Please ELECTRODE,"
 	cont "pay attention!"
 	done
 
 _CeruleanCityText_19735::
-	text "SLOWBRO punch!"
+	text "ELECTRODE, TACKLE!"
 	line "No! You blew it"
 	cont "again!"
 	done
 
 _CeruleanCityText_1973a::
-	text "SLOWBRO, WITHDRAW!"
+	text "ELECTRODE, SWIFT!"
 	line "No! That's wrong!"
 
-	para "It's so hard to"
-	line "control #MON!"
+	para "Training #MON"
+	line "is difficult!"
 
 	para "Your #MON's"
 	line "obedience depends"
@@ -160,22 +160,22 @@ _CeruleanCityText_1973a::
 	done
 
 _CeruleanCityText_1976f::
-	text "SLOWBRO took a"
+	text "ELECTRODE took a"
 	line "snooze..."
 	done
 
 _CeruleanCityText_19774::
-	text "SLOWBRO is"
+	text "ELECTRODE is"
 	line "loafing around..."
 	done
 
 _CeruleanCityText_19779::
-	text "SLOWBRO turned"
+	text "ELECTRODE turned"
 	line "away..."
 	done
 
 _CeruleanCityText_1977e::
-	text "SLOWBRO"
+	text "ELECTRODE"
 	line "ignored orders..."
 	done
 

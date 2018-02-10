@@ -13,7 +13,7 @@ Route4Object:
 
 	db $3 ; objects
 	object SPRITE_LASS, $9, $8, WALK, $0, $1 ; person
-	object SPRITE_LASS, $3f, $3, STAY, RIGHT, $2, OPP_LASS, $4
+	object SPRITE_BRUNETTE_GIRL, $3f, $3, STAY, RIGHT, $2, OPP_LASS, $4
 	object SPRITE_BALL, $39, $3, STAY, NONE, $3, TM_05
 
 	; warp-to

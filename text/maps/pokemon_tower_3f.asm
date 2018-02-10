@@ -4,8 +4,7 @@ _PokemonTower3BattleText1::
 	done
 
 _PokemonTower3EndBattleText1::
-	text "Hwa!"
-	line "I'm saved!"
+	text "Hwa! I'm saved!"
 	prompt
 
 _PokemonTower3AfterBattleText1::
@@ -20,8 +19,8 @@ _PokemonTower3BattleText2::
 	done
 
 _PokemonTower3EndBattleText2::
-	text "Hmm?"
-	line "What am I doing?"
+	text "Hmm? What am I"
+	line "doing?"
 	prompt
 
 _PokemonTower3AfterBattleText2::
@@ -35,8 +34,8 @@ _PokemonTower3BattleText3::
 	done
 
 _PokemonTower3EndBattleText3::
-	text "Whew!"
-	line "The spirit left!"
+	text "Whew! The spirit"
+	line "left!"
 	prompt
 
 _PokemonTower3AfterBattleText3::

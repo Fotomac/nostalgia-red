@@ -17,7 +17,7 @@ _KogaBeforeBattleText::
 	done
 
 _KogaAfterBattleText::
-	text "Humph!"
+	text "KOGA: Humph!"
 	line "You have proven"
 	cont "your worth!"
 

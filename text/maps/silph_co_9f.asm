@@ -35,8 +35,7 @@ _SilphCo9BattleText2::
 	done
 
 _SilphCo9EndBattleText2::
-	text "You"
-	line "hammered me!"
+	text "You hammered me!"
 	prompt
 
 _SilphCo9AfterBattleText2::

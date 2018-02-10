@@ -5,8 +5,7 @@ _Route9BattleText1::
 	done
 
 _Route9EndBattleText1::
-	text "You"
-	line "deceived me!"
+	text "You deceived me!"
 	prompt
 
 _Route9AfterBattleText1::
@@ -22,8 +21,7 @@ _Route9BattleText2::
 	done
 
 _Route9EndBattleText2::
-	text "Out"
-	line "like a light!"
+	text "Out like a light!"
 	prompt
 
 _Route9AfterBattleText2::
@@ -37,8 +35,7 @@ _Route9BattleText3::
 	done
 
 _Route9EndBattleText3::
-	text "Can't"
-	line "measure up!"
+	text "Can't measure up!"
 	prompt
 
 _Route9AfterBattleText3::
@@ -52,8 +49,8 @@ _Route9BattleText4::
 	done
 
 _Route9EndBattleText4::
-	text "No!"
-	line "You're too much!"
+	text "No! You're too"
+	line "much!"
 	prompt
 
 _Route9AfterBattleText4::
@@ -89,8 +86,7 @@ _Route9BattleText6::
 	done
 
 _Route9EndBattleText6::
-	text "What's"
-	line "that?"
+	text "What's that?"
 	prompt
 
 _Route9AfterBattleText6::
@@ -140,8 +136,7 @@ _Route9BattleText9::
 	done
 
 _Route9EndBattleText9::
-	text "My"
-	line "bugs..."
+	text "My bugs..."
 	prompt
 
 _Route9AfterBattleText9::

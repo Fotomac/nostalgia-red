@@ -20,7 +20,7 @@ PewterCityObject:
 	db $17, $19, $c ; PewterCityText12
 
 	db $5 ; objects
-	object SPRITE_LASS, $8, $f, STAY, NONE, $1 ; person
+	object SPRITE_BRUNETTE_GIRL, $8, $f, STAY, NONE, $1 ; person
 	object SPRITE_BLACK_HAIR_BOY_1, $11, $19, STAY, NONE, $2 ; person
 	object SPRITE_BLACK_HAIR_BOY_2, $1b, $11, STAY, NONE, $3 ; person
 	object SPRITE_BLACK_HAIR_BOY_2, $1a, $19, WALK, $2, $4 ; person

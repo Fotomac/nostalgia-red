@@ -47,8 +47,7 @@ _Route20BattleText4::
 	done
 
 _Route20EndBattleText4::
-	text "No"
-	line "mercy at all!"
+	text "No mercy at all!"
 	prompt
 
 _Route20AfterBattleText4::
@@ -78,8 +77,7 @@ _Route20BattleText6::
 	done
 
 _Route20EndBattleText6::
-	text "Ouch!"
-	line "Torpedoed!"
+	text "Ouch! Torpedoed!"
 	prompt
 
 _Route20AfterBattleText6::
@@ -93,8 +91,7 @@ _Route20BattleText7::
 	done
 
 _Route20EndBattleText7::
-	text "Oh"
-	line "no!"
+	text "Oh no!"
 	prompt
 
 _Route20AfterBattleText7::
@@ -108,8 +105,8 @@ _Route20BattleText8::
 	done
 
 _Route20EndBattleText8::
-	text "Don't"
-	line "touch my pearls!"
+	text "Don't touch my"
+	line "pearls!"
 	prompt
 
 _Route20AfterBattleText8::
@@ -124,8 +121,8 @@ _Route20BattleText9::
 	done
 
 _Route20EndBattleText9::
-	text "I'm"
-	line "so disappointed!"
+	text "I'm so"
+	line "disappointed!"
 	prompt
 
 _Route20AfterBattleText9::

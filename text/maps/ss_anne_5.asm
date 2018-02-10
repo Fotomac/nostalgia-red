@@ -24,8 +24,7 @@ _SSAnne5BattleText1::
 	done
 
 _SSAnne5EndBattleText1::
-	text "You're"
-	line "impressive!"
+	text "You're impressive!"
 	prompt
 
 _SSAnne5AfterBattleText1::
@@ -40,8 +39,8 @@ _SSAnne5BattleText2::
 	done
 
 _SSAnne5EndBattleText2::
-	text "I was"
-	line "just careless!"
+	text "I was just"
+	line "careless!"
 	prompt
 
 _SSAnne5AfterBattleText2::

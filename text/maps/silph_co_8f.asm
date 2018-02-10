@@ -14,8 +14,7 @@ _SilphCo8BattleText1::
 	done
 
 _SilphCo8EndBattleText1::
-	text "Not"
-	line "enough grit!"
+	text "Not enough grit!"
 	prompt
 
 _SilphCo8AfterBattleText1::
@@ -30,8 +29,7 @@ _SilphCo8BattleText2::
 	done
 
 _SilphCo8EndBattleText2::
-	text "Huh?"
-	line "I lost?"
+	text "Huh? I lost?"
 	prompt
 
 _SilphCo8AfterBattleText2::
@@ -46,8 +44,7 @@ _SilphCo8BattleText3::
 	done
 
 _SilphCo8EndBattleText3::
-	text "Whoo!"
-	line "Oh brothers!"
+	text "Whoo! Oh brothers!"
 	prompt
 
 _SilphCo8AfterBattleText3::

@@ -13,7 +13,7 @@ _FightingDojoText_5ce8e::
 	done
 
 _FightingDojoText_5ce93::
-	text "Hwa!"
+	text "KIYO: Hwa!"
 	line "Arrgh! Beaten!"
 	prompt
 
@@ -47,8 +47,7 @@ _FightingDojoBattleText1::
 	done
 
 _FightingDojoEndBattleText1::
-	text "I give"
-	line "up!"
+	text "I give up!"
 	prompt
 
 _FightingDojoAfterBattleText1::
@@ -65,8 +64,7 @@ _FightingDojoBattleText2::
 	done
 
 _FightingDojoEndBattleText2::
-	text "Judge!"
-	line "1 point!"
+	text "Judge! 1 point!"
 	prompt
 
 _FightingDojoAfterBattleText2::
@@ -102,8 +100,7 @@ _FightingDojoBattleText4::
 	done
 
 _FightingDojoEndBattleText4::
-	text "Oof!"
-	line "I give up!"
+	text "Oof! I give up!"
 	prompt
 
 _FightingDojoAfterBattleText4::

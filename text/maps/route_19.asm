@@ -4,8 +4,7 @@ _Route19BattleText1::
 	done
 
 _Route19EndBattleText1::
-	text "All"
-	line "warmed up!"
+	text "All warmed up!"
 	prompt
 
 _Route19AfterBattleText1::
@@ -19,8 +18,7 @@ _Route19BattleText2::
 	done
 
 _Route19EndBattleText2::
-	text "Ooh!"
-	line "That's chilly!"
+	text "Ooh! That's chilly!"
 	prompt
 
 _Route19AfterBattleText2::
@@ -34,8 +32,7 @@ _Route19BattleText3::
 	done
 
 _Route19EndBattleText3::
-	text "Belly"
-	line "flop!"
+	text "Belly flop!"
 	prompt
 
 _Route19AfterBattleText3::
@@ -78,8 +75,7 @@ _Route19BattleText6::
 	done
 
 _Route19EndBattleText6::
-	text "Ooh!"
-	line "Traumatic!"
+	text "Ooh! Traumatic!"
 	prompt
 
 _Route19AfterBattleText6::
@@ -94,8 +90,7 @@ _Route19BattleText7::
 	done
 
 _Route19EndBattleText7::
-	text "Oh!"
-	line "I lost!"
+	text "Oh! I lost!"
 	prompt
 
 _Route19AfterBattleText7::
@@ -125,8 +120,7 @@ _Route19BattleText9::
 	done
 
 _Route19EndBattleText9::
-	text "Ooh!"
-	line "Dangerous!"
+	text "Ooh! Dangerous!"
 	prompt
 
 _Route19AfterBattleText9::
@@ -140,8 +134,7 @@ _Route19BattleText10::
 	done
 
 _Route19EndBattleText10::
-	text "I'm"
-	line "exhausted..."
+	text "I'm exhausted..."
 	prompt
 
 _Route19AfterBattleText10::

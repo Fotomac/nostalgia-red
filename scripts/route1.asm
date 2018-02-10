@@ -19,7 +19,8 @@ Route1Text1:
 	jr .asm_1cadd
 .BagFull
 	ld hl, Route1Text_1caf3
-	jr .asm_1cadd
+	call PrintText
+	call Delay3
 .asm_1cada
 	ld hl, Route1Text_1caee
 .asm_1cadd

@@ -18,8 +18,7 @@ _Mansion4BattleText2::
 	done
 
 _Mansion4EndBattleText2::
-	text "What"
-	line "was that for?"
+	text "What was that for?"
 	prompt
 
 _Mansion4AfterBattleText2::

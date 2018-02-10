@@ -61,8 +61,7 @@ _SilphCo6BattleText2::
 	done
 
 _SilphCo6EndBattleText2::
-	text "Flame"
-	line "out!"
+	text "Flame out!"
 	prompt
 
 _SilphCo6AfterBattleText2::
@@ -98,8 +97,7 @@ _SilphCo6BattleText4::
 	done
 
 _SilphCo6EndBattleText4::
-	text "You"
-	line "traitor!"
+	text "You traitor!"
 	prompt
 
 _SilphCo6AfterBattleText4::

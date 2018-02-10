@@ -26,8 +26,7 @@ _PokemonTower5BattleText2::
 	done
 
 _PokemonTower5EndBattleText2::
-	text "What"
-	line "a nightmare!"
+	text "What a nightmare!"
 	prompt
 
 _PokemonTower5AfterBattleText2::

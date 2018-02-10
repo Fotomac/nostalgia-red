@@ -27,8 +27,7 @@ _MtMoon3Text_49f85::
 	done
 
 _MtMoon3Text_49f8a::
-	text "OK!"
-	line "I'll share!"
+	text "OK! I'll share!"
 	prompt
 
 _MtMoon3Text_49f8f::
@@ -61,8 +60,7 @@ _MtMoon3BattleText2::
 	done
 
 _MtMoon3EndBattleText2::
-	text "Urgh!"
-	line "Now I'm mad!"
+	text "Urgh! Now I'm mad!"
 	prompt
 
 _MtMoon3AfterBattleText2::
@@ -81,8 +79,7 @@ _MtMoon3BattleText3::
 	done
 
 _MtMoon3EndBattleText3::
-	text "I blew"
-	line "it!"
+	text "I blew it!"
 	prompt
 
 _MtMoon3AfterBattleText3::
@@ -98,8 +95,7 @@ _MtMoon3BattleText4::
 	done
 
 _MtMoon3EndBattleText4::
-	text "So, you"
-	line "are good."
+	text "So, you are good."
 	prompt
 
 _MtMoon3AfterBattleText4::
@@ -119,8 +115,7 @@ _MtMoon3BattleText5::
 	done
 
 _MtMoon3EndBattleText5::
-	text "I'm"
-	line "steamed!"
+	text "I'm steamed!"
 	prompt
 
 _MtMoon3AfterBattleText5::

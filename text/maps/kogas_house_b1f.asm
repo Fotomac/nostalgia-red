@@ -11,7 +11,7 @@ _JanineBeforeBattleText::
 	done
 
 _JanineEndBattleText::
-	text "You're a"
+	text "JANINE: You're a"
 	line "tough one. You"
 	cont "definitely won..."
 	done
@@ -59,9 +59,8 @@ _KogasHouseBattleText1::
 	done
 
 _KogasHouseEndBattleText1::
-	text "Ooh..."
-	line "I lost..."
-	cont "You're not weak!"
+	text "Ooh... I lost..."
+	line "You're not weak!"
 	done
 
 _KogasHouseAfterBattleText1::
@@ -78,9 +77,8 @@ _KogasHouseBattleText2::
 	done
 
 _KogasHouseEndBattleText2::
-	text "Darn"
-	line "it! I wanted to"
-	cont "win!"
+	text "Darn it! I wanted"
+	cont "to win!"
 	done
 
 _KogasHouseAfterBattleText2::
@@ -96,8 +94,7 @@ _KogasHouseBattleText3::
 	done
 
 _KogasHouseEndBattleText3::
-	text "My"
-	line "disguise was"
+	text "My disguise was"
 	cont "right on! Dang!"
 	done
 
@@ -116,8 +113,8 @@ _KogasHouseBattleText4::
 	done
 
 _KogasHouseEndBattleText4::
-	text "I had"
-	line "you fooled..."
+	text "I had you"
+	line "fooled..."
 	done
 
 _KogasHouseAfterBattleText4::

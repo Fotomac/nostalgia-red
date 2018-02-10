@@ -3,8 +3,8 @@ _Route16BattleText1::
 	done
 
 _Route16EndBattleText1::
-	text "Don't you"
-	line "dare laugh!"
+	text "Don't you dare"
+	line "laugh!"
 	prompt
 
 _Route16AfterBattleText1::
@@ -19,8 +19,7 @@ _Route16BattleText2::
 	done
 
 _Route16EndBattleText2::
-	text "Knock"
-	line "out!"
+	text "Knock out!"
 	prompt
 
 _Route16AfterBattleText2::
@@ -34,8 +33,7 @@ _Route16BattleText3::
 	done
 
 _Route16EndBattleText3::
-	text "You"
-	line "little rat!"
+	text "You little rat!"
 	prompt
 
 _Route16AfterBattleText3::
@@ -65,8 +63,7 @@ _Route16BattleText5::
 	done
 
 _Route16EndBattleText5::
-	text "Bad,"
-	line "bad, bad!"
+	text "Bad, bad, bad!"
 	prompt
 
 _Route16AfterBattleText5::
@@ -80,8 +77,7 @@ _Route16BattleText6::
 	done
 
 _Route16EndBattleText6::
-	text "Don't make"
-	line "me mad!"
+	text "Don't make me mad!"
 	prompt
 
 _Route16AfterBattleText6::

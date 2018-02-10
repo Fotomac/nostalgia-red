@@ -21,7 +21,7 @@ _BrunoBeforeBattleText::
 	done
 
 _BrunoEndBattleText::
-	text "Why?"
+	text "BRUNO: Why?"
 	line "How could I lose?"
 	prompt
 

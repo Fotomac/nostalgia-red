@@ -54,6 +54,10 @@ ViridianMartScript1:
 	call DisplayTextID
 	lb bc, OAKS_PARCEL, 1
 	call GiveItem
+	call Delay3
+	ld a, $1
+	ld [hSpriteIndexOrTextID], a
+	call DisplayTextID
 	SetEvent EVENT_GOT_OAKS_PARCEL
 	ld a, $2
 	ld [wViridianMarketCurScript], a

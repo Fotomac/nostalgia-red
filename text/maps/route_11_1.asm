@@ -19,8 +19,7 @@ _Route11BattleText2::
 	done
 
 _Route11EndBattleText2::
-	text "I had"
-	line "a chance!"
+	text "I had a chance!"
 	prompt
 
 _Route11AfterBattleText2::
@@ -35,8 +34,8 @@ _Route11BattleText3::
 	done
 
 _Route11EndBattleText3::
-	text "Huh?"
-	line "That's not right!"
+	text "Huh? That's not"
+	line "right!"
 	prompt
 
 _Route11AfterBattleText3::
@@ -51,8 +50,7 @@ _Route11BattleText4::
 	done
 
 _Route11EndBattleText4::
-	text "That"
-	line "was electric!"
+	text "That was electric!"
 	prompt
 
 _Route11AfterBattleText4::
@@ -67,8 +65,8 @@ _Route11BattleText5::
 	done
 
 _Route11EndBattleText5::
-	text "My"
-	line "#MON couldn't!"
+	text "My #MON"
+	line "couldn't!"
 	prompt
 
 _Route11AfterBattleText5::
@@ -82,8 +80,7 @@ _Route11BattleText6::
 	done
 
 _Route11EndBattleText6::
-	text "My"
-	line "first loss!"
+	text "My first loss!"
 	prompt
 
 _Route11AfterBattleText6::
@@ -97,9 +94,8 @@ _Route11BattleText7::
 	done
 
 _Route11EndBattleText7::
-	text "Ah hell,"
-	line "I saw this"
-	cont "coming..."
+	text "Ah hell, I saw"
+	line "this coming..."
 	prompt
 
 _Route11AfterBattleText7::

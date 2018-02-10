@@ -28,7 +28,7 @@ _LanceBeforeBattleText::
 	done
 
 _LanceEndBattleText::
-	text "That's it!"
+	text "LANCE: That's it!"
 
 	para "I hate to admit"
 	line "it, but you are a"

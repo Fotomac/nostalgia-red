@@ -632,6 +632,7 @@ ItemUseBallText06:
 ;play sound
 	TX_FAR _ItemUseBallText06
 	TX_SFX_DEX_ADD_PAGE
+	TX_BLINK
 	db "@"
 
 ItemUseTownMap:

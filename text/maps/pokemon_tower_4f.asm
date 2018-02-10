@@ -4,8 +4,8 @@ _PokemonTower4BattleText1::
 	done
 
 _PokemonTower4EndBattleText1::
-	text "Where"
-	line "is the GHOST?"
+	text "Where is the"
+	line "GHOST?"
 	prompt
 
 _PokemonTower4AfterBattleText1::
@@ -34,8 +34,7 @@ _PokemonTower4BattleText3::
 	done
 
 _PokemonTower4EndBattleText3::
-	text "Huh?"
-	line "Who? What?"
+	text "Huh? Who? What?"
 	prompt
 
 _PokemonTower4AfterBattleText3::

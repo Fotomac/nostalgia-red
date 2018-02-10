@@ -33,8 +33,7 @@ _SilphCo5BattleText3::
 	done
 
 _SilphCo5EndBattleText3::
-	text "Dang!"
-	line "Blast it!"
+	text "Dang! Blast it!"
 	prompt
 
 _SilphCo5AfterBattleText3::

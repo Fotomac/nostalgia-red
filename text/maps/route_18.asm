@@ -20,8 +20,7 @@ _Route18BattleText2::
 	done
 
 _Route18EndBattleText2::
-	text "I"
-	line "had to bug you!"
+	text "I had to bug you!"
 	prompt
 
 _Route18AfterBattleText2::

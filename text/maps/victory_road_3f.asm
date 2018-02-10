@@ -4,8 +4,8 @@ _VictoryRoad3BattleText2::
 	done
 
 _VictoryRoad3EndBattleText2::
-	text "The"
-	line "rumors were true!"
+	text "The rumors were"
+	line "true!"
 	prompt
 
 _VictoryRoad3AfterBattleText2::
@@ -19,8 +19,7 @@ _VictoryRoad3BattleText3::
 	done
 
 _VictoryRoad3EndBattleText3::
-	text "I'm"
-	line "furious!"
+	text "I'm furious!"
 	prompt
 
 _VictoryRoad3AfterBattleText3::
@@ -34,8 +33,7 @@ _VictoryRoad3BattleText4::
 	done
 
 _VictoryRoad3EndBattleText4::
-	text "I"
-	line "don't believe it!"
+	text "I don't believe it!"
 	prompt
 
 _VictoryRoad3AfterBattleText4::
@@ -52,8 +50,7 @@ _VictoryRoad3BattleText5::
 	done
 
 _VictoryRoad3EndBattleText5::
-	text "Oh!"
-	line "So strong!"
+	text "Oh! So strong!"
 	prompt
 
 _VictoryRoad3AfterBattleText5::

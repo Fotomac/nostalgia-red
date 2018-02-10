@@ -75,7 +75,7 @@ _SilphCo11Text3::
 	done
 
 _SilphCo10Text_62330::
-	text "Arrgh!!"
+	text "GIOVANNI: Arrgh!!"
 	line "I lost again!?"
 	prompt
 
@@ -118,8 +118,7 @@ _SilphCo11BattleText2::
 	done
 
 _SilphCo11EndBattleText2::
-	text "Gaah!"
-	line "Demolished!"
+	text "Gaah! Demolished!"
 	prompt
 
 _SilphCo11AfterBattleText2::

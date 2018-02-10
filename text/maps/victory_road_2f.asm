@@ -24,8 +24,7 @@ _VictoryRoad2BattleText2::
 	done
 
 _VictoryRoad2EndBattleText2::
-	text "You"
-	line "got me!"
+	text "You got me!"
 	prompt
 
 _VictoryRoad2AfterBattleText2::
@@ -39,8 +38,7 @@ _VictoryRoad2BattleText3::
 	done
 
 _VictoryRoad2EndBattleText3::
-	text "I got"
-	line "whipped!"
+	text "I got whipped!"
 	prompt
 
 _VictoryRoad2AfterBattleText3::
@@ -57,8 +55,7 @@ _VictoryRoad2BattleText4::
 	done
 
 _VictoryRoad2EndBattleText4::
-	text "No!"
-	line "Unbelievable!"
+	text "No! Unbelievable!"
 	prompt
 
 _VictoryRoad2AfterBattleText4::
@@ -74,8 +71,7 @@ _VictoryRoad2BattleText5::
 	done
 
 _VictoryRoad2EndBattleText5::
-	text "Well"
-	line "done!"
+	text "Well done!"
 	prompt
 
 _VictoryRoad2AfterBattleText5::

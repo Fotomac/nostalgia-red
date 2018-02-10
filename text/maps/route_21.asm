@@ -19,8 +19,7 @@ _Route21BattleText2::
 	done
 
 _Route21EndBattleText2::
-	text "Darn"
-	line "MAGIKARP!"
+	text "Darn MAGIKARP!"
 	prompt
 
 _Route21AfterBattleText2::
@@ -48,8 +47,7 @@ _Route21BattleText4::
 	done
 
 _Route21EndBattleText4::
-	text "Cheap"
-	line "shot!"
+	text "Cheap shot!"
 	prompt
 
 _Route21AfterBattleText4::
@@ -64,8 +62,7 @@ _Route21BattleText5::
 	done
 
 _Route21EndBattleText5::
-	text "Diver!!"
-	line "Down!!"
+	text "Diver!! Down!!"
 	prompt
 
 _Route21AfterBattleText5::
@@ -96,8 +93,7 @@ _Route21BattleText7::
 	done
 
 _Route21EndBattleText7::
-	text "Yow!"
-	line "I lost!"
+	text "Yow! I lost!"
 	prompt
 
 _Route21AfterBattleText7::
@@ -111,8 +107,8 @@ _Route21BattleText8::
 	done
 
 _Route21EndBattleText8::
-	text "Sorry!"
-	line "I didn't mean it!"
+	text "Sorry! I didn't"
+	line "mean it!"
 	prompt
 
 _Route21AfterBattleText8::
@@ -127,8 +123,8 @@ _Route21BattleText9::
 	done
 
 _Route21EndBattleText9::
-	text "That"
-	line "burned some time."
+	text "That burned some"
+	line "time."
 	prompt
 
 _Route21AfterBattleText9::

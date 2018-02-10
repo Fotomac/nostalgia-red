@@ -5,8 +5,7 @@ _Route15BattleText1::
 	done
 
 _Route15EndBattleText1::
-	text "Not"
-	line "good enough!"
+	text "Not good enough!"
 	prompt
 
 _Route15AfterBattleText1::
@@ -26,8 +25,7 @@ _Route15BattleText2::
 	done
 
 _Route15EndBattleText2::
-	text "No,"
-	line "wrong!"
+	text "No, wrong!"
 	prompt
 
 _Route15AfterBattleText2::
@@ -43,8 +41,7 @@ _Route15BattleText3::
 	done
 
 _Route15EndBattleText3::
-	text "Ow!"
-	line "That's tragic!"
+	text "Ow! That's tragic!"
 	prompt
 
 _Route15AfterBattleText3::
@@ -59,8 +56,7 @@ _Route15BattleText4::
 	done
 
 _Route15EndBattleText4::
-	text "Just"
-	line "as I thought!"
+	text "Just as I thought!"
 	prompt
 
 _Route15AfterBattleText4::
@@ -76,8 +72,8 @@ _Route15BattleText5::
 	done
 
 _Route15EndBattleText5::
-	text "You looked"
-	line "so cute too!"
+	text "You looked so cute"
+	line "too!"
 	prompt
 
 _Route15AfterBattleText5::
@@ -92,8 +88,8 @@ _Route15BattleText6::
 	done
 
 _Route15EndBattleText6::
-	text "I didn't"
-	line "ask for this!"
+	text "I didn't ask for"
+	line "this!"
 	prompt
 
 _Route15AfterBattleText6::
@@ -108,8 +104,7 @@ _Route15BattleText7::
 	done
 
 _Route15EndBattleText7::
-	text "Why"
-	line "not?"
+	text "Why not?"
 	prompt
 
 _Route15AfterBattleText7::
@@ -126,8 +121,7 @@ _Route15BattleText8::
 	done
 
 _Route15EndBattleText8::
-	text "That"
-	line "can't be true!"
+	text "That can't be true!"
 	prompt
 
 _Route15AfterBattleText8::
@@ -141,8 +135,7 @@ _Route15BattleText9::
 	done
 
 _Route15EndBattleText9::
-	text "I"
-	line "said trade!"
+	text "I said trade!"
 	prompt
 
 _Route15AfterBattleText9::
@@ -156,8 +149,8 @@ _Route15BattleText10::
 	done
 
 _Route15EndBattleText10::
-	text "I was"
-	line "too impatient!"
+	text "I was too"
+	line "impatient!"
 	prompt
 
 _Route15AfterBattleText10::

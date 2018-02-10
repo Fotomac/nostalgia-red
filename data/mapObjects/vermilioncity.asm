@@ -22,7 +22,7 @@ VermilionCityObject:
 	db $f, $1d, $d ; VermilionCityText13
 
 	db $6 ; objects
-	object SPRITE_FOULARD_WOMAN, $13, $7, WALK, $2, $1 ; person
+	object SPRITE_GIRL, $13, $7, WALK, $2, $1 ; person
 	object SPRITE_GAMBLER, $e, $6, STAY, NONE, $2 ; person
 	object SPRITE_SAILOR, $13, $1e, STAY, UP, $3 ; person
 	object SPRITE_GAMBLER, $1e, $7, STAY, NONE, $4 ; person

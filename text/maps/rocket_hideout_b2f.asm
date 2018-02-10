@@ -5,8 +5,7 @@ _RocketHideout2BattleText2::
 	done
 
 _RocketHideout2EndBattleText2::
-	text "I"
-	line "surrender!"
+	text "I surrender!"
 	prompt
 
 _RocketHideout2AfterBattleTxt2::

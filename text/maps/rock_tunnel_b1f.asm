@@ -4,8 +4,7 @@ _RockTunnel1BattleText1::
 	done
 
 _RockTunnel1EndBattleText1::
-	text "Doh!"
-	line "You win!"
+	text "D'oh! You win!"
 	prompt
 
 _RockTunnel1AfterBattleText1::
@@ -53,8 +52,7 @@ _RockTunnel1BattleText4::
 	done
 
 _RockTunnel1EndBattleText4::
-	text "Game"
-	line "over!"
+	text "Game over!"
 	prompt
 
 _RockTunnel1AfterBattleText4::
@@ -69,8 +67,7 @@ _RockTunnel1BattleText5::
 	done
 
 _RockTunnel1EndBattleText5::
-	text "It"
-	line "was too dark!"
+	text "It was too dark!"
 	prompt
 
 _RockTunnel1AfterBattleText5::
@@ -84,8 +81,7 @@ _RockTunnel1BattleText6::
 	done
 
 _RockTunnel1EndBattleText6::
-	text "I'm"
-	line "out of #MON!"
+	text "I'm out of #MON!"
 	prompt
 
 _RockTunnel1AfterBattleText6::
@@ -99,8 +95,7 @@ _RockTunnel1BattleText7::
 	done
 
 _RockTunnel1EndBattleText7::
-	text "You"
-	line "play hard!"
+	text "You play hard!"
 	prompt
 
 _RockTunnel1AfterBattleText7::

@@ -18,7 +18,7 @@ _SaffronGymText_5d162::
 	done
 
 _SaffronGymText_5d167::
-	text "This"
+	text "SABRINA: This"
 	line "loss shocks me!"
 	cont "But, a loss is a"
 	cont "loss."
@@ -112,8 +112,7 @@ _SaffronGymBattleText1::
 	done
 
 _SaffronGymEndBattleText1::
-	text "Not"
-	line "good enough!"
+	text "Not good enough!"
 	prompt
 
 _SaffronGymAfterBattleText1::
@@ -133,8 +132,8 @@ _SaffronGymBattleText2::
 	done
 
 _SaffronGymEndBattleText2::
-	text "I never"
-	line "foresaw this!"
+	text "I never foresaw"
+	line "this!"
 	prompt
 
 _SaffronGymAfterBattleText2::
@@ -153,8 +152,7 @@ _SaffronGymBattleText3::
 	done
 
 _SaffronGymEndBattleText3::
-	text "I knew"
-	line "it!"
+	text "I knew it!"
 	prompt
 
 _SaffronGymAfterBattleText3::
@@ -170,8 +168,8 @@ _SaffronGymBattleText4::
 	done
 
 _SaffronGymEndBattleText4::
-	text "I don't"
-	line "believe this!"
+	text "I don't believe"
+	line "this!"
 	prompt
 
 _SaffronGymAfterBattleText4::
@@ -187,8 +185,7 @@ _SaffronGymBattleText5::
 	done
 
 _SaffronGymEndBattleText5::
-	text "I lost"
-	line "after all!"
+	text "I lost after all!"
 	prompt
 
 _SaffronGymAfterBattleText5::
@@ -207,8 +204,8 @@ _SaffronGymBattleText6::
 	done
 
 _SaffronGymEndBattleText6::
-	text "I lost"
-	line "my concentration!"
+	text "I lost my"
+	line "concentration!"
 	prompt
 
 _SaffronGymAfterBattleText6::

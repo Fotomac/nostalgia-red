@@ -49,8 +49,7 @@ _PokemonTower7BattleText2::
 	done
 
 _PokemonTower7EndBattleText2::
-	text "Please!"
-	line "No more!"
+	text "Please! No more!"
 	prompt
 
 _PokemonTower7AfterBattleText2::
@@ -68,8 +67,8 @@ _PokemonTower7BattleText3::
 	done
 
 _PokemonTower7EndBattleText3::
-	text "Don't"
-	line "fight us ROCKETs!"
+	text "Don't fight us"
+	line "ROCKETs!"
 	prompt
 
 _PokemonTower7AfterBattleText3::

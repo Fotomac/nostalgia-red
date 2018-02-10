@@ -5,8 +5,7 @@ _RocketHideout3BattleText2::
 	done
 
 _RocketHideout3EndBattleText2::
-	text "Oof!"
-	line "Taken down!"
+	text "Oof! Taken down!"
 	prompt
 
 _RocketHideout3AfterBattleTxt2::
@@ -23,8 +22,7 @@ _RocketHideout3BattleTxt::
 	done
 
 _RocketHideout3EndBattleText3::
-	text "What?"
-	line "I lost? No!"
+	text "What? I lost? No!"
 	prompt
 
 _RocketHide3AfterBattleText3::

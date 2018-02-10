@@ -45,7 +45,7 @@ _TM34NoRoomText::
 	done
 
 _ReceivedThunderbadgeText::
-	text "Whoa!"
+	text "LT. SURGE: Whoa!"
 
 	para "You're the real"
 	line "deal, kid!"
@@ -61,8 +61,8 @@ _VermilionGymBattleText1::
 	done
 
 _VermilionGymEndBattleText1::
-	text "Stop!"
-	line "You're very good!"
+	text "Stop! You're"
+	line "very good!"
 	prompt
 
 _VermilionGymAfterBattleText1::
@@ -97,8 +97,7 @@ _VermilionGymBattleText3::
 	done
 
 _VermilionGymEndBattleText3::
-	text "Wow!"
-	line "Surprised me!"
+	text "Wow! Surprised me!"
 	prompt
 
 _VermilionGymAfterBattleText3::
@@ -120,9 +119,8 @@ _VermilionGymBattleText4::
 	done
 
 _VermilionGymEndBattleText4::
-	text "God"
-	line "bless America and"
-	cont "democracy!"
+	text "God bless America"
+	cont "and democracy!"
 	prompt
 
 _VermilionGymAfterBattleText4::

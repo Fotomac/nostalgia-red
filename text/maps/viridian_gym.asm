@@ -20,7 +20,7 @@ _ViridianGymText_74ace::
 	done
 
 _ViridianGymText_74ad3::
-	text "Ha!"
+	text "GIOVANNI: Ha!"
 	line "That was a truly"
 	cont "intense fight!"
 	cont "You have won!"
@@ -97,8 +97,7 @@ _ViridianGymBattleText1::
 	done
 
 _ViridianGymEndBattleText1::
-	text "I"
-	line "ran out of gas!"
+	text "I ran out of gas!"
 	prompt
 
 _ViridianGymAfterBattleText1::
@@ -129,8 +128,8 @@ _ViridianGymBattleText3::
 	done
 
 _ViridianGymEndBattleText3::
-	text "You are in"
-	line "perfect harmony!"
+	text "You are in perfect"
+	line "harmony!"
 	prompt
 
 _ViridianGymAfterBattleText3::
@@ -161,8 +160,7 @@ _ViridianGymBattleText5::
 	done
 
 _ViridianGymEndBattleText5::
-	text "I"
-	line "lost my grip!"
+	text "I lost my grip!"
 	prompt
 
 _ViridianGymAfterBattleText5::
@@ -193,8 +191,7 @@ _ViridianGymBattleText7::
 	done
 
 _ViridianGymEndBattleText7::
-	text "Yowch!"
-	line "Whiplash!"
+	text "Yowch! Whiplash!"
 	prompt
 
 _ViridianGymAfterBattleText7::
@@ -210,8 +207,7 @@ _ViridianGymBattleText8::
 	done
 
 _ViridianGymEndBattleText8::
-	text "I"
-	line "was beaten?"
+	text "I was beaten?"
 	prompt
 
 _ViridianGymAfterBattleText8::

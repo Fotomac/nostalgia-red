@@ -15,8 +15,7 @@ _SilphCo3BattleText1::
 	done
 
 _SilphCo3EndBattleText1::
-	text "I give"
-	line "up!"
+	text "I give up!"
 	prompt
 
 _SilphCo3AfterBattleText1::
@@ -32,8 +31,7 @@ _SilphCo3BattleText2::
 	done
 
 _SilphCo3EndBattleText2::
-	text "You"
-	line "really got me!"
+	text "You really got me!"
 	prompt
 
 _SilphCo3AfterBattleText2::

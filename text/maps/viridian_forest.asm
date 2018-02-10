@@ -13,9 +13,8 @@ _ViridianForestBattleText1::
 	done
 
 _ViridianForestEndBattleText1::
-	text "No!"
-	line "CATERPIE can't"
-	cont "hack it!"
+	text "No! CATERPIE can't"
+	line "hack it!"
 	prompt
 
 _ViridianFrstAfterBattleText1::
@@ -32,9 +31,8 @@ _ViridianForestBattleText2::
 	done
 
 _ViridianForestEndBattleText2::
-	text "Huh?"
-	line "I ran out of"
-	cont "#MON!"
+	text "Huh? I ran out of"
+	line "#MON!"
 	prompt
 
 _ViridianFrstAfterBattleText2::
@@ -50,9 +48,8 @@ _ViridianForestBattleText3::
 	done
 
 _ViridianForestEndBattleText3::
-	text "I"
-	line "give! You're good"
-	cont "at this!"
+	text "I give! You're good"
+	line "at this!"
 	prompt
 
 _ViridianFrstAfterBattleText3::
@@ -73,9 +70,8 @@ _ViridianForestBattleText4::
 	done
 
 _ViridianForestEndBattleText4::
-	text "Oh,"
-	line "hell! Nothing"
-	cont "went right!"
+	text "Oh, hell! Nothing"
+	line "went right!"
 	prompt
 
 _ViridianFrstAfterBattleText4::
@@ -89,8 +85,7 @@ _ViridianForestBattleText5::
 	done
 
 _ViridianForestEndBattleText5::
-	text "Oh!"
-	line "I lost!"
+	text "Oh! I lost!"
 	prompt
 
 _ViridianFrstAfterBattleText5::

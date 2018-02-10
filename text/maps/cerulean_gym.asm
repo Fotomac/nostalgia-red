@@ -61,7 +61,7 @@ _CeruleanGymText_5c7d3::
 	done
 
 _CeruleanGymText_5c7d8::
-	text "Wow!"
+	text "MISTY: Wow!"
 	line "You're too much!"
 
 	para "All right!"
@@ -79,8 +79,8 @@ _CeruleanGymBattleText1::
 	done
 
 _CeruleanGymEndBattleText1::
-	text "You"
-	line "overwhelmed me!"
+	text "You overwhelmed"
+	line "me!"
 	prompt
 
 _CeruleanGymAfterBattleText1::
@@ -98,8 +98,7 @@ _CeruleanGymBattleText2::
 	done
 
 _CeruleanGymEndBattleText2::
-	text "That"
-	line "can't be!"
+	text "That can't be!"
 	prompt
 
 _CeruleanGymAfterBattleText2::

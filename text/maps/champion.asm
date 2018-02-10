@@ -36,7 +36,7 @@ _GaryChampionIntroText::
 	done
 
 _GaryDefeatedText::
-	text "NO!"
+	text "<RIVAL>: NO!"
 	line "That can't be!"
 	cont "You beat my best!"
 
@@ -50,7 +50,7 @@ _GaryDefeatedText::
 	prompt
 
 _GaryVictoryText::
-	text "Hahaha!"
+	text "<RIVAL>: Hahaha!"
 	line "I won, I won!"
 
 	para "I'm too good for"

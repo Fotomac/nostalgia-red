@@ -5,8 +5,7 @@ _VictoryRoad1BattleText1::
 	done
 
 _VictoryRoad1EndBattleText1::
-	text "I"
-	line "lost out!"
+	text "I lost out!"
 	prompt
 
 _VictoryRoad1AfterBattleText1::
@@ -21,8 +20,7 @@ _VictoryRoad1BattleText2::
 	done
 
 _VictoryRoad1EndBattleText2::
-	text "I"
-	line "had a chance..."
+	text "I had a chance..."
 	prompt
 
 _VictoryRoad1AfterBattleText2::

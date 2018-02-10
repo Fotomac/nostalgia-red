@@ -15,8 +15,7 @@ _SilphCo10BattleText1::
 	done
 
 _SilphCo10EndBattleText1::
-	text "I'm"
-	line "stunned!"
+	text "I'm stunned!"
 	prompt
 
 _SilphCo10AfterBattleText1::
@@ -31,8 +30,7 @@ _SilphCo10BattleText2::
 	done
 
 _SilphCo10EndBattleText2::
-	text "No"
-	line "continues left!"
+	text "No continues left!"
 	prompt
 
 _SilphCo10AfterBattleText2::

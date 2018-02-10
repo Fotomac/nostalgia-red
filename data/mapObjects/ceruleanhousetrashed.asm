@@ -11,7 +11,7 @@ CeruleanHouseTrashedObject:
 
 	db $2 ; objects
 	object SPRITE_FISHER, $2, $1, STAY, DOWN, $1 ; person
-	object SPRITE_GIRL, $5, $6, WALK, $2, $2 ; person
+	object SPRITE_BRUNETTE_GIRL, $5, $6, WALK, $2, $2 ; person
 
 	; warp-to
 	EVENT_DISP TRASHED_HOUSE_WIDTH, $7, $2

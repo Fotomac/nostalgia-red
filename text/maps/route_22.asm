@@ -32,7 +32,7 @@ _Route22RivalAfterBattleText1::
 	done
 
 _Route22RivalDefeatedText1::
-	text "Awww!"
+	text "<RIVAL>: Awww!"
 	line "You just lucked"
 	cont "out!"
 	prompt
@@ -81,7 +81,7 @@ _Route22RivalAfterBattleText2::
 	done
 
 _Route22RivalDefeatedText2::
-	text "What!?"
+	text "<RIVAL>: What!?"
 
 	para "I was just"
 	line "careless!"
