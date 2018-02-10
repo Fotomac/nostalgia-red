@@ -38,7 +38,7 @@ MapSongBanks:
 	db MUSIC_ROUTES2, 0 ; ROUTE_25
 	db MUSIC_PALLET_TOWN, 0 ; RedsHouse1F
 	db MUSIC_PALLET_TOWN, 0 ; RedsHouse2F
-	db MUSIC_MEET_CUTE_TRAINER, 0 ; BluesHouse
+	db MUSIC_PALLET_TOWN, 0 ; BluesHouse
 	db MUSIC_OAKS_LAB, 0 ; OaksLab
 	db MUSIC_POKECENTER, 0 ; ViridianPokecenter
 	db MUSIC_SHOP, 0 ; ViridianMart
