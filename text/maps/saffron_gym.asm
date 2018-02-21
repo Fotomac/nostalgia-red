@@ -28,7 +28,7 @@ _SaffronGymText_5d167::
 	cont "to win!"
 
 	para "You earned the"
-	line "MARSHBADGE!@@"
+	line "SOULBADGE!@@"
 
 _SaffronGymText_5d16e::
 	text "Psychic power"
@@ -43,7 +43,7 @@ _SaffronGymText_5d16e::
 	done
 
 _SaffronGymText_5d173::
-	text "The MARSHBADGE"
+	text "The SOULBADGE"
 	line "makes #MON up"
 	cont "to L70 obey you!"
 

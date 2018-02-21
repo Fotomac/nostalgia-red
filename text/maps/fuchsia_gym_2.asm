@@ -11,7 +11,7 @@ _KogaExplainToxicText::
 
 _FuchsiaGymText9::
 	text "Now that you have"
-	line "the SOULBADGE,"
+	line "the MARSHBADGE,"
 	cont "the DEFENSE of"
 	cont "your #MON"
 	cont "increases!"

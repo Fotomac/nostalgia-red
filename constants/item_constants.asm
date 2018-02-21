@@ -26,8 +26,8 @@ SAFARI_BAIT           EQU $15 ; overload
 SAFARI_ROCK           EQU $16 ; overload
 	const THUNDERBADGE  ; $17
 	const RAINBOWBADGE  ; $18
-	const SOULBADGE     ; $19
-	const MARSHBADGE    ; $1A
+	const MARSHBADGE    ; $19
+	const SOULBADGE     ; $1A
 	const VOLCANOBADGE  ; $1B
 	const EARTHBADGE    ; $1C
 	const ESCAPE_ROPE   ; $1D

@@ -22,5 +22,5 @@ _KogaAfterBattleText::
 	cont "your worth!"
 
 	para "Here! Take the"
-	line "SOULBADGE!"
+	line "MARSHBADGE!"
 	prompt

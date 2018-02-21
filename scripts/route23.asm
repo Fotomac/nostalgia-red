@@ -86,8 +86,8 @@ BadgeTextPointers:
 	dw CascadeBadgeText
 	dw ThunderBadgeText
 	dw RainbowBadgeText
-	dw SoulBadgeText
 	dw MarshBadgeText
+	dw SoulBadgeText
 	dw VolcanoBadgeText
 	dw EarthBadgeText
 
@@ -97,11 +97,11 @@ EarthBadgeText:
 VolcanoBadgeText:
 	db "VOLCANOBADGE@"
 
-MarshBadgeText:
-	db "MARSHBADGE@"
-
 SoulBadgeText:
 	db "SOULBADGE@"
+
+MarshBadgeText:
+	db "MARSHBADGE@"
 
 RainbowBadgeText:
 	db "RAINBOWBADGE@"
@@ -155,13 +155,13 @@ Route23Text2:
 
 Route23Text3:
 	TX_ASM
-	EventFlagBit a, EVENT_PASSED_MARSHBADGE_CHECK, EVENT_PASSED_CASCADEBADGE_CHECK
+	EventFlagBit a, EVENT_PASSED_SOULBADGE_CHECK, EVENT_PASSED_CASCADEBADGE_CHECK
 	call Route23Script_51346
 	jp TextScriptEnd
 
 Route23Text4:
 	TX_ASM
-	EventFlagBit a, EVENT_PASSED_SOULBADGE_CHECK, EVENT_PASSED_CASCADEBADGE_CHECK
+	EventFlagBit a, EVENT_PASSED_MARSHBADGE_CHECK, EVENT_PASSED_CASCADEBADGE_CHECK
 	call Route23Script_51346
 	jp TextScriptEnd
 
