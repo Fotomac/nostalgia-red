@@ -1,9 +1,13 @@
 _KogaExplainToxicText::
 	text "When afflicted by"
-	line "TOXIC, #MON"
-	cont "suffer more and"
-	cont "more as battle"
-	cont "progresses!"
+	line "TOXIC, a #MON"
+	cont "suffers more and"
+	cont "more!"
+
+	para "It suffers"
+	line "worsening damage"
+	cont "as the battle"
+	cont "wears on!"
 
 	para "It will surely"
 	line "terrorize foes!"
@@ -32,12 +36,13 @@ _ReceivedTM06Text::
 
 _TM06ExplanationText::
 	db $0
-	para "TM06 contains"
-	line "TOXIC!"
+	para "Sealed within that"
+	line "TM lies TOXIC!"
 
 	para "It is a secret"
-	line "technique over"
-	cont "400 years old!"
+	line "technique dating"
+	cont "back some four"
+	cont "hundred years!"
 	done
 
 _TM06NoRoomText::

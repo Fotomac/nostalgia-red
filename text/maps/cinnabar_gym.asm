@@ -1,13 +1,17 @@
 _BlaineBattleText::
 	text "Hah!"
 
-	para "I am BLAINE! I"
-	line "am the LEADER of"
+	para "I am BLAINE, the"
+	line "red hot LEADER of"
 	cont "CINNABAR GYM!"
 
 	para "My fiery #MON"
-	line "will incinerate"
-	cont "all challengers!"
+	line "are all ready"
+	cont "with intense"
+	cont "heat!"
+
+	para "They incinerate"
+	line "all challengers!"
 
 	para "Hah! You better"
 	line "have BURN HEAL!"
@@ -15,7 +19,9 @@ _BlaineBattleText::
 
 _BlaineEndBattleText::
 	text "BLAINE: I have"
-	line "burnt out!"
+	line "burned down to"
+	cont "nothing! Not even"
+	cont "ashes remain!"
 
 	para "You have earned"
 	line "the VOLCANOBADGE!@@"
@@ -55,9 +61,10 @@ _TM38ExplanationText::
 	para "Teach it to fire-"
 	line "type #MON!"
 
-	para "CHARMELEON or"
-	line "PONYTA would be"
-	cont "good bets!"
+	para "VULPIX or"
+	line "CHARMELEON would"
+	cont "be ideal for that"
+	cont "move!"
 	done
 
 _TM38NoRoomText::

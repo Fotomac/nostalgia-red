@@ -39,8 +39,15 @@ TryDoWildEncounter:
 ; so long as the map is "indoor" and has wild pokemon defined.
 ; ...as long as it's not Viridian Forest or Safari Zone.
 	ld a, [wCurMap]
-	cp REDS_HOUSE_1F ; is this an indoor map?
-	jr c, .CantEncounter2
+    cp CERULEAN_CITY
+    jr nz, .nope
+    CheckEvent EVENT_BEAT_CERULEAN_GYM_TRAINER_1
+    jr nz, .CurMapTileset
+.nope
+    ld a, [wCurMap]
+    cp REDS_HOUSE_1F ; is this an indoor map?
+    jr c, .CantEncounter2
+.CurMapTileset
 	ld a, [wCurMapTileset]
 	cp FOREST ; Viridian Forest/Safari Zone
 	jr z, .CantEncounter2

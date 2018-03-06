@@ -1,5 +1,15 @@
 CeladonMons:
-	db $00
+	db $01
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
+	db 5,EEVEE
 	db $05
 	IF DEF(_RED)
 		db 5,SLOWPOKE
